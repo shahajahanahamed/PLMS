@@ -11,7 +11,7 @@ public class LoginModule extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginModule.class.getResource("/com/plms/design/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 500);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
