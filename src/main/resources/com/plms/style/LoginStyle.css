@@ -12,12 +12,18 @@
     -fx-background-color:#ca0303;
 }
 .user-textbox{
-    -fx-background-radius:10px;
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
 .password-textbox{
-    -fx-background-radius:10px;
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
