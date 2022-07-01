@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="360.0" styleClass="login-bg" stylesheets="@../style/LoginStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="440.0" styleClass="login-bg" stylesheets="@../style/LoginStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.LoginController">
    <children>
       <Label layoutX="122.0" layoutY="132.0" prefHeight="46.0" prefWidth="130.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
          <font>
@@ -21,7 +20,7 @@
             <Font name="Serif Bold" size="20.0" />
          </font>
       </Button>
-      <Label fx:id="wrongLogIn" layoutX="153.0" layoutY="127.0" textFill="#80423c"/>
+      <Label fx:id="wrongLogIn" layoutX="153.0" layoutY="127.0" textFill="#80423c" />
       <FontAwesomeIcon fill="#3d3f56" glyphName="USER" layoutX="284.0" layoutY="237.0" size="2em" />
       <FontAwesomeIcon fill="#3d3f56" glyphName="KEY" layoutX="286.0" layoutY="281.0" size="1.5em" />
    </children>
