@@ -1,6 +1,7 @@
 .login-bg{
-    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
-    
+    -fx-background-image: url("../Images/home-bckground_imge.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1900 1024;
 }
 .exit{
     -fx-background-color:#ff0101;
@@ -16,6 +17,13 @@
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
     -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.user-textbox:hover{
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
@@ -24,10 +32,26 @@
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
     -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.password-textbox:hover{
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
 .login-button{
+    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.login-button:hover{
     -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
     -fx-background-radius:30px;
     -fx-border-radius: 30px;

@@ -5,14 +5,14 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
-public class AfterLogin {
+public class Homepage {
     @FXML
     private Button logout;
 
 
     public void userLogOut(ActionEvent event) throws IOException {
         LoginController m = new LoginController();
-        //m.changeScene("hello-view.fxml");
+        //m.changeScene("login-view.fxml");
 
     }
 }

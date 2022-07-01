@@ -3,8 +3,6 @@ package com.plms.controller;
 import com.plms.modules.LoginModule;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -33,18 +31,15 @@ public class LoginController {
     }
     private void checkLogin() throws IOException {
         LoginModule m = new LoginModule();
-        if(username.getText().toString().equals("javacoding") && password.getText().toString().equals("123")) {
+        if(username.getText().toString().equals("admin") && password.getText().toString().equals("123")) {
             wrongLogIn.setText("Success!");
-            m.changeScene("AfterLogin.fxml");
+            m.changeScene("/com/plms/design/homepage-view.fxml");
         }
-
         else if(username.getText().isEmpty() && password.getText().isEmpty()) {
-            wrongLogIn.setText("Please enter your data.");
+            wrongLogIn.setText("Please enter username and password.");
         }
-
-
         else {
-            wrongLogIn.setText("Wrong username or password!");
+            wrongLogIn.setText("Invalid username or password!");
         }
     }
 
