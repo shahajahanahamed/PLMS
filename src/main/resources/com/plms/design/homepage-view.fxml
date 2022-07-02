@@ -1,24 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1280.0">
          <left>
-            <VBox prefHeight="720.0" prefWidth="263.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="620.0" prefWidth="200.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" text="Button" />
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="EmpLoyee" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/users.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Patient" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/patient.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Test" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/test.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Prices" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/price.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Reports" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Help" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="About Us" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/aboutus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Contact Us" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/contactus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Button>
                </children>
             </VBox>
          </left>
          <top>
-            <HBox prefHeight="74.0" prefWidth="1280.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER" />
+            <HBox prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="FLASK" size="8em" stroke="WHITE" strokeDashOffset="2.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="103.99999713897705" />
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" graphicTextGap="10.0" prefHeight="99.0" prefWidth="183.0" text="LAB Name" textAlignment="CENTER" textFill="#e4e4e4">
+                     <font>
+                        <Font name="Serif Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="user-profile" stylesheets="@../style/homestyle.css" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="930.0" top="25.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/profile.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children></HBox>
          </top>
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />

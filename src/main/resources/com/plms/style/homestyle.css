@@ -1,10 +1,15 @@
 .button{
     -fx-background-color: #6F5CC2;
-    -fx-background-radium:0m;
+    /*-fx-background-radium:0m;*/
+}
+.button:focussed{
+    -fx-background-color: #7D6CC8;
+    -fx-border-color: #CDD1D6;
+    -fx-border-width:0px 0px,0px,3px;
 }
 .button:hover{
     -fx-background-color: #A89DDA;
-    -fx-background-radium:0m;
+    /*-fx-background-radium:0m;*/
 }
 .button:pressed{
     -fx-background-color: #A89DDA;
@@ -33,6 +38,19 @@
 }
 .table-row-cell:selected .text{
     -fx-fill: white;
+}
+
+.logo{
+    -fx-background-radius:100px;
+    -fx-border-radius: 100px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
+}
+.user-profile{
+    -fx-background-radius:100px;
+    -fx-border-radius: 100px;
+    -fx-border-width: 2px;
+    -fx-border-color: #fcfcff;
 }
 
 /*Scroll bar starts here*/

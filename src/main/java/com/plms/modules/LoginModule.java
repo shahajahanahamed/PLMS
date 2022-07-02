@@ -17,7 +17,7 @@ public class LoginModule extends Application {
         stg=primaryStage;
         primaryStage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(LoginModule.class.getResource("/com/plms/design/login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+        Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
         primaryStage.show();
