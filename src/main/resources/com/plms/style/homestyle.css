@@ -1,9 +1,21 @@
-.home-main-anchor{
-    -fx-background-image: url("../Images/home-bckground_imge.jpg");
-    -fx-background-repeat: stretch;   
-    -fx-background-size: 1900 1024;
-    
+.home-main-anchorbg{
+    -fx-background-color: linear-gradient(to bottom right, #6579eb, #4089ff);  
     
 }
+.header-bg{
+    -fx-background-color: linear-gradient(to top left, #8a46f6, #4e56fe);  
+    
+}
+.leftnav-bg{
+    -fx-background-color: linear-gradient(to top left, #8a46f6, #4e56fe);  
+    
+}
+.logo{
+    -fx-background-radius:100px;
+    -fx-border-radius: 100px;
+    -fx-border-width: 5px;
+    -fx-border-color: rgb(255, 255, 255);
+}
+
 -fx-background-position: center center;
 -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
