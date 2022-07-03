@@ -24,7 +24,6 @@ public class LoginModule extends Application {
     }
     public void changeScene(String fxml) throws IOException {
         Parent pane = FXMLLoader.load(Homepage.class.getResource(fxml));
-
         stg.getScene().setRoot(pane);
     }
     public static void main(String[] args) {

@@ -12,8 +12,13 @@
     /*-fx-background-radium:0m;*/
 }
 .button:pressed{
-    -fx-background-color: #A89DDA;
-    -fx-border-color: #A89DDA;
+    -fx-background-color: #6243eb;
+    -fx-border-color: #766ca4;
+    -fx-border-width:0px 0px,0px,3px;
+}
+.button:selected{
+    -fx-background-color: #4925e8;
+    -fx-border-color: #978ace;
     -fx-border-width:0px 0px,0px,3px;
 }
 .table-view .column-header,
