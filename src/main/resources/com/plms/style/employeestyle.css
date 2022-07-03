@@ -1,7 +1,12 @@
+.header{
+    -fx-background-color:#52438F
+}
+.header2{
+    -fx-background-color:#6959a9
+}
 .button{
     -fx-background-color: #6F5CC2;
-    -fx-background-radius:10px;
-    -fx-border-color: #9181d9;
+    -fx-background-radius:30px;
 }
 .button:focussed{
     -fx-background-color: #7D6CC8;
@@ -11,6 +16,14 @@
 .button:hover{
     -fx-background-color: #A89DDA;
     /*-fx-background-radium:0m;*/
+}
+#searchBox{
+    -fx-background-color: #58507e;
+    -fx-background-radius: 30px;
+}
+#filterComboBox{
+    -fx-background-color: #58507e;
+    -fx-background-radius: 30px;
 }
 .button:pressed{
     -fx-background-color: #907de6;
