@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
@@ -20,7 +22,12 @@ public class Homepage {
 
     @FXML
     private Label lblUserProfile;
-
+    @FXML
+    private HBox headerPane;
+    @FXML
+    private Pane pane;
+    @FXML
+    private Label wlcmLbl;
     @FXML
     public void clickOnHomeMenu(javafx.scene.input.MouseEvent mouseEvent) {
         bp.setCenter(ap);
@@ -51,9 +58,7 @@ public class Homepage {
 
     public void getUserProfileName(String username){
         System.out.println(username);
-        lblUserProfile.setStyle("-fx-text-fill:White; -fx-font-size: 18;");
-        lblUserProfile.setText("vbhmvbm");
+        //lblUserProfile.setStyle("-fx-text-fill:White; -fx-font-size: 18;");
+        lblUserProfile.setText(username.toString());
     }
-
-
 }

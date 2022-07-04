@@ -52,7 +52,7 @@ public class LoginController {
         }
     }
     public void loadScene(String fxml){
-        Parent pane = null;
+        Parent pane;
         try {
             pane = FXMLLoader.load(Homepage.class.getResource(fxml));
         } catch (IOException e) {
