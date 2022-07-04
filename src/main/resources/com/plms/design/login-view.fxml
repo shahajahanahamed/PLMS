@@ -18,12 +18,12 @@
             <Font name="Serif Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="wrongLogIn" alignment="CENTER" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" text="Validtion" textAlignment="CENTER" textFill="#fc1500"> focusTraversable=false
+      <Label fx:id="valLbl" alignment="CENTER" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" text="Validtion" textAlignment="CENTER" textFill="#fc1500" visible="false"> focusTraversable=false
          <font>
-            <Font name="Serif Regular" size="12.0" />
+            <Font name="Serif Regular" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="username" alignment="BASELINE_LEFT" layoutX="489.0" layoutY="345.0" prefHeight="38.0" prefWidth="310.0" promptText="Username" styleClass="user-textbox" stylesheets="@../style/LoginStyle.css">
+      <TextField fx:id="usernameTB" alignment="BASELINE_LEFT" layoutX="489.0" layoutY="345.0" prefHeight="38.0" prefWidth="310.0" promptText="Username" styleClass="user-textbox" stylesheets="@../style/LoginStyle.css">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
@@ -34,7 +34,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></TextField>
       <FontAwesomeIcon fill="#3d3f56" focusTraversable="false" glyphName="USER" layoutX="772.0" layoutY="371.0" size="2em" />
-      <PasswordField fx:id="password" alignment="BASELINE_LEFT" layoutX="488.0" layoutY="405.0" prefHeight="38.0" prefWidth="310.0" promptText="Password" styleClass="password-textbox" stylesheets="@../style/LoginStyle.css">
+      <PasswordField fx:id="passwordTB" alignment="BASELINE_LEFT" layoutX="488.0" layoutY="405.0" prefHeight="38.0" prefWidth="310.0" promptText="Password" styleClass="password-textbox" stylesheets="@../style/LoginStyle.css">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
@@ -42,7 +42,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></PasswordField>
       <FontAwesomeIcon fill="#3d3f56" focusTraversable="false" glyphName="KEY" layoutX="768.0" layoutY="431.0" size="2em" />
-      <Button fx:id="button" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="564.0" layoutY="467.0" mnemonicParsing="false" onAction="#userLogIn" prefHeight="50.0" prefWidth="153.0" styleClass="login-button" stylesheets="@../style/LoginStyle.css" text="   Log In" textAlignment="CENTER" textFill="#fafafa">
+      <Button fx:id="loginBtn" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="564.0" layoutY="467.0" mnemonicParsing="false" onMouseClicked="#doLogin" prefHeight="50.0" prefWidth="153.0" styleClass="login-button" stylesheets="@../style/LoginStyle.css" text="   Log In" textAlignment="CENTER" textFill="#fafafa">
          <font>
             <Font name="Serif Bold" size="24.0" />
          </font>
