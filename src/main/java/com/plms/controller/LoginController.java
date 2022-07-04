@@ -29,28 +29,22 @@ public class LoginController {
     }
 
     public void doLogin(MouseEvent mouseEvent) {
-        userLogin("Admin","123");
+        userLogin("admin","123");
     }
 
     public void userLogin(String username,String password){
         try {
             if(usernameTB.getText().equals(username) && passwordTB.getText().equals(password)){
-                valLbl.setVisible(true);
-                valLbl.setStyle("-fx-text-fill:Green; -fx-font-size: 14;");
+                valLbl.setStyle("fx-background-color:White;-fx-text-fill:Green; -fx-font-size: 14;");
                 valLbl.setText("Login Successful");
-                Thread.sleep(10000);
-                valLbl.setVisible(false);
                 loadScene("/com/plms/design/homepage-view.fxml");
+                new Homepage().getUserProfileName(username);
             } else if (usernameTB.getText().isEmpty() || passwordTB.getText().isEmpty()) {
+                valLbl.setStyle("-fx-text-fill:Red; -fx-font-size: 14;");
                 valLbl.setText("Please enter Username and Password");
-                valLbl.setStyle("-fx-text-fill:Red; -fx-font-size: 18;");
-                //Thread.sleep(2000);
-                //valLbl.setVisible(false);
             }else {
+                valLbl.setStyle("-fx-text-fill:Red; -fx-font-size: 14;");
                 valLbl.setText("Invalid Username or Password");
-                valLbl.setStyle("-fx-text-fill:Red; -fx-font-size: 18;");
-                //Thread.sleep(2000);
-                //valLbl.setVisible(false);
             }
         }catch (Exception e){
             System.out.println("Exception Occured: "+e);

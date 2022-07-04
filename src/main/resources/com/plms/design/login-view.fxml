@@ -18,7 +18,7 @@
             <Font name="Serif Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="valLbl" alignment="CENTER" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" text="Validtion" textAlignment="CENTER" textFill="#fc1500" visible="false"> focusTraversable=false
+      <Label fx:id="valLbl" alignment="CENTER" focusTraversable="false" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>

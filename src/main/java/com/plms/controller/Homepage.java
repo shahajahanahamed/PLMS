@@ -4,9 +4,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 
@@ -19,8 +19,7 @@ public class Homepage {
     private AnchorPane ap;
 
     @FXML
-    private Button homeBtn;
-
+    private Label lblUserProfile;
 
     @FXML
     public void clickOnHomeMenu(javafx.scene.input.MouseEvent mouseEvent) {
@@ -38,6 +37,7 @@ public class Homepage {
         Parent content=null;
         try {
             content = FXMLLoader.load(getClass().getResource("/com/plms/design/"+page+".fxml"));
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -47,6 +47,12 @@ public class Homepage {
         LoginController m = new LoginController();
         //m.changeScene("login-view.fxml");
 
+    }
+
+    public void getUserProfileName(String username){
+        System.out.println(username);
+        lblUserProfile.setStyle("-fx-text-fill:White; -fx-font-size: 18;");
+        lblUserProfile.setText("vbhmvbm");
     }
 
 
