@@ -1,7 +1,9 @@
 package com.plms.controller;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -41,7 +43,7 @@ public class Homepage {
         loadPage("patient");
     }
     private void loadPage(String page){
-        Parent content=null;
+        Parent content;
         try {
             content = FXMLLoader.load(getClass().getResource("/com/plms/design/"+page+".fxml"));
 
@@ -58,7 +60,8 @@ public class Homepage {
 
     public void getUserProfileName(String username){
         System.out.println(username);
-        //lblUserProfile.setStyle("-fx-text-fill:White; -fx-font-size: 18;");
-        lblUserProfile.setText(username.toString());
+//        lblUserProfile.setStyle("-fx-background-color:White;-fx-text-fill:White; -fx-font-size: 18px;");
+//        lblUserProfile.setText(username);
+//        wlcmLbl.setText(wlcmLbl.getText()+" "+username);
     }
 }
