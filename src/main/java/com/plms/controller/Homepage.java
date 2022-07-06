@@ -36,13 +36,13 @@ public class Homepage {
     }
     @FXML
     public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadPage("employee");
+        loadContent("employee");
     }
     @FXML
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadPage("patient");
+        loadContent("patient");
     }
-    private void loadPage(String page){
+    private void loadContent(String page){
         Parent content;
         try {
             content = FXMLLoader.load(getClass().getResource("/com/plms/design/"+page+".fxml"));
