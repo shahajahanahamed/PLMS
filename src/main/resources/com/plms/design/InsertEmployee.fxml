@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="412.0" prefWidth="600.0" styleClass="InsertEmp" stylesheets="@../style/InsertEmployeeStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
    <children>
-      <TextField fx:id="EmpIdText" layoutX="185.0" layoutY="24.0" prefHeight="32.0" prefWidth="277.0" />
+      <TextField fx:id="EmpIdText" layoutX="185.0" layoutY="24.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpIDtextbox" />
       <Label fx:id="EmpIdLabel" layoutX="46.0" layoutY="24.0" prefHeight="32.0" prefWidth="102.0" text=" Emp Id" textFill="#1515c5">
          <font>
             <Font size="18.0" />
@@ -42,7 +41,7 @@
          </font>
       </Label>
       <TextField fx:id="EmpEmailText" layoutX="185.0" layoutY="216.0" prefHeight="32.0" prefWidth="277.0" />
-      <Button fx:id="submitbtn" layoutX="185.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" text="SUBMIT" textFill="#d91d36">
+      <Button fx:id="submitbtn" layoutX="185.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" styleClass="submit-button" text="SUBMIT" textFill="#d91d36">
          <font>
             <Font name="Baskerville Old Face" size="17.0" />
          </font>
