@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-    private static Stage stage;
+    private Stage stage;
     @Override
     public void start(Stage primaryStage) throws IOException {
         stage=primaryStage;
@@ -20,7 +20,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        LoginController.setStage(stage);
+        SceneLoader.setStage(stage);
     }
     public static void main(String[] args) {
         launch();
