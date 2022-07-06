@@ -14,6 +14,11 @@ import java.io.IOException;
 public class Main extends Application {
     private static Stage stage;
     @Override
+    /*public void start(Stage primaryStage) throws IOException {
+        stage=primaryStage;
+        SceneLoader.setPrimaryStage(stage);
+        new SceneLoader().loadScene("login-view");
+    }*/
     public void start(Stage primaryStage) throws IOException {
         stage=primaryStage;
         primaryStage.setResizable(false);
