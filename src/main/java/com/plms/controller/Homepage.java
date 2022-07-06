@@ -59,6 +59,6 @@ public class Homepage {
     public void getUserProfileName(String username){
         System.out.println(username);
         //lblUserProfile.setStyle("-fx-text-fill:White; -fx-font-size: 18;");
-        lblUserProfile.setText(username.toString());
+        lblUserProfile.setText(username);
     }
 }

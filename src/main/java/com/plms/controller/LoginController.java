@@ -7,7 +7,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+//import java.sql.Connection;
+//import java.sql.DriverManager;
 import java.io.IOException;
 
 public class LoginController {
@@ -19,7 +20,7 @@ public class LoginController {
     private PasswordField passwordTB;
 
     private static Stage stage;
-
+    //private  Connection conn;
     public static Stage getStage() {
         return stage;
     }
@@ -30,6 +31,7 @@ public class LoginController {
 
     public void doLogin(MouseEvent mouseEvent) {
         userLogin("admin","123");
+
     }
 
     public void userLogin(String username,String password){
