@@ -1,7 +1,4 @@
 package com.plms.modules;
-
-//import com.sun.javafx.tk.quantum.PaintRenderJob;
-import com.plms.controller.Homepage;
 import com.plms.controller.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,11 +11,6 @@ import java.io.IOException;
 public class Main extends Application {
     private static Stage stage;
     @Override
-    /*public void start(Stage primaryStage) throws IOException {
-        stage=primaryStage;
-        SceneLoader.setPrimaryStage(stage);
-        new SceneLoader().loadScene("login-view");
-    }*/
     public void start(Stage primaryStage) throws IOException {
         stage=primaryStage;
         primaryStage.setResizable(false);
