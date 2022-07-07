@@ -12,13 +12,13 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="EmpNameText" layoutX="185.0" layoutY="73.0" prefHeight="32.0" prefWidth="277.0" />
+      <TextField fx:id="EmpNameText" layoutX="185.0" layoutY="73.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpName-txtbox" />
       <Label fx:id="EmpNameLabel" layoutX="51.0" layoutY="73.0" prefHeight="32.0" prefWidth="102.0" text="Emp Name:" textFill="#1723d7">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="EmpTypeText" layoutX="185.0" layoutY="120.0" prefHeight="32.0" prefWidth="277.0" />
+      <TextField fx:id="EmpTypeText" layoutX="185.0" layoutY="120.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpType_txtbox" />
       <Label fx:id="EmpTypeLabel" layoutX="41.0" layoutY="120.0" prefHeight="32.0" prefWidth="102.0" text="  Emp Type:" textFill="#3409be">
          <font>
             <Font size="18.0" />
@@ -34,13 +34,13 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="EmpContactText" layoutX="185.0" layoutY="169.0" prefHeight="32.0" prefWidth="277.0" />
+      <TextField fx:id="EmpContactText" layoutX="185.0" layoutY="169.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpContactNo-txtbox" />
       <Label fx:id="EmpEmailLabel" layoutX="54.0" layoutY="216.0" prefHeight="32.0" prefWidth="59.0" text=" Email:" textFill="#3311f2">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="EmpEmailText" layoutX="185.0" layoutY="216.0" prefHeight="32.0" prefWidth="277.0" />
+      <TextField fx:id="EmpEmailText" layoutX="185.0" layoutY="216.0" prefHeight="32.0" prefWidth="277.0" styleClass="Email-txtbox" />
       <Button fx:id="submitbtn" layoutX="185.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" styleClass="submit-button" text="SUBMIT" textFill="#d91d36">
          <font>
             <Font name="Baskerville Old Face" size="17.0" />

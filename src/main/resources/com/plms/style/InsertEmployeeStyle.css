@@ -29,3 +29,73 @@
     -fx-border-color: black;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
 }
+.EmpIDtextbox:hover{
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+.EmpName-txtbox{
+   -fx-background-radius:30px;
+     -fx-border-radius: 30px;
+     -fx-border-width: 2px;
+     -fx-border-color: black;
+     -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+
+.EmpName-txtbox:hover{
+-fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+
+}
+
+.EmpType_txtbox{
+    -fx-background-radius:30px;
+      -fx-border-radius: 30px;
+      -fx-border-width: 2px;
+      -fx-border-color: black;
+      -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.EmpType_txtbox:hover{
+  -fx-background-radius:30px;
+      -fx-border-radius: 30px;
+      -fx-border-width: 2px;
+      -fx-border-color: green;
+      -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+.EmpContactNo-txtbox{
+   -fx-background-radius:30px;
+      -fx-border-radius: 30px;
+      -fx-border-width: 2px;
+      -fx-border-color: black;
+      -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+
+.EmpContactNo-txtbox:hover{
+  -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.Email-txtbox{
+  -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+
+.Email-txtbox:hover{
+ -fx-background-radius:30px;
+   -fx-border-radius: 30px;
+   -fx-border-width: 2px;
+   -fx-border-color: black;
+   -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+
