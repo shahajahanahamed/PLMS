@@ -7,41 +7,41 @@
 <AnchorPane prefHeight="412.0" prefWidth="600.0" styleClass="InsertEmp" stylesheets="@../style/InsertEmployeeStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
    <children>
       <TextField fx:id="EmpIdText" layoutX="185.0" layoutY="24.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpIDtextbox" />
-      <Label fx:id="EmpIdLabel" layoutX="46.0" layoutY="24.0" prefHeight="32.0" prefWidth="102.0" text=" Emp Id" textFill="#1515c5">
+      <Label fx:id="EmpIdLabel" layoutX="46.0" layoutY="24.0" prefHeight="32.0" prefWidth="102.0" styleClass="EmpId-label" text=" Emp Id:" textFill="#1515c5">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="EmpNameText" layoutX="185.0" layoutY="73.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpName-txtbox" />
-      <Label fx:id="EmpNameLabel" layoutX="51.0" layoutY="73.0" prefHeight="32.0" prefWidth="102.0" text="Emp Name:" textFill="#1723d7">
+      <Label fx:id="EmpNameLabel" layoutX="51.0" layoutY="73.0" prefHeight="32.0" prefWidth="102.0" styleClass="EmpName-label" text="Emp Name:" textFill="#1723d7">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="EmpTypeText" layoutX="185.0" layoutY="120.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpType_txtbox" />
-      <Label fx:id="EmpTypeLabel" layoutX="41.0" layoutY="120.0" prefHeight="32.0" prefWidth="102.0" text="  Emp Type:" textFill="#3409be">
+      <Label fx:id="EmpTypeLabel" layoutX="41.0" layoutY="120.0" prefHeight="32.0" prefWidth="102.0" styleClass="EmpType-label" text="  Emp Type:" textFill="#3409be">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="EmpGenLabel" layoutX="55.0" layoutY="270.0" prefHeight="32.0" prefWidth="83.0" text=" Gender:" textFill="#3610d0">
+      <Label fx:id="EmpGenLabel" layoutX="55.0" layoutY="270.0" prefHeight="32.0" prefWidth="83.0" styleClass="EmpGen-label" text=" Gender:" textFill="#3610d0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="EmpContactNOLabel" layoutX="51.0" layoutY="169.0" prefHeight="32.0" prefWidth="102.0" text="Contact NO:" textFill="#2310b3">
+      <Label fx:id="EmpContactNOLabel" layoutX="51.0" layoutY="169.0" prefHeight="32.0" prefWidth="102.0" styleClass="EmpContact-label" text="Contact NO:" textFill="#2310b3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="EmpContactText" layoutX="185.0" layoutY="169.0" prefHeight="32.0" prefWidth="277.0" styleClass="EmpContactNo-txtbox" />
-      <Label fx:id="EmpEmailLabel" layoutX="54.0" layoutY="216.0" prefHeight="32.0" prefWidth="59.0" text=" Email:" textFill="#3311f2">
+      <Label fx:id="EmpEmailLabel" layoutX="54.0" layoutY="216.0" prefHeight="32.0" prefWidth="59.0" styleClass="EmpEmail-label" text=" Email:" textFill="#3311f2">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="EmpEmailText" layoutX="185.0" layoutY="216.0" prefHeight="32.0" prefWidth="277.0" styleClass="Email-txtbox" />
-      <Button fx:id="submitbtn" layoutX="185.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" styleClass="submit-button" text="SUBMIT" textFill="#d91d36">
+      <Button fx:id="submitbtn" layoutX="244.0" layoutY="349.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" styleClass="submit-button" text="SUBMIT" textFill="#d91d36">
          <font>
             <Font name="Baskerville Old Face" size="17.0" />
          </font>
