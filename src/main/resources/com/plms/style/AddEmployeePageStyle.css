@@ -1,3 +1,14 @@
+#mainAP{
+  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+}
+
+#header{
+  -fx-background-color: linear-gradient(to right, #832bd5, #343488);
+}
+
+#centerPane{
+  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+}
 .InsertEmp{
 -fx-background: bisque;
 
