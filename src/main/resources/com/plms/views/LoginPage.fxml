@@ -10,20 +10,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="1024.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="login-bg" stylesheets="@../style/LoginStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="1024.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="login-bg" stylesheets="@../style/LoginPageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.LoginController">
    <children>
       <FontAwesomeIcon fill="WHITE" focusTraversable="false" glyphName="USERS" layoutX="594.0" layoutY="217.0" size="8em" wrappingWidth="14.099987792968705" />
-      <Label layoutX="584.0" layoutY="241.0" prefHeight="46.0" prefWidth="130.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="584.0" layoutY="241.0" prefHeight="46.0" prefWidth="130.0" stylesheets="@../style/LoginPageStyle.css" text="Sign In" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Serif Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="valLbl" alignment="CENTER" focusTraversable="false" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER">
+      <Label fx:id="valLbl" alignment="CENTER" focusTraversable="false" layoutX="541.0" layoutY="300.0" prefHeight="20.0" prefWidth="200.0" stylesheets="@../style/LoginPageStyle.css" textAlignment="CENTER">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameTB" alignment="BASELINE_LEFT" layoutX="489.0" layoutY="345.0" prefHeight="38.0" prefWidth="310.0" promptText="Username" styleClass="user-textbox" stylesheets="@../style/LoginStyle.css">
+      <TextField fx:id="usernameTB" alignment="BASELINE_LEFT" layoutX="489.0" layoutY="345.0" prefHeight="38.0" prefWidth="310.0" promptText="Username" styleClass="user-textbox" stylesheets="@../style/LoginPageStyle.css">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
@@ -34,7 +34,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></TextField>
       <FontAwesomeIcon fill="#3d3f56" focusTraversable="false" glyphName="USER" layoutX="772.0" layoutY="371.0" size="2em" />
-      <PasswordField fx:id="passwordTB" alignment="BASELINE_LEFT" layoutX="488.0" layoutY="405.0" prefHeight="38.0" prefWidth="310.0" promptText="Password" styleClass="password-textbox" stylesheets="@../style/LoginStyle.css">
+      <PasswordField fx:id="passwordTB" alignment="BASELINE_LEFT" layoutX="488.0" layoutY="405.0" prefHeight="38.0" prefWidth="310.0" promptText="Password" styleClass="password-textbox" stylesheets="@../style/LoginPageStyle.css">
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
@@ -42,7 +42,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></PasswordField>
       <FontAwesomeIcon fill="#3d3f56" focusTraversable="false" glyphName="KEY" layoutX="768.0" layoutY="431.0" size="2em" />
-      <Button fx:id="loginBtn" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="564.0" layoutY="467.0" mnemonicParsing="false" onMouseClicked="#doLogin" prefHeight="50.0" prefWidth="153.0" styleClass="login-button" stylesheets="@../style/LoginStyle.css" text="   Log In" textAlignment="CENTER" textFill="#fafafa">
+      <Button fx:id="loginBtn" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="564.0" layoutY="467.0" mnemonicParsing="false" onMouseClicked="#doLogin" prefHeight="50.0" prefWidth="153.0" styleClass="login-button" stylesheets="@../style/LoginPageStyle.css" text="   Log In" textAlignment="CENTER" textFill="#fafafa">
          <font>
             <Font name="Serif Bold" size="24.0" />
          </font>

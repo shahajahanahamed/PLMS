@@ -36,7 +36,6 @@ public class Homepage implements Initializable {
         Parent content;
         try {
             content = FXMLLoader.load(getClass().getResource("/com/plms/views/" + page+".fxml"));
-            System.out.println(getClass());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -48,7 +47,6 @@ public class Homepage implements Initializable {
 
     }
     public void printUserProfileName(String username) {
-        System.out.println(lblUserProfile.getText());
         lblUserProfile.setText(username);
     }
 

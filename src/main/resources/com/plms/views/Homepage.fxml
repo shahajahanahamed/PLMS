@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAP" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
+<AnchorPane fx:id="mainAP" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../style/HomepageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
    <children>
       <BorderPane fx:id="bp" prefHeight="720.0" prefWidth="1280.0">
          <left>
             <VBox fx:id="menuPane" prefHeight="620.0" prefWidth="200.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="homeBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHomeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Home" textFill="WHITE">
+                  <Button fx:id="homeBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHomeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Home" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -34,7 +34,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnEmployeeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="EmpLoyee" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnEmployeeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="EmpLoyee" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -49,7 +49,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPatientMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Patient" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPatientMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Patient" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -64,7 +64,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Test" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Test" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -79,7 +79,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Prices" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Prices" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -94,7 +94,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Reports" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Reports" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -109,7 +109,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Dashboard" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -124,7 +124,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Help" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Help" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -139,7 +139,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="About Us" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="About Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -154,7 +154,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/homestyle.css" text="Contact Us" textFill="WHITE">
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Contact Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
@@ -177,7 +177,7 @@
                <children>
                   <Pane fx:id="pane" prefHeight="100.0" prefWidth="1280.0">
                      <children>
-                        <Button layoutX="1191.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="user-profile" stylesheets="@../style/homestyle.css" />
+                        <Button layoutX="1191.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="user-profile" stylesheets="@../style/HomepageStyle.css" />
                         <Label fx:id="lblLabName" alignment="BASELINE_LEFT" layoutX="109.0" layoutY="10.0" prefHeight="77.0" prefWidth="526.0" text="CURE PATHOLOGICAL lABORATORY" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold Italic" size="30.0" />
