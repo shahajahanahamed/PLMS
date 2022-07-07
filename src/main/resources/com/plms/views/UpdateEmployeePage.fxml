@@ -22,7 +22,7 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="500.0">
                      <children>
-                        <Label layoutX="130.0" layoutY="26.0" text="Add Employee" textFill="WHITE">
+                        <Label layoutX="110.0" layoutY="26.0" text="Update Employee" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="48.0" />
                            </font>

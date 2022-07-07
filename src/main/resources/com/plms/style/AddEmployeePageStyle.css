@@ -1,5 +1,7 @@
-#mainAP{
+#mainBP{
   -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+  -fx-border-width:0px 0px,0px,2px;
+  -fx-border-color: #fbfbff;
 }
 
 #header{
@@ -9,6 +11,34 @@
 #centerPane{
   -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
 }
+.button{
+  -fx-background-color: #4725e1;
+  -fx-background-radius:10px;
+  -fx-border-width:0px 0px,0px,2px;
+  -fx-border-radius:10px;
+  -fx-border-color: #fbfbff;
+}
+.button:focussed{
+  -fx-background-color: #7D6CC8;
+  -fx-border-color: #CDD1D6;
+  -fx-border-radius:10px;
+  -fx-border-width:0px 0px,0px,2px;
+}
+.button:hover{
+  -fx-background-color: #A89DDA;
+  /*-fx-background-radium:0m;*/
+}
+.button:pressed{
+  -fx-background-color: #907de6;
+  -fx-border-color: #381bb7;
+  -fx-border-width:0px 0px,0px,2px;
+}
+.button:selected{
+  -fx-background-color: #4925e8;
+  -fx-border-color: #978ace;
+  -fx-border-width:0px 0px,0px,2px;
+}
+
 .InsertEmp{
 -fx-background: bisque;
 
