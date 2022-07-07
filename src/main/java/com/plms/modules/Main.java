@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage=primaryStage;
         primaryStage.setResizable(false);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/plms/design/login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/plms/views/LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("PLMS");
         primaryStage.setScene(scene);

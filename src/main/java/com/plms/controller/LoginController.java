@@ -39,7 +39,7 @@ public class LoginController {
                 valLbl.setStyle("fx-background-color:White;-fx-text-fill:Green; -fx-font-size: 14;");
                 valLbl.setText("Login Successful");
                 //loading scene
-                FXMLLoader loader = new SceneLoader().loadScene(getClass(), "homepage-view");
+                FXMLLoader loader = new SceneLoader().loadScene(getClass(), "Homepage");
 
                 //printing user profile name
                 Homepage hpage = loader.getController();

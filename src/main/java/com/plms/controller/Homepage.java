@@ -26,16 +26,16 @@ public class Homepage implements Initializable {
     }
     @FXML
     public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadContent("employee-view");
+        loadContent("ViewEmployeePage");
     }
     @FXML
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadContent("patient-view");
+        loadContent("ViewPatientPage");
     }
     private void loadContent(String page) {
         Parent content;
         try {
-            content = FXMLLoader.load(getClass().getResource("/com/plms/design/" + page+".fxml"));
+            content = FXMLLoader.load(getClass().getResource("/com/plms/views/" + page+".fxml"));
             System.out.println(getClass());
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -44,7 +44,7 @@ public class Homepage implements Initializable {
     }
     public void userLogOut(ActionEvent event) throws IOException {
         LoginController m = new LoginController();
-        //m.changeScene("login-view.fxml");
+        //m.changeScene("LoginPage.fxml");
 
     }
     public void printUserProfileName(String username) {

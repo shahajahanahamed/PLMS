@@ -1,9 +1,6 @@
 package com.plms.modules;
 
-import com.plms.controller.Homepage;
-import com.plms.controller.LoginController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -27,7 +24,7 @@ public class SceneLoader {
         stage.getScene().setRoot(root);
         stage.show();*/
 
-        FXMLLoader fxmlLoader = new FXMLLoader(controllerName.getResource("/com/plms/design/"+viewName+".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(controllerName.getResource("/com/plms/views/" +viewName+".fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         //stage.setTitle("PLMS");
         stage.setScene(scene);
