@@ -11,6 +11,7 @@ module com.example.plms {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires spring.context;
+    requires spring.jdbc;
 
     opens com.plms.controller to javafx.fxml;
     exports com.plms.controller;
