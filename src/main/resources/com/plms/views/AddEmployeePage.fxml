@@ -16,7 +16,7 @@
 
 <AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddEmployeePageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
    <children>
-      <BorderPane prefHeight="650.0" prefWidth="500.0">
+      <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
             <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
