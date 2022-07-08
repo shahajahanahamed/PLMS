@@ -1,0 +1,67 @@
+#mainBP-emp{
+  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+  -fx-border-width:0px 0px,0px,2px;
+  -fx-border-color: #fbfbff;
+}
+
+#header{
+  -fx-background-color: linear-gradient(to right, #832bd5, #343488);
+}
+
+#centerPane{
+  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+}
+.button{
+  -fx-background-color: #4725e1;
+  -fx-background-radius:10px;
+  -fx-border-width:0px 0px,0px,2px;
+  -fx-border-radius:10px;
+  -fx-border-color: #fbfbff;
+}
+.button:focussed{
+  -fx-background-color: #7D6CC8;
+  -fx-border-color: #CDD1D6;
+  -fx-border-radius:10px;
+  -fx-border-width:0px 0px,0px,2px;
+}
+.button:hover{
+  -fx-background-color: #A89DDA;
+  /*-fx-background-radium:0m;*/
+}
+.button:pressed{
+  -fx-background-color: #907de6;
+  -fx-border-color: #381bb7;
+  -fx-border-width:0px 0px,0px,2px;
+}
+.button:selected{
+  -fx-background-color: #4925e8;
+  -fx-border-color: #978ace;
+  -fx-border-width:0px 0px,0px,2px;
+}
+
+.InsertEmp{
+-fx-background: bisque;
+
+}
+
+.submit-button{
+    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+}
+.submit-button:hover{
+    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
+    -fx-background-radius:30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+
+
