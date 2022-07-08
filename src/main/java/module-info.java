@@ -9,7 +9,7 @@ module com.example.plms {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+//    requires eu.hansolo.tilesfx;
     requires spring.context;
     requires spring.jdbc;
 
