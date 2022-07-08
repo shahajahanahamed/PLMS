@@ -37,5 +37,6 @@ public class SceneLoader {
         Parent root;
         root = FXMLLoader.load(controllerName.getResource("/com/plms/views/" +viewName+".fxml"));
         newstage.show();
+        ///Will vbe continue
     }
 }
