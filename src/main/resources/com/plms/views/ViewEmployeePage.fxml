@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
    <children>
-      <BorderPane prefHeight="720.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox prefHeight="78.0" prefWidth="820.0" style="-fx-background-color: #ffddff;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="1008.0" style="-fx-background-color: #ffddff;" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="78.0" prefWidth="1008.0" styleClass="header" stylesheets="@../style/employeestyle.css">
+                  <Pane prefHeight="100.0" prefWidth="1008.0" styleClass="header" stylesheets="@../style/employeestyle.css">
                      <children>
-                        <Button alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@../style/employeestyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/employeestyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="890.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="890.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/createnew.png" />
                            </image>
@@ -51,7 +61,7 @@
                   </TableView>
                </center>
                <top>
-                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/employeestyle.css" BorderPane.alignment="CENTER">
+                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" BorderPane.alignment="CENTER">
                      <children>
                         <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="25.0" prefWidth="197.0" promptText="Search by name">
                            <font>
@@ -60,6 +70,10 @@
                         </TextField>
                         <ComboBox fx:id="filterComboBox" layoutX="779.0" layoutY="11.0" prefHeight="25.0" prefWidth="209.0" promptText="Filter by type" />
                      </children>
+                     <stylesheets>
+                        <URL value="@../style/employeestyle.css" />
+                        <URL value="@../style/ViewEmployeePageStyle.css" />
+                     </stylesheets>
                   </Pane>
                </top>
             </BorderPane>

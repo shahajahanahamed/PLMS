@@ -1,6 +1,7 @@
 package com.plms.modules;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -30,5 +31,11 @@ public class SceneLoader {
         stage.setScene(scene);
         stage.show();
         return fxmlLoader;
+    }
+    public void loadSceneInDifferentStage(Class controllerName, String viewName) throws IOException {
+        Stage newstage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(controllerName.getResource("/com/plms/views/" +viewName+".fxml"));
+        newstage.show();
     }
 }

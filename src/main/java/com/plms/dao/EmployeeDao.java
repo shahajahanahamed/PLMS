@@ -11,6 +11,8 @@ public class EmployeeDao {
     EmployeeDao() {
         context = new ClassPathXmlApplicationContext("/com/plms/config.xml");
         template = context.getBean("jdbcTemplate", JdbcTemplate.class);
+
+
     }
 
 }

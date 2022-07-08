@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddEmployeePageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.Homepage">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddEmployeePageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -36,34 +36,34 @@
          <center>
             <Pane id="centerPane" prefHeight="550.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXTextField layoutX="101.0" layoutY="14.0" prefHeight="33.0" prefWidth="300.0" promptText="Full Name">
+                  <JFXTextField fx:id="fullnameTB" layoutX="101.0" layoutY="14.0" prefHeight="33.0" prefWidth="300.0" promptText="Full Name">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font></JFXTextField>
-                  <JFXTextField layoutX="102.0" layoutY="267.0" prefHeight="33.0" prefWidth="300.0" promptText="Contact No">
+                  <JFXTextField fx:id="contactTB" layoutX="102.0" layoutY="267.0" prefHeight="33.0" prefWidth="300.0" promptText="Contact No">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField layoutX="103.0" layoutY="313.0" prefHeight="33.0" prefWidth="300.0" promptText="Email ID">
+                  <JFXTextField fx:id="emailTB" layoutX="103.0" layoutY="313.0" prefHeight="33.0" prefWidth="300.0" promptText="Email ID">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField layoutX="101.0" layoutY="60.0" prefHeight="33.0" prefWidth="300.0" promptText="Username">
+                  <JFXTextField fx:id="usernameTB" layoutX="101.0" layoutY="60.0" prefHeight="33.0" prefWidth="300.0" promptText="Username">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXComboBox layoutX="102.0" layoutY="152.0" prefHeight="25.0" prefWidth="300.0" promptText="Type" />
-                  <DatePicker layoutX="101.0" layoutY="194.0" prefHeight="25.0" prefWidth="300.0" promptText="Date of Birth" />
-                  <JFXPasswordField layoutX="101.0" layoutY="105.0" prefHeight="25.0" prefWidth="300.0" promptText="Password">
+                  <JFXComboBox fx:id="typeCB" layoutX="102.0" layoutY="152.0" prefHeight="25.0" prefWidth="300.0" promptText="Type" />
+                  <DatePicker fx:id="dobDP" layoutX="101.0" layoutY="194.0" prefHeight="25.0" prefWidth="300.0" promptText="Date of Birth" />
+                  <JFXPasswordField fx:id="passwordTB" layoutX="101.0" layoutY="105.0" prefHeight="25.0" prefWidth="300.0" promptText="Password">
                      <font>
                         <Font name="Serif Regular" size="18.0" />
                      </font>
                   </JFXPasswordField>
-                  <JFXComboBox layoutX="102.0" layoutY="231.0" prefHeight="25.0" prefWidth="300.0" promptText="Gender" />
-                  <JFXTextArea layoutX="100.0" layoutY="359.0" prefHeight="84.0" prefWidth="300.0" promptText="Enter address here..." />
+                  <JFXComboBox fx:id="genderCB" layoutX="102.0" layoutY="231.0" prefHeight="25.0" prefWidth="300.0" promptText="Gender" />
+                  <JFXTextArea fx:id="addressTA" layoutX="100.0" layoutY="359.0" prefHeight="84.0" prefWidth="300.0" promptText="Enter address here..." />
                   <Button alignment="CENTER_RIGHT" layoutX="205.0" layoutY="482.0" mnemonicParsing="false" prefWidth="90.0" text="Add" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
