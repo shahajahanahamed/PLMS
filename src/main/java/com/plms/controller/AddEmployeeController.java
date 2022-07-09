@@ -44,14 +44,14 @@ public class AddEmployeeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        empName = fullnameTB.getText();
+        /*empName = fullnameTB.getText();
         username=usernameTB.getText();
         password = passwordTB.getText();
         userType = typeCB.getValue();
         gender = genderCB.getValue();
         contactNo = contactTB.getText();
         emailId = emailTB.getText();
-        address = addressTA.getText();
+        address = addressTA.getText();*/
 
     }
 }

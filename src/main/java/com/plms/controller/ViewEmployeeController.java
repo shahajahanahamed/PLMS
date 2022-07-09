@@ -22,6 +22,6 @@ public class ViewEmployeeController {
 
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
-        new SceneLoader().loadSceneInDifferentStage("AddEmployeePage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"xyz");
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #33FF33;">
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="261.0" layoutY="62.0" text="This is normal tttt" />
+                  <JFXButton layoutX="275.0" layoutY="89.0" text="Button 1" />
+                  <JFXDialog layoutX="190.0" layoutY="165.0" prefHeight="38.0" prefWidth="80.0" />
+                  <JFXDialogLayout layoutX="92.0" layoutY="230.0">
+                     <children>
+                        <JFXCheckBox />
+                     </children>
+                  </JFXDialogLayout>
+                  <JFXDrawer layoutX="15.0" layoutY="32.0" prefHeight="57.0" prefWidth="221.0" />
+                  <JFXRippler layoutX="112.0" layoutY="164.0" prefHeight="26.0" prefWidth="50.0" />
+                  <JFXRadioButton layoutX="155.0" layoutY="192.0" />
+                  <JFXComboBox layoutX="162.0" layoutY="215.0" prefHeight="25.0" prefWidth="279.0" promptText="select here" />
+                  <JFXPasswordField layoutX="155.0" layoutY="314.0" promptText="password" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

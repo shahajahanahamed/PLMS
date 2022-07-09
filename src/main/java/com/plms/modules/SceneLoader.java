@@ -33,8 +33,8 @@ public class SceneLoader {
         stage.show();
         return fxmlLoader;
     }
-    public void loadSceneInDifferentStage( String viewName) throws IOException {
-        FXMLLoader loader = new FXMLLoader(ViewEmployeeController.class.getResource("/com/plms/views/"+viewName+".fxml"));
+    public void loadSceneInDifferentStage(Class controllerClass, String viewName) throws IOException {
+        FXMLLoader loader = new FXMLLoader(controllerClass.getResource("/com/plms/views/"+viewName+".fxml"));
         Parent root = loader.load();
         Stage stage1 = new Stage();
         stage1.setScene(new Scene(root));
