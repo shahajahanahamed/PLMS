@@ -1,5 +1,6 @@
 package com.plms.modules;
 
+import com.plms.controller.ViewEmployeeController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -32,11 +33,11 @@ public class SceneLoader {
         stage.show();
         return fxmlLoader;
     }
-    public void loadSceneInDifferentStage(Class controllerName, String viewName) throws IOException {
-        Stage newstage = new Stage();
-        Parent root;
-        root = FXMLLoader.load(controllerName.getResource("/com/plms/views/" +viewName+".fxml"));
-        newstage.show();
-        ///Will vbe continue
+    public void loadSceneInDifferentStage( String viewName) throws IOException {
+        FXMLLoader loader = new FXMLLoader(ViewEmployeeController.class.getResource("/com/plms/views/"+viewName+".fxml"));
+        Parent root = loader.load();
+        Stage stage1 = new Stage();
+        stage1.setScene(new Scene(root));
+        stage1.show();
     }
 }

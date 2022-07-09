@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -20,11 +19,11 @@
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox prefHeight="100.0" prefWidth="1008.0" style="-fx-background-color: #ffddff;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="1008.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="100.0" prefWidth="1008.0" styleClass="header" stylesheets="@../style/employeestyle.css">
+                  <Pane prefHeight="100.0" prefWidth="1008.0" styleClass="header" stylesheets="@../style/ViewEmployeePageStyle.css">
                      <children>
-                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/employeestyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewEmployeePageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
                            </font>
@@ -46,7 +45,7 @@
             </HBox>
          </top>
          <center>
-            <BorderPane BorderPane.alignment="CENTER">
+            <BorderPane stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
                <center>
                   <TableView prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
@@ -61,7 +60,7 @@
                   </TableView>
                </center>
                <top>
-                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" BorderPane.alignment="CENTER">
+                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
                      <children>
                         <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="25.0" prefWidth="197.0" promptText="Search by name">
                            <font>
@@ -70,10 +69,6 @@
                         </TextField>
                         <ComboBox fx:id="filterComboBox" layoutX="779.0" layoutY="11.0" prefHeight="25.0" prefWidth="209.0" promptText="Filter by type" />
                      </children>
-                     <stylesheets>
-                        <URL value="@../style/employeestyle.css" />
-                        <URL value="@../style/ViewEmployeePageStyle.css" />
-                     </stylesheets>
                   </Pane>
                </top>
             </BorderPane>
