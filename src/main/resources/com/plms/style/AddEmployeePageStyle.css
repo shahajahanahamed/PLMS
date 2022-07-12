@@ -39,29 +39,143 @@
   -fx-border-width:0px 0px,0px,2px;
 }
 
-.InsertEmp{
--fx-background: bisque;
-
-}
-
 #fullnameTB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
-  
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
   -fx-background-radius:30px;
   -fx-border-radius: 30px;
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
-
 }
 #fullnameTB:hover{
   -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#usernameTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
   -fx-background-radius:30px;
   -fx-border-radius: 30px;
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
-  -fx-effect: dropshadow(three-pass-box, rgba(149, 0, 255, 0.8), 10, 0, 0, 0);
+}
+#usernameTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
 }
 
+#passwordTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#passwordTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
 
+#typeCB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-prompt-text-fill: #ffffff ;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#typeCB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
 
+#dobCal{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#dobCal:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+
+#genderCB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#genderCB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#contactTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#contactTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#emailTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#emailTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#addressTA{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#addressTA:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
