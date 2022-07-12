@@ -59,19 +59,19 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="125.0" layoutY="476.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="211.0" layoutY="477.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="295.0" layoutY="476.0" size="2em" text="" />
-                  <TextField layoutX="125.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" promptText="Fullname" />
-                  <TextField layoutX="125.0" layoutY="79.0" prefHeight="25.0" prefWidth="250.0" promptText="Username">
+                  <TextField id="fullnameTB" layoutX="125.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" promptText="Fullname" />
+                  <TextField id="usernameTB" layoutX="125.0" layoutY="79.0" prefHeight="25.0" prefWidth="250.0" promptText="Username">
                      <font>
                         <Font name="Serif Regular" size="12.0" />
                      </font>
                   </TextField>
-                  <PasswordField layoutX="125.0" layoutY="119.0" prefHeight="25.0" prefWidth="250.0" promptText="Password" />
-                  <ComboBox layoutX="125.0" layoutY="159.0" prefHeight="25.0" prefWidth="250.0" promptText="Type" />
-                  <DatePicker layoutX="125.0" layoutY="199.0" prefHeight="25.0" prefWidth="250.0" promptText="Date of Birth" />
-                  <ComboBox layoutX="125.0" layoutY="239.0" prefHeight="25.0" prefWidth="250.0" promptText="Gender" />
-                  <TextField layoutX="125.0" layoutY="279.0" prefHeight="25.0" prefWidth="250.0" promptText="Contact No" />
-                  <TextField layoutX="125.0" layoutY="319.0" prefHeight="25.0" prefWidth="250.0" promptText="Email ID" />
-                  <TextArea layoutX="125.0" layoutY="359.0" prefHeight="67.0" prefWidth="250.0" promptText="Address" />
+                  <PasswordField id="passwordTB" layoutX="125.0" layoutY="119.0" prefHeight="25.0" prefWidth="250.0" promptText="Password" />
+                  <ComboBox id="typeCB" layoutX="125.0" layoutY="159.0" prefHeight="25.0" prefWidth="250.0" promptText="Type" />
+                  <DatePicker id="dob" layoutX="125.0" layoutY="199.0" prefHeight="25.0" prefWidth="250.0" promptText="Date of Birth" />
+                  <ComboBox id="genderCB" layoutX="125.0" layoutY="239.0" prefHeight="25.0" prefWidth="250.0" promptText="Gender" />
+                  <TextField id="contactTB" layoutX="125.0" layoutY="279.0" prefHeight="25.0" prefWidth="250.0" promptText="Contact No" />
+                  <TextField id="emailTB" layoutX="125.0" layoutY="319.0" prefHeight="25.0" prefWidth="250.0" promptText="Email ID" />
+                  <TextArea id="addressTA" layoutX="125.0" layoutY="359.0" prefHeight="67.0" prefWidth="250.0" promptText="Address" />
                </children>
             </Pane>
          </center></BorderPane>
