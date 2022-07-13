@@ -19,9 +19,9 @@
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox prefHeight="100.0" prefWidth="1008.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="100.0" prefWidth="1008.0" styleClass="header" stylesheets="@../style/ViewEmployeePageStyle.css">
+                  <Pane prefHeight="100.0" prefWidth="1000.0" styleClass="header" stylesheets="@../style/ViewEmployeePageStyle.css">
                      <children>
                         <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewEmployeePageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
