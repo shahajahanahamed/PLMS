@@ -29,7 +29,11 @@
                            </font>
                         </Label>
                         <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="49.0" layoutY="61.0" size="5em" />
-                        <Label fx:id="validationLbl" layoutX="165.0" layoutY="70.0" prefHeight="17.0" prefWidth="188.0" textFill="WHITE" />
+                        <Label fx:id="validationLbl" alignment="BASELINE_CENTER" layoutX="165.0" layoutY="70.0" prefHeight="17.0" prefWidth="188.0" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                </children>
@@ -38,7 +42,7 @@
          <center>
             <Pane id="centerPane" prefHeight="550.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="clearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="488.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
+                  <Button fx:id="clearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>

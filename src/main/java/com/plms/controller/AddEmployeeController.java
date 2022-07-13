@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
+import javafx.animation.Animation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -66,6 +67,11 @@ public class AddEmployeeController implements Initializable {
     private String emailId;
     private String address;
 
+    protected
+    String successMessage = String.format("-fx-text-fill: GREEN;");
+    String errorMessage = String.format("-fx-text-fill: RED;");
+    String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 5;");
+    String successStyle = String.format("-fx-border-color: #A9A9A9; -fx-border-width: 2; -fx-border-radius: 5;");
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setValuesToTypeComboBox();
@@ -85,6 +91,11 @@ public class AddEmployeeController implements Initializable {
     @FXML
     void clickOnAddButton(MouseEvent event) {
         addEmployeeDetails();
+    }
+
+    @FXML
+    void clickOnClearBtn(MouseEvent event) {
+        clearAllFields();
     }
     public void addEmployeeDetails(){
         //Getting values from fields
@@ -115,8 +126,24 @@ public class AddEmployeeController implements Initializable {
         int result = empDao.insertData(employee);
         if(result==1){
             validationLbl.setText("Employee Added Successfully");
+            validationLbl.setStyle(successMessage);
         }else {
             validationLbl.setText("Employee Addition Failed");
+            validationLbl.setStyle(errorMessage);
         }
     }
+
+    public void clearAllFields(){
+        fullnameTB.clear();
+        usernameTB.clear();
+        passwordTB.clear();
+        //typeCB.setPromptText(typeCB.getPromptText());
+        typeCB.setPromptText("Type");
+        dobDP.setPromptText(dobDP.getPromptText());
+        genderCB.setPromptText(genderCB.getPromptText());
+        contactTB.clear();
+        emailTB.clear();
+        addressTA.clear();
+    }
+
 }
