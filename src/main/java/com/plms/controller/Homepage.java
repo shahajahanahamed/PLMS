@@ -35,7 +35,7 @@ public class Homepage implements Initializable {
     private void loadContent(String page) {
         Parent content;
         try {
-            content = FXMLLoader.load(getClass().getResource("/com/plms/views/" + page+".fxml"));
+            content = FXMLLoader.load(getClass().getResource("/com/plms/views/" +page+".fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

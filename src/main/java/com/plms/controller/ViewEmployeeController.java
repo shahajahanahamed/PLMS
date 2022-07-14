@@ -1,7 +1,10 @@
 package com.plms.controller;
 
+import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
 import com.plms.modules.SceneLoader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -10,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewEmployeeController implements Initializable {
@@ -42,22 +46,25 @@ public class ViewEmployeeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadData();
+        loadDataIntoTable();
     }
-
-
-
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         new SceneLoader().loadSceneInDifferentStage(getClass(),"AddEmployeePage");
     }
 
-    public void loadData() {
+    public void loadDataIntoTable() {
+        List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
+
         idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
         usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+
+        //employeeTV.setItems((ObservableList<Employee>) employeeList);
+        ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
+        employeeTV.setItems(employees);
     }
 }
