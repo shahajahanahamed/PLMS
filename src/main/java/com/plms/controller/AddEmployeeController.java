@@ -20,28 +20,20 @@ import java.util.ResourceBundle;
 public class AddEmployeeController implements Initializable {
     @FXML
     private Button addBtn;
-
     @FXML
     private TextArea addressTA;
-
     @FXML
     private Button backBtn;
-
     @FXML
     private Button clearBtn;
-
     @FXML
     private TextField contactTB;
-
     @FXML
     private DatePicker dobDP;
-
     @FXML
     private TextField emailTB;
-
     @FXML
     private TextField fullnameTB;
-
     @FXML
     private ComboBox<String> genderCB;
 
@@ -91,6 +83,7 @@ public class AddEmployeeController implements Initializable {
     @FXML
     void clickOnAddButton(MouseEvent event) {
         addEmployeeDetails();
+        clearAllFields();
     }
 
     @FXML
@@ -138,6 +131,7 @@ public class AddEmployeeController implements Initializable {
         usernameTB.clear();
         passwordTB.clear();
         //typeCB.setPromptText(typeCB.getPromptText());
+        typeCB.getSelectionModel().clearSelection();
         typeCB.setPromptText("Type");
         dobDP.setPromptText(dobDP.getPromptText());
         genderCB.setPromptText(genderCB.getPromptText());

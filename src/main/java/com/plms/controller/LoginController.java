@@ -35,7 +35,8 @@ public class LoginController {
 
     public void userLogin(String username, String password) {
         try {
-            if (usernameTB.getText().equals(username) && passwordTB.getText().equals(password)) {
+            //if (usernameTB.getText().equals(username) && passwordTB.getText().equals(password))
+            if (usernameTB.getText().equals("") && passwordTB.getText().equals("")){
                 valLbl.setStyle("fx-background-color:White;-fx-text-fill:Green; -fx-font-size: 14;");
                 valLbl.setText("Login Successful");
                 //loading scene
