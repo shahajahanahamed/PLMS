@@ -1,4 +1,4 @@
-#mainBP-emp{
+#mainBP{
   -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
   -fx-border-width:0px 0px,0px,2px;
   -fx-border-color: #fbfbff;
@@ -39,29 +39,165 @@
   -fx-border-width:0px 0px,0px,2px;
 }
 
-.InsertEmp{
--fx-background: bisque;
-
+#PatnFullNameTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatnFullNameTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
 }
 
-.submit-button{
-    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
-    -fx-background-radius:30px;
-    -fx-border-radius: 30px;
-    -fx-border-width: 2px;
-    -fx-border-color: black;
-    -fx-cursor:hand;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+#PatnIdPB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
 }
-.submit-button:hover{
-    -fx-background-color: linear-gradient(to right , #94b3e4, #1d90b3);
-    -fx-background-radius:30px;
-    -fx-border-radius: 30px;
-    -fx-border-width: 2px;
-    -fx-border-color: black;
-    -fx-cursor:hand;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+#PatnIdPB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
 }
 
+#TestTypeCB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-prompt-text-fill: #ffffff ;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#TestTypeCB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
 
+#PatndobDP{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatndobDP:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
 
+#PatngenderCB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatngenderCB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#PatncontactTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatncontactTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#PatnemailTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatnemailTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+#PatnaddressTA{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:14px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#PatnaddressTA:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+
+.text-area .scroll-pane {
+  -fx-background-color: transparent;
+  -fx-background-radius:30px;
+}
+.text-area .scroll-pane .viewport{
+  -fx-background-color: transparent;
+  -fx-background-radius:30px;
+}
+.text-area .scroll-pane .content{
+  -fx-background-color: transparent;
+  -fx-background-radius:30px;
+}
+
+/*All Code for datepicker*/
+
+.date-picker .arrow-button {
+  -fx-background-radius:30;
+	-fx-background-color: linear-gradient(to left, #9545e0, #41419e);
+	-fx-text-fill: #ffffff;
+}
+.date-picker .arrow-button:hover {
+	-fx-background-color: linear-gradient(to right, #9545e0, #41419e);
+  -fx-text-fill: #ffffff;
+}
+.date-picker .arrow-button .arrow {
+	-fx-background-color: #ffffff;
+  -fx-text-fill: #ffffff;
+}
+.date-picker .selected {
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
+.date-picker .selected:focused {
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
