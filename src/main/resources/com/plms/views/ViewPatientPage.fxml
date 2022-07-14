@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewPatientPageStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="1000.0" styleClass="header" stylesheets="@../style/ViewEmployeePageStyle.css">
+                     <children>
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewEmployeePageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="890.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/createnew.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="83.0" layoutY="21.0" prefHeight="28.0" prefWidth="112.0" text="Patient" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="51.0" size="4em" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView fx:id="employeeTV" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
+                    <columns>
+                      <TableColumn fx:id="idCol" prefWidth="65.0" text="ID" />
+                      <TableColumn fx:id="nameCol" prefWidth="185.0" text="Name" />
+                        <TableColumn fx:id="TestTypeCol" prefWidth="143.0" text="Test Type" />
+                        <TableColumn fx:id="DOBCol" prefWidth="100.0" text="DOB" />
+                        <TableColumn fx:id="ContactCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Contact No" />
+                        <TableColumn fx:id="EmailCol" prefWidth="158.4000244140625" text="Email" />
+                        <TableColumn fx:id="AddressCol" prefWidth="158.4000244140625" text="Address" />
+                    </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="25.0" prefWidth="197.0" promptText="Search by ID">
+                           <font>
+                              <Font name="Serif Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="filterComboBox" layoutX="779.0" layoutY="11.0" prefHeight="25.0" prefWidth="209.0" promptText="Filter by type" />
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
