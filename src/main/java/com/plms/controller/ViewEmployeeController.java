@@ -55,7 +55,6 @@ public class ViewEmployeeController implements Initializable {
 
     public void loadDataIntoTable() {
         List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
-
         idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
         usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));

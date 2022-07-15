@@ -18,4 +18,5 @@ module com.example.plms {
     exports com.plms.controller;
     exports com.plms.modules;
     opens com.plms.modules to javafx.fxml;
+    exports com.plms.entities;
 }
