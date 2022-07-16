@@ -15,15 +15,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewPatientPageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
    <children>
-      <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewEmployeePageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewPatientPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="100.0" prefWidth="1000.0" styleClass="header" stylesheets="@../style/ViewEmployeePageStyle.css">
+                  <Pane prefHeight="100.0" prefWidth="1000.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
                      <children>
-                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewEmployeePageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewPatientPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
                            </font>
@@ -45,7 +45,7 @@
             </HBox>
          </top>
          <center>
-            <BorderPane stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+            <BorderPane stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <center>
                   <TableView fx:id="employeeTV" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
@@ -59,7 +59,7 @@
                   </TableView>
                </center>
                <top>
-                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/ViewEmployeePageStyle.css" BorderPane.alignment="CENTER">
+                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                      <children>
                         <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="25.0" prefWidth="197.0" promptText="Search by name">
                            <font>
