@@ -1,7 +1,9 @@
 package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
+import com.plms.dao.PatientDao;
 import com.plms.entities.Employee;
+import com.plms.entities.Patient;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -62,8 +64,8 @@ public class AddPatientController implements Initializable {
 
     //Adding employee types to the Type Combobox
     public void setValuesToTypeComboBox(){
-        ObservableList<String> employeeTypes = FXCollections.observableArrayList("Blood Test","Sugar Test","Urine Test","Others");
-        TestTypeCB.getItems().setAll(employeeTypes);
+        ObservableList<String> testTypeList = FXCollections.observableArrayList("Blood Test","Sugar Test","Urine Test","Others");
+        TestTypeCB.getItems().setAll(testTypeList);
     }
     public void setValuesToGenderComboBox(){
         ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
@@ -82,7 +84,7 @@ public class AddPatientController implements Initializable {
     }
     public void addEmployeeDetails(){
         //Getting values from fields
-        empFullname = fullnameTB.getText();
+        String patientName = PatnFullNameTB.getText();
         username = usernameTB.getText();
         password = passwordTB.getText();
         userType = typeCB.getValue();
@@ -93,9 +95,9 @@ public class AddPatientController implements Initializable {
         address = addressTA.getText();
 
         //adding to the employee object
-        Employee employee = new Employee();
-        employee.setEmpName(empFullname);
-        employee.setUsername(username);
+        Patient ptnt = new Patient();
+        ptnt.setPatientName(patientName);
+        ptnt.setUsername(username);
         employee.setPassword(password);
         employee.setUserType(userType);
         employee.setDob(dob);
@@ -105,8 +107,8 @@ public class AddPatientController implements Initializable {
         employee.setAddress(address);
 
         //
-        EmployeeDao empDao = new EmployeeDao();
-        int result = empDao.insertData(employee);
+        PatientDao pDao = new PatientDao();
+        int result = pDao.insertData(ptnt);
         if(result==1){
             validationLbl.setText("Employee Added Successfully");
             validationLbl.setStyle(successMessage);
@@ -129,5 +131,4 @@ public class AddPatientController implements Initializable {
         emailTB.clear();
         addressTA.clear();
     }
-
 }
