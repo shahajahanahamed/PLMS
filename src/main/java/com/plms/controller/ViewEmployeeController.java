@@ -62,7 +62,6 @@ public class ViewEmployeeController implements Initializable {
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
 
-        //employeeTV.setItems((ObservableList<Employee>) employeeList);
         ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
         employeeTV.setItems(employees);
     }

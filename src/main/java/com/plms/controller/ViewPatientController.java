@@ -62,7 +62,6 @@ public class ViewPatientController implements Initializable {
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
 
-        patientTV.setItems((ObservableList<Patient>) patientList);
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         patientTV.setItems(patients);
     }

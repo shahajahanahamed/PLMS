@@ -25,20 +25,16 @@ public class Homepage implements Initializable {
         bp.setCenter(ap);
     }
     @FXML
-    public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadContent("ViewEmployeePage");
+    public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        loadContent(ViewEmployeeController.class,"ViewEmployeePage");
     }
     @FXML
-    public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        loadContent("ViewPatientPage");
+    public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        loadContent(ViewPatientController.class,"ViewPatientPage");
     }
-    private void loadContent(String page) {
+    private void loadContent(Class controllerName,String page) throws IOException {
         Parent content;
-        try {
-            content = FXMLLoader.load(getClass().getResource("/com/plms/views/" +page+".fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        content = FXMLLoader.load(controllerName.getResource("/com/plms/views/"+page+".fxml"));
         bp.setCenter(content);
     }
     public void userLogOut(ActionEvent event) throws IOException {

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -64,7 +73,7 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="208.0" layoutY="516.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="302.0" layoutY="514.0" size="2em" text="" />
-                  <TextField id="PatnFullNameTB" fx:id="PatnFullNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname" stylesheets="@../style/AddEmployeePageStyle.css" />
+                  <TextField id="PatnFullNameTB" fx:id="PatnFullNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" stylesheets="@../style/AddEmployeePageStyle.css" />
                   <PasswordField id="PatnIdPB" fx:id="PatnIdPB" layoutX="87.0" layoutY="70.0" prefHeight="31.0" prefWidth="305.0" promptText="Id" />
                   <ComboBox id="TestTypeCB" fx:id="TestTypeCB" layoutX="87.0" layoutY="121.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <DatePicker id="PatndobDP" fx:id="PatndobDP" editable="false" layoutX="87.0" layoutY="168.0" prefHeight="29.0" prefWidth="305.0" promptText="Date of Birth" />
