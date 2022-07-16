@@ -22,7 +22,7 @@ public class EmployeeDao {
 
     public List<Employee> getAllEmployeeShortDetails(){
         String sql = "SELECT empId,empName,username,userType,contactNo,emailId FROM temployee";
-        List<Employee> employees = this.jdbcTemplate.query(sql,new RowMapperImplmentation());
+        List<Employee> employees = this.jdbcTemplate.query(sql,new RowMapperImplmentationEmp());
         return employees;
     }
 

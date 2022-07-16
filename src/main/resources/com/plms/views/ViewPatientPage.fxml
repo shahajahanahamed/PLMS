@@ -38,7 +38,7 @@
          <center>
             <BorderPane stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <center>
-                  <TableView fx:id="employeeTV" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
+                  <TableView fx:id="patientTV" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
                       <TableColumn fx:id="idCol" prefWidth="65.0" text="ID" />
                       <TableColumn fx:id="nameCol" prefWidth="185.0" text="Name" />

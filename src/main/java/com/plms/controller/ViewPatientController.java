@@ -1,7 +1,9 @@
 package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
+import com.plms.dao.PatientDao;
 import com.plms.entities.Employee;
+import com.plms.entities.Patient;
 import com.plms.modules.SceneLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,18 +29,16 @@ public class ViewPatientController implements Initializable {
     @FXML
     private TextField searchBox;
     @FXML
-    private TableView<Employee> employeeTV;
+    private TableView<Patient> patientTV;
 
 
 
     @FXML
-    private TableColumn<Employee, String> idCol;
+    private TableColumn<Patient, String> idCol;
     @FXML
-    private TableColumn<Employee, String> nameCol;
+    private TableColumn<Patient, String> nameCol;
     @FXML
-    private TableColumn<Employee, String> usernameCol;
-    @FXML
-    private TableColumn<Employee, String> typeCol;
+    private TableColumn<Patient, String> testType;
     @FXML
     private TableColumn<Employee, String> contactCol;
     @FXML
@@ -50,20 +50,20 @@ public class ViewPatientController implements Initializable {
     }
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
-        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddEmployeePage");
+        //Add patient page instead of AddEmployeePage
+        //new SceneLoader().loadSceneInDifferentStage(getClass(),"AddEmployeePage");
     }
 
     public void loadDataIntoTable() {
-        List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
-        idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
-        usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
-        typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
+        List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
+        idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
+        testType.setCellValueFactory(new PropertyValueFactory<>("testType"));
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
 
-        //employeeTV.setItems((ObservableList<Employee>) employeeList);
-        ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
-        employeeTV.setItems(employees);
+        patientTV.setItems((ObservableList<Patient>) patientList);
+        ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
+        patientTV.setItems(patients);
     }
 }
