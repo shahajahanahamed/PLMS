@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
+   <children>
+      <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
+         <top>
+            <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="500.0">
+                     <children>
+                        <Label layoutX="130.0" layoutY="12.0" text="Add Patient" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="49.0" layoutY="61.0" size="5em" />
+                        <Label fx:id="validationLbl" alignment="BASELINE_CENTER" layoutX="165.0" layoutY="70.0" prefHeight="17.0" prefWidth="188.0" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <Pane id="centerPane" prefHeight="550.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="PtnClearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="ptnAddBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnAddButton" prefHeight="35.0" prefWidth="95.0" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="ptnBackBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="365.0" layoutY="45.0" size="2em" text="" wrappingWidth="8.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="362.0" layoutY="296.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="358.0" layoutY="348.0" size="2em" text="" />
+                  <FontAwesomeIcon fx:id="clearbtn" fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="208.0" layoutY="516.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="302.0" layoutY="514.0" size="2em" text="" />
+                  <TextField id="PatnFullNameTB" fx:id="ptnNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" stylesheets="@../style/AddEmployeePageStyle.css" />
+                  <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
+                  <DatePicker id="PatndobDP" fx:id="ptnDobDP" editable="false" layoutX="87.0" layoutY="140.0" prefHeight="29.0" prefWidth="305.0" promptText="Date of Birth" />
+                  <ComboBox id="PatngenderCB" fx:id="ptnGenderCB" layoutX="87.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
+                  <TextField id="PatncontactTB" fx:id="ptnContactTB" layoutX="87.0" layoutY="265.0" prefHeight="29.0" prefWidth="305.0" promptText="Contact No" />
+                  <TextField id="PatnemailTB" fx:id="ptnEmailTB" layoutX="87.0" layoutY="320.0" prefHeight="36.0" prefWidth="305.0" promptText="Email ID" />
+                  <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="87.0" layoutY="381.0" prefHeight="90.0" prefWidth="305.0" promptText="Address" stylesheets="@../style/AddEmployeePageStyle.css">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></TextArea>
+               </children>
+            </Pane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

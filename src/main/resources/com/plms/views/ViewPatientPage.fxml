@@ -46,7 +46,6 @@
                         <TableColumn fx:id="DOBCol" prefWidth="100.0" text="DOB" />
                         <TableColumn fx:id="ContactCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Contact No" />
                         <TableColumn fx:id="EmailCol" prefWidth="158.4000244140625" text="Email" />
-                        <TableColumn fx:id="AddressCol" prefWidth="158.4000244140625" text="Address" />
                     </columns>
                   </TableView>
                </center>

@@ -38,11 +38,13 @@ public class ViewPatientController implements Initializable {
     @FXML
     private TableColumn<Patient, String> nameCol;
     @FXML
-    private TableColumn<Patient, String> testType;
+    private TableColumn<Patient, String> TestTypeCol;
     @FXML
-    private TableColumn<Employee, String> contactCol;
+    private TableColumn<Patient, String> DOBCol;
     @FXML
-    private TableColumn<Employee, String> emailCol;
+    private TableColumn<Patient, String> ContactCol;
+    @FXML
+    private TableColumn<Patient, String> EmailCol;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -51,16 +53,17 @@ public class ViewPatientController implements Initializable {
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         //Add patient page instead of AddEmployeePage
-        //new SceneLoader().loadSceneInDifferentStage(getClass(),"AddEmployeePage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
     }
 
     public void loadDataIntoTable() {
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
         idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
-        testType.setCellValueFactory(new PropertyValueFactory<>("testType"));
-        contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
-        emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+        TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
+        DOBCol.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        ContactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+        EmailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
 
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         patientTV.setItems(patients);

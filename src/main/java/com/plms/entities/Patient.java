@@ -10,13 +10,6 @@ public class Patient {
     private String emailId;
     private String address;
 
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
 
     public String getPatientName() {
         return patientName;

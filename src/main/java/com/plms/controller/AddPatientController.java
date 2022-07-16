@@ -16,37 +16,34 @@ import java.util.ResourceBundle;
 
 public class AddPatientController implements Initializable {
     @FXML
-    private TextField PatnFullNameTB;
+    private TextField ptnNameTB;
 
     @FXML
-    private PasswordField PatnIdPB;
+    private Button ptnAddBtn;
 
     @FXML
-    private Button PatnaddBtn;
+    private TextArea ptnAddressTA;
 
     @FXML
-    private TextArea PatnaddressTA;
+    private Button ptnBackBtn;
 
     @FXML
-    private Button PatnbackBtn;
+    private Button PtnClearBtn;
 
     @FXML
-    private Button PatnclearBtn;
+    private TextField ptnContactTB;
 
     @FXML
-    private TextField PatncontactTB;
+    private DatePicker ptnDobDP;
 
     @FXML
-    private DatePicker PatndobDP;
+    private TextField ptnEmailTB;
 
     @FXML
-    private TextField PatnemailTB;
+    private ComboBox<String> ptnGenderCB;
 
     @FXML
-    private ComboBox<String> PatngenderCB;
-
-    @FXML
-    private ComboBox<String> TestTypeCB;
+    private ComboBox<String> testTypeCB;
 
     @FXML
     private Label validationLbl;
@@ -62,19 +59,19 @@ public class AddPatientController implements Initializable {
         setValuesToGenderComboBox();
     }
 
-    //Adding employee types to the Type Combobox
+    //Adding Test types to the Type Combo box
     public void setValuesToTypeComboBox(){
         ObservableList<String> testTypeList = FXCollections.observableArrayList("Blood Test","Sugar Test","Urine Test","Others");
-        TestTypeCB.getItems().setAll(testTypeList);
+        testTypeCB.getItems().setAll(testTypeList);
     }
     public void setValuesToGenderComboBox(){
         ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
-        PatngenderCB.getItems().setAll(gender);
+        ptnGenderCB.getItems().setAll(gender);
     }
 
     @FXML
     void clickOnAddButton(MouseEvent event) {
-        addEmployeeDetails();
+        addPatientDetails();
         clearAllFields();
     }
 
@@ -82,29 +79,25 @@ public class AddPatientController implements Initializable {
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
-    public void addEmployeeDetails(){
+    public void addPatientDetails(){
         //Getting values from fields
-        String patientName = PatnFullNameTB.getText();
-        username = usernameTB.getText();
-        password = passwordTB.getText();
-        userType = typeCB.getValue();
-        dob = dobDP.getValue().toString();
-        gender = genderCB.getValue();
-        contactNo = contactTB.getText();
-        emailId = emailTB.getText();
-        address = addressTA.getText();
+        String patientName = ptnNameTB.getText();
+        String testType = testTypeCB.getValue();
+        String dob = ptnDobDP.getValue().toString();
+        String gender = ptnGenderCB.getValue();
+        String contactNo = ptnContactTB.getText();
+        String emailId = ptnEmailTB.getText();
+        String address = ptnAddressTA.getText();
 
         //adding to the employee object
         Patient ptnt = new Patient();
         ptnt.setPatientName(patientName);
-        ptnt.setUsername(username);
-        employee.setPassword(password);
-        employee.setUserType(userType);
-        employee.setDob(dob);
-        employee.setGender(gender);
-        employee.setContactNo(contactNo);
-        employee.setEmailId(emailId);
-        employee.setAddress(address);
+        ptnt.setTestType(testType);
+        ptnt.setDob(dob);
+        ptnt.setGender(gender);
+        ptnt.setContactNo(contactNo);
+        ptnt.setEmailId(emailId);
+        ptnt.setAddress(address);
 
         //
         PatientDao pDao = new PatientDao();
@@ -119,16 +112,14 @@ public class AddPatientController implements Initializable {
     }
 
     public void clearAllFields(){
-        fullnameTB.clear();
-        usernameTB.clear();
-        passwordTB.clear();
+        ptnNameTB.clear();
         //typeCB.setPromptText(typeCB.getPromptText());
-        typeCB.getSelectionModel().clearSelection();
-        typeCB.setPromptText("Type");
-        dobDP.setPromptText(dobDP.getPromptText());
-        genderCB.setPromptText(genderCB.getPromptText());
-        contactTB.clear();
-        emailTB.clear();
-        addressTA.clear();
+        testTypeCB.getSelectionModel().clearSelection();
+        testTypeCB.setPromptText("Type");
+        ptnDobDP.setPromptText(ptnDobDP.getPromptText());
+        ptnGenderCB.setPromptText(ptnGenderCB.getPromptText());
+        ptnContactTB.clear();
+        ptnEmailTB.clear();
+        ptnAddressTA.clear();
     }
 }
