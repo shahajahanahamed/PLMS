@@ -26,15 +26,15 @@ public class Homepage implements Initializable {
     }
     @FXML
     public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        loadContent(ViewEmployeeController.class,"ViewEmployeePage");
+        loadContent("ViewEmployeePage");
     }
     @FXML
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        loadContent(ViewPatientController.class,"ViewPatientPage");
+        loadContent("ViewPatientPage");
     }
-    private void loadContent(Class controllerName,String page) throws IOException {
+    private void loadContent(String page) throws IOException {
         Parent content;
-        content = FXMLLoader.load(controllerName.getResource("/com/plms/views/"+page+".fxml"));
+        content = FXMLLoader.load(getClass().getResource("/com/plms/views/"+page+".fxml"));
         bp.setCenter(content);
     }
     public void userLogOut(ActionEvent event) throws IOException {
@@ -45,7 +45,6 @@ public class Homepage implements Initializable {
     public void printUserProfileName(String username) {
         lblUserProfile.setText(username);
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

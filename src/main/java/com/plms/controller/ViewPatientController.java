@@ -19,20 +19,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewPatientController implements Initializable {
-
     @FXML
     private Button createNewBtn;
-
     @FXML
     private ComboBox<String> filterComboBox;
-
     @FXML
     private TextField searchBox;
     @FXML
     private TableView<Patient> patientTV;
-
-
-
     @FXML
     private TableColumn<Patient, String> idCol;
     @FXML
@@ -64,7 +58,6 @@ public class ViewPatientController implements Initializable {
         DOBCol.setCellValueFactory(new PropertyValueFactory<>("dob"));
         ContactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         EmailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
-
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         patientTV.setItems(patients);
     }

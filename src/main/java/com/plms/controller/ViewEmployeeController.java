@@ -1,5 +1,4 @@
 package com.plms.controller;
-
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
 import com.plms.modules.SceneLoader;
@@ -10,26 +9,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewEmployeeController implements Initializable {
-
     @FXML
     private Button createNewBtn;
-
     @FXML
     private ComboBox<String> filterComboBox;
-
     @FXML
     private TextField searchBox;
     @FXML
     private TableView<Employee> employeeTV;
-
-
 
     @FXML
     private TableColumn<Employee, String> idCol;
@@ -61,7 +54,6 @@ public class ViewEmployeeController implements Initializable {
         typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
-
         ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
         employeeTV.setItems(employees);
     }
