@@ -61,7 +61,13 @@ public class AddPatientController implements Initializable {
 
     //Adding Test types to the Type Combo box
     public void setValuesToTypeComboBox(){
-        ObservableList<String> testTypeList = FXCollections.observableArrayList("Blood Test","Sugar Test","Urine Test","Others");
+        ObservableList<String> testTypeList = FXCollections.observableArrayList("ACTH(Adreno Corticotropic Hormone) Test","AFT(Alpha Feto Protein)Test","Albumin Test","Alkaline Phophatase(ALP)Test","Allergy Test","Amylase Test","ANA(Antinuclear Antibody)Test","ANCA Profile","Anti CCP(ACCP)Test","Anti TPO Test","Antibody Test","APTT(Active Partial Thromboplastin Time)Test",
+                "ASO Test","Beta HCG Test","Bicarbonate Test","Billirubin Test","Bleeding/Clotting Time Test","Blood Culture Test","Blood Group Test","Blood Sugar Test","Blood Urea Nitrogen Test","CA 15.3 Test","CA 19.9 Test","CA-125(Tumor Marker)Test","Calcium Test","CBC/Hemogram Test","CD4 Test","CEA(Carcinoembryonic Antigen)Test","Chloride Test","Cholesterol Test","CK-MB Test",
+                "Cortisol Test","CPK(Creatine Phossphokinase)Test","Creatinine Test","CRP(C-Reactive Protein)Test","Dengue IgG Test","Dengue IgM Test","DHEA Test","Double Marker Test","Electrolytes Test","ESR(Erythrocyte Sedimentation Rate)Test","Estradiol(E2)Test","Ferritin Test","Fluoride Test","FNAC Test","Folic Acid test","FSH(Follicle Stimulating Hormone)Test","G6PD Test",
+                "Gamma GT(GGTP)Test","Globulin Test","Glucose Tolerance Test","Hb1AC Test","HBsAg Test","HCV Antibody Test","HDL Cholesterol Test",
+                "Hemoglobin(Hb)Test","HGH Test","HIV Test","HLA B27 Test","Homocysteine Test","Insulin Test","Iron Test",
+                "Kidney/Renal Function Test","Kidney Profile","LDH(Lactate Dehydrogenase)Test","LDL Cholesterol","LH(Luteinizing Hormone)Test",
+                "Lipid Profile","Liver Function Test(LFT)","Mammography");
         testTypeCB.getItems().setAll(testTypeList);
     }
     public void setValuesToGenderComboBox(){
@@ -103,10 +109,10 @@ public class AddPatientController implements Initializable {
         PatientDao pDao = new PatientDao();
         int result = pDao.insertData(ptnt);
         if(result==1){
-            validationLbl.setText("Employee Added Successfully");
+            validationLbl.setText("Patient Added Successfully");
             validationLbl.setStyle(successMessage);
         }else {
-            validationLbl.setText("Employee Addition Failed");
+            validationLbl.setText("Patient Addition Failed");
             validationLbl.setStyle(errorMessage);
         }
     }

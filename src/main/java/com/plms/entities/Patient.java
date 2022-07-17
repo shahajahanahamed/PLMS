@@ -1,7 +1,6 @@
 package com.plms.entities;
 
 public class Patient {
-    private int patientId;
     private String patientName;
     private String testType;
     private String dob;
