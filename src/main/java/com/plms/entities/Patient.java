@@ -1,6 +1,7 @@
 package com.plms.entities;
 
 public class Patient {
+    private int ptnId;
     private String patientName;
     private String testType;
     private String dob;
@@ -9,6 +10,13 @@ public class Patient {
     private String emailId;
     private String address;
 
+    public int getPtnId() {
+        return ptnId;
+    }
+
+    public void setPtnId(int ptnId) {
+        this.ptnId = ptnId;
+    }
 
     public String getPatientName() {
         return patientName;

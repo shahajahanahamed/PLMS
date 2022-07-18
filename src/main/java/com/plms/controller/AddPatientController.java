@@ -47,7 +47,7 @@ public class AddPatientController implements Initializable {
 
     @FXML
     private Label validationLbl;
-
+    private int ptnId;
     protected
     String successMessage = String.format("-fx-text-fill: GREEN;");
     String errorMessage = String.format("-fx-text-fill: RED;");

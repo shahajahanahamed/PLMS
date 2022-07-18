@@ -16,8 +16,8 @@ public class PatientDao {
         this.jdbcTemplate=this.context.getBean("jdbcTemplate",JdbcTemplate.class);
     }
     public int insertData(Patient ptnt){
-        String sql = "INSERT INTO tpatient (ptnName,testType,dob,gender,contactNo,emailId,address) VALUES(?,?,?,?,?,?,?)";
-        int result = this.jdbcTemplate.update(sql,ptnt.getPatientName(),ptnt.getTestType(),ptnt.getDob(),ptnt.getGender(),ptnt.getContactNo(),ptnt.getEmailId(),ptnt.getAddress());
+        String sql = "INSERT INTO tpatient (ptnId,ptnName,testType,dob,gender,contactNo,emailId,address) VALUES(?,?,?,?,?,?,?,?)";
+        int result = this.jdbcTemplate.update(sql,ptnt.getPtnId(),ptnt.getPatientName(),ptnt.getTestType(),ptnt.getDob(),ptnt.getGender(),ptnt.getContactNo(),ptnt.getEmailId(),ptnt.getAddress());
         return result;
     }
 
