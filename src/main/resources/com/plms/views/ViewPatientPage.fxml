@@ -44,8 +44,9 @@
                       <TableColumn fx:id="nameCol" prefWidth="185.0" text="Name" />
                         <TableColumn fx:id="TestTypeCol" prefWidth="143.0" text="Test Type" />
                         <TableColumn fx:id="DOBCol" prefWidth="100.0" text="DOB" />
-                        <TableColumn fx:id="ContactCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Contact No" />
-                        <TableColumn fx:id="EmailCol" prefWidth="158.4000244140625" text="Email" />
+                        <TableColumn fx:id="GenderCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Gender" />
+                        <TableColumn fx:id="ContactCol" prefWidth="158.4000244140625" text="ContactNo" />
+                        <TableColumn fx:id="EmailCol" prefWidth="100.0" text="Email" />
                     </columns>
                   </TableView>
                </center>
