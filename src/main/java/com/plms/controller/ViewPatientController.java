@@ -52,8 +52,8 @@ public class ViewPatientController implements Initializable {
 
     public void loadDataIntoTable() {
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
-        idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("pateintId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("patientName"));
         TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
         DOBCol.setCellValueFactory(new PropertyValueFactory<>("dob"));
         ContactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));

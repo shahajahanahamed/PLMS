@@ -68,13 +68,11 @@ public class AddPatientController implements Initializable {
         ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
         ptnGenderCB.getItems().setAll(gender);
     }
-
     @FXML
     void clickOnAddButton(MouseEvent event) {
         addPatientDetails();
         clearAllFields();
     }
-
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
@@ -103,10 +101,10 @@ public class AddPatientController implements Initializable {
         PatientDao pDao = new PatientDao();
         int result = pDao.insertData(ptnt);
         if(result==1){
-            validationLbl.setText("Employee Added Successfully");
+            validationLbl.setText("Patient Added Successfully");
             validationLbl.setStyle(successMessage);
         }else {
-            validationLbl.setText("Employee Addition Failed");
+            validationLbl.setText("Patient Addition Failed");
             validationLbl.setStyle(errorMessage);
         }
     }

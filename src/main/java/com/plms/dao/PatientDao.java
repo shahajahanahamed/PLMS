@@ -22,7 +22,7 @@ public class PatientDao {
     }
 
     public List<Patient> getAllPatientShortDetails(){
-        String sql = "SELECT ptnId,ptnName,testType,dob,gender,contactNo,emailId FROM tpatient";
+        String sql = "SELECT ptnId,ptnName,testType,dob,contactNo,emailId FROM tpatient";
         List<Patient> patients = this.jdbcTemplate.query(sql,new RowMapperImplmentationPatient());
         return patients;
     }
