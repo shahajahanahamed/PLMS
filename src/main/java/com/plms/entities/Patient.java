@@ -1,22 +1,29 @@
 package com.plms.entities;
 
 public class Patient {
-    private int patientId;
-    private String patientName;
+    private int ptnId;
+    private String ptnName;
     private String testType;
-    private String dob;
-    private String gender;
-    private String contactNo;
-    private String emailId;
-    private String address;
+    private String ptnDOB;
+    private String ptnGender;
+    private String ptnContact;
+    private String ptnEmailId;
+    private String ptnAddress;
 
-
-    public String getPatientName() {
-        return patientName;
+    public int getPtnId() {
+        return ptnId;
     }
 
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
+    public void setPtnId(int ptnId) {
+        this.ptnId = ptnId;
+    }
+
+    public String getPtnName() {
+        return ptnName;
+    }
+
+    public void setPtnName(String ptnName) {
+        this.ptnName = ptnName;
     }
 
     public String getTestType() {
@@ -27,43 +34,43 @@ public class Patient {
         this.testType = testType;
     }
 
-    public String getDob() {
-        return dob;
+    public String getPtnDOB() {
+        return ptnDOB;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setPtnDOB(String ptnDOB) {
+        this.ptnDOB = ptnDOB;
     }
 
-    public String getGender() {
-        return gender;
+    public String getPtnGender() {
+        return ptnGender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setPtnGender(String ptnGender) {
+        this.ptnGender = ptnGender;
     }
 
-    public String getContactNo() {
-        return contactNo;
+    public String getPtnContact() {
+        return ptnContact;
     }
 
-    public void setContactNo(String contactNo) {
-        this.contactNo = contactNo;
+    public void setPtnContact(String ptnContact) {
+        this.ptnContact = ptnContact;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getPtnEmailId() {
+        return ptnEmailId;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setPtnEmailId(String ptnEmailId) {
+        this.ptnEmailId = ptnEmailId;
     }
 
-    public String getAddress() {
-        return address;
+    public String getPtnAddress() {
+        return ptnAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPtnAddress(String ptnAddress) {
+        this.ptnAddress = ptnAddress;
     }
 }

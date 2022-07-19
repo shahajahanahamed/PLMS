@@ -85,7 +85,7 @@ public class AddPatientController implements Initializable {
     }
     public void addPatientDetails(){
         //Getting values from fields
-        String patientName = ptnNameTB.getText();
+        String ptnName = ptnNameTB.getText();
         String testType = testTypeCB.getValue();
         String dob = ptnDobDP.getValue().toString();
         String gender = ptnGenderCB.getValue();
@@ -95,13 +95,13 @@ public class AddPatientController implements Initializable {
 
         //adding to the employee object
         Patient ptnt = new Patient();
-        ptnt.setPatientName(patientName);
+        ptnt.setPtnName(ptnName);
         ptnt.setTestType(testType);
-        ptnt.setDob(dob);
-        ptnt.setGender(gender);
-        ptnt.setContactNo(contactNo);
-        ptnt.setEmailId(emailId);
-        ptnt.setAddress(address);
+        ptnt.setPtnDOB(dob);
+        ptnt.setPtnGender(gender);
+        ptnt.setPtnContact(contactNo);
+        ptnt.setPtnEmailId(emailId);
+        ptnt.setPtnAddress(address);
 
         //
         PatientDao pDao = new PatientDao();

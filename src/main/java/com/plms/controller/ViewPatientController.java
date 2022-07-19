@@ -52,12 +52,12 @@ public class ViewPatientController implements Initializable {
 
     public void loadDataIntoTable() {
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
-        idCol.setCellValueFactory(new PropertyValueFactory<>("pateintId"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<>("patientName"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
         TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
-        DOBCol.setCellValueFactory(new PropertyValueFactory<>("dob"));
-        ContactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
-        EmailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+        DOBCol.setCellValueFactory(new PropertyValueFactory<>("ptnDOB"));
+        ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
+        EmailCol.setCellValueFactory(new PropertyValueFactory<>("ptnEmailId"));
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         patientTV.setItems(patients);
     }
