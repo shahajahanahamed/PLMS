@@ -1,9 +1,4 @@
 package com.plms.controller;
-
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextArea;
-import com.jfoenix.controls.JFXTextField;
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
 import javafx.animation.Animation;

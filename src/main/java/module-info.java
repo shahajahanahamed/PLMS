@@ -12,7 +12,7 @@ module com.example.plms {
 //    requires eu.hansolo.tilesfx;
     requires spring.context;
     requires spring.jdbc;
-    requires com.jfoenix;
+    requires fontawesomefx;
 
     opens com.plms.controller to javafx.fxml;
     exports com.plms.controller;
