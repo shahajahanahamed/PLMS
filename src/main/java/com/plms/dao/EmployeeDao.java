@@ -26,8 +26,8 @@ public class EmployeeDao {
         return employees;
     }
 
-    public int deleteEmployee(int id){
-        String query = "DELETE FROM `temployee` WHERE id=?";
+    public int deleteSingleEmployee(int id){
+        String query = "DELETE FROM `temployee` WHERE empId=?";
         int result = this.jdbcTemplate.update(query,id);
         return result;
     }
