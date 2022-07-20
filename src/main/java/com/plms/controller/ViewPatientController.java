@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewPatientController implements Initializable {
+    Patient patient = null;
     @FXML
     private Button createNewBtn;
     @FXML

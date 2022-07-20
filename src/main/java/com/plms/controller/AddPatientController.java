@@ -68,7 +68,7 @@ public class AddPatientController implements Initializable {
                 "Hemoglobin(Hb)Test","HGH Test","HIV Test","HLA B27 Test","Homocysteine Test","Insulin Test","Iron Test",
                 "Kidney/Renal Function Test","Kidney Profile","LDH(Lactate Dehydrogenase)Test","LDL Cholesterol","LH(Luteinizing Hormone)Test",
                 "Lipid Profile","Liver Function Test(LFT)","Mammography");
-        testTypeCB.getItems().setAll(testTypeList);
+                 testTypeCB.getItems().setAll(testTypeList);
     }
     public void setValuesToGenderComboBox(){
         ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
