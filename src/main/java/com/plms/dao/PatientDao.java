@@ -26,5 +26,9 @@ public class PatientDao {
         List<Patient> patients = this.jdbcTemplate.query(sql,new RowMapperImplmentationPatient());
         return patients;
     }
-
+    public int deleteSinglePatient(int id){
+        String query = "DELETE FROM `tpatient` WHERE ptnId=?";
+        int result = this.jdbcTemplate.update(query,id);
+        return result;
+    }
 }

@@ -39,7 +39,7 @@
   -fx-border-width:0px 0px,0px,2px;
 }
 
-#PatnFullNameTB{
+#fullnameTB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -49,13 +49,12 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatnFullNameTB:hover{
+#fullnameTB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
-
-#PatnIdPB{
+#usernameTB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -65,13 +64,29 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatnIdPB:hover{
+#usernameTB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
 
-#TestTypeCB{
+#passwordTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#passwordTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
+
+#typeCB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -82,13 +97,13 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#TestTypeCB:hover{
+#typeCB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
 
-#PatndobDP{
+#dobCal{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -98,13 +113,13 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatndobDP:hover{
+#dobCal:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
 
-#PatngenderCB{
+#genderCB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -114,12 +129,12 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatngenderCB:hover{
+#genderCB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
-#PatncontactTB{
+#contactTB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -129,12 +144,12 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatncontactTB:hover{
+#contactTB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
-#PatnemailTB{
+#emailTB{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -144,12 +159,12 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatnemailTB:hover{
+#emailTB:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
 }
-#PatnaddressTA{
+#addressTA{
   -fx-background-color:transparent;
   -fx-font-family:Serif;
   -fx-text-fill: #ffffff;
@@ -159,7 +174,7 @@
   -fx-border-width: 2px;
   -fx-border-color: #ffffff;
 }
-#PatnaddressTA:hover{
+#addressTA:hover{
   -fx-background-color:transparent;
   -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
   -fx-background-size:255 37;
