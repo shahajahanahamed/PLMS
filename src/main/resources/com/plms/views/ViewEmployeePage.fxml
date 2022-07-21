@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -21,17 +22,23 @@
          <top>
             <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="100.0" prefWidth="1000.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
                      <children>
-                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewPatientPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="createNewBtn" alignment="BASELINE_RIGHT" ellipsisString="x yz" layoutX="882.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewPatientPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
-                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="890.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="890.0" layoutY="35.0" onMouseClicked="#clickOnCreateNewIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/createnew.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                         <Label layoutX="83.0" layoutY="21.0" prefHeight="28.0" prefWidth="112.0" text="Employees" textFill="WHITE">
                            <font>

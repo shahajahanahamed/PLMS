@@ -53,6 +53,10 @@ public class ViewEmployeeController implements Initializable {
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         new SceneLoader().loadSceneInDifferentStage(getClass(), "AddEmployeePage");
     }
+    @FXML
+    void clickOnCreateNewIcon(MouseEvent event) throws IOException {
+        new SceneLoader().loadSceneInDifferentStage(getClass(), "AddEmployeePage");
+    }
 
     public void loadDataIntoTable() {
         List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();

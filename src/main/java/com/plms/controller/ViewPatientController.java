@@ -54,6 +54,10 @@ public class ViewPatientController implements Initializable {
         //Add patient page instead of AddEmployeePage
         new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
     }
+    @FXML
+    void clickOnCreateNewIcon(MouseEvent event) throws IOException {
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
+    }
 
     public void loadDataIntoTable() {
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
