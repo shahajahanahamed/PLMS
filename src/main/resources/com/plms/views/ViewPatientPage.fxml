@@ -15,13 +15,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/ViewPatientPageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewPatientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewPatientPageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewPatientController">
    <children>
-      <BorderPane stylesheets="@../style/ViewPatientPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewPatientPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1080.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
                      <children>
                         <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="960.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewPatientPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
@@ -45,9 +45,9 @@
             </HBox>
          </top>
          <center>
-            <BorderPane stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1100.0" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                <center>
-                  <TableView fx:id="patientTV" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="1080.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
+                  <TableView fx:id="patientTV" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1100.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
                       <TableColumn fx:id="idCol" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" text="ID" />
                       <TableColumn fx:id="nameCol" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Name" />
@@ -60,14 +60,14 @@
                   </TableView>
                </center>
                <top>
-                  <Pane prefHeight="46.0" prefWidth="1000.0" styleClass="header2" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
+                  <Pane prefHeight="50.0" prefWidth="1100.0" styleClass="header2" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="29.0" prefWidth="261.0" promptText="Search by Name">
+                        <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="260.0" promptText="Search by Name">
                            <font>
                               <Font name="Serif Regular" size="14.0" />
                            </font>
                         </TextField>
-                        <ComboBox fx:id="filterComboBox" layoutX="729.0" layoutY="11.0" prefHeight="25.0" prefWidth="259.0" promptText="Filter by type" />
+                        <ComboBox fx:id="filterComboBox" layoutX="729.0" layoutY="10.0" prefHeight="30.0" prefWidth="260.0" promptText="Filter by type" />
                      </children>
                   </Pane>
                </top>
