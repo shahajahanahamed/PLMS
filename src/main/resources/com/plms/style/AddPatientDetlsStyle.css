@@ -1,15 +1,15 @@
 #mainBP{
-  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+  -fx-background-color: linear-gradient(to right, #9545e0, #41419e);
   -fx-border-width:0px 0px,0px,2px;
   -fx-border-color: #fbfbff;
 }
 
 #header{
-  -fx-background-color: linear-gradient(to right, #832bd5, #343488);
+  -fx-background-color: linear-gradient(to right, #ab6de4, #343488);
 }
 
 #centerPane{
-  -fx-background-color: linear-gradient(to right, rgb(149, 69, 224), rgb(65, 65, 158));
+  -fx-background-color: linear-gradient(to right, #9545e0, #41419e);
 }
 .button{
   -fx-background-color: #4725e1;
