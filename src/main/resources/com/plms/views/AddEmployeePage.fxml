@@ -58,7 +58,7 @@
                         <Insets left="20.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="backBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
+                  <Button fx:id="backBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnBackBtn" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
@@ -71,9 +71,9 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="KEY" layoutX="396.0" layoutY="146.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="394.0" layoutY="335.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="395.0" layoutY="385.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="207.0" layoutY="515.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="515.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" onMouseClicked="#clickOnClearIcon" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="207.0" layoutY="515.0" onMouseClicked="#clickOnAddIcon" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="515.0" onMouseClicked="#clickOnBackIcon" size="2em" />
                   <TextField id="fullnameTB" fx:id="fullnameTB" layoutX="86.0" layoutY="20.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname" stylesheets="@../style/AddPatientDetlsStyle.css" />
                   <TextField id="usernameTB" fx:id="usernameTB" layoutX="85.0" layoutY="69.0" prefHeight="36.0" prefWidth="305.0" promptText="Username">
                      <font>

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -65,11 +66,33 @@ public class AddEmployeeController implements Initializable {
         }
 
     }
+    @FXML
+    void clickOnAddIcon(MouseEvent event) {
+        clickOnAddButton(event);
+    }
 
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
+    @FXML
+    void clickOnClearIcon(MouseEvent event) {
+        clickOnClearBtn(event);
+    }
+
+
+    @FXML
+    void clickOnBackBtn(MouseEvent event) {
+        Stage stage = new Stage();
+        stage.close();
+    }
+
+    @FXML
+    void clickOnBackIcon(MouseEvent event) {
+
+    }
+
+
 
     public void clearAllFields() {
         fullnameTB.clear();
@@ -128,68 +151,5 @@ public class AddEmployeeController implements Initializable {
             validationLbl.setStyle(errorMessage);
         }
     }
-
-    /*public boolean fullNameValidation() {
-        if (fullnameTB.getText().isBlank()) {
-            validate=true;
-            fullnameTB.setStyle(errorStyle);
-            fullnameTB.setStyle(errorMessage);
-            fullnameTB.setText("Fullname cannot be blank");
-        }
-        return validate;
-    }
-
-    public boolean usernameValidation() {
-        if (usernameTB.getText().isBlank()) {
-            validate=true;
-            usernameTB.setStyle(errorStyle);
-            usernameTB.setStyle(errorMessage);
-            usernameTB.setText("Username cannot be blank");
-        }
-        return validate;
-    }*/
-        /*// In case the Username and Password fields are left blank then display the error message
-        if (usernameTextField.getText().isBlank() || userPassword.getText().isBlank()) {
-            invalidDetails.setStyle(errorMessage);
-
-// When the username and password are blank
-            if (usernameTextField.getText().isBlank() || userPassword.getText().isBlank()) {
-                invalidDetails.setText("The Login fields are required!");
-                usernameTextField.setStyle(errorStyle);
-                userPassword.setStyle(errorStyle);
-
-
-            } else // When only the username is blank
-                if (usernameTextField.getText().isBlank()) {
-                    usernameTextField.setStyle(errorStyle);
-                    invalidDetails.setText("The Username or Email is required!");
-                    userPassword.setStyle(successStyle);
-
-
-                } else // When only the password is blank
-                    if (userPassword.getText().isBlank()) {
-                        userPassword.setStyle(errorStyle);
-                        invalidDetails.setText("The Password is required!");
-                        usernameTextField.setStyle(successStyle);
-
-
-                    }
-        } else // Check if password is less than four characters, if so display error message
-            if (userPassword.getText().length() < 4) {
-                invalidDetails.setText("The Password can't be less than 4 characters!");
-                invalidDetails.setStyle(errorMessage);
-                userPassword.setStyle(errorStyle);
-
-
-            }
-// If all login details are entered as required then display success message
-            else {
-                invalidDetails.setText("Login Successful!");
-                invalidDetails.setStyle(successMessage);
-                usernameTextField.setStyle(successStyle);
-                userPassword.setStyle(successStyle);
-
-
-            }*/
 
 }
