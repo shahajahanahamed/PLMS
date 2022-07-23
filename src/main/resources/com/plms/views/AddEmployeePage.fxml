@@ -72,8 +72,8 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="394.0" layoutY="335.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="395.0" layoutY="385.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="208.0" layoutY="516.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="302.0" layoutY="514.0" size="2em" text="" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="207.0" layoutY="515.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="515.0" size="2em" />
                   <TextField id="fullnameTB" fx:id="fullnameTB" layoutX="86.0" layoutY="20.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname" stylesheets="@../style/AddPatientDetlsStyle.css" />
                   <TextField id="usernameTB" fx:id="usernameTB" layoutX="85.0" layoutY="69.0" prefHeight="36.0" prefWidth="305.0" promptText="Username">
                      <font>

@@ -69,8 +69,8 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="362.0" layoutY="296.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="358.0" layoutY="348.0" size="2em" text="" />
                   <FontAwesomeIcon fx:id="clearbtn" fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="208.0" layoutY="516.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="302.0" layoutY="514.0" size="2em" text="" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="206.0" layoutY="515.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="303.0" layoutY="515.0" size="2em" />
                   <TextField id="PatnFullNameTB" fx:id="ptnNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" stylesheets="@../style/AddPatientDetlsStyle.css" />
                   <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <DatePicker id="PatndobDP" fx:id="ptnDobDP" editable="false" layoutX="87.0" layoutY="140.0" prefHeight="29.0" prefWidth="305.0" promptText="Date of Birth" />
