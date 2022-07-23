@@ -2,11 +2,9 @@ package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
-import javafx.animation.Animation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
@@ -32,11 +30,12 @@ public class AddEmployeeController implements Initializable {
     private int empId;
     private String empFullname, username, password, userType, dob, gender, contactNo, emailId, address;
     boolean validate = false;
+    boolean fullnameV,usernameV,passwordV,usertypeV,dobV,genderV,contactV,emailV,addressV;
     protected
     String successMessage = String.format("-fx-text-fill: GREEN;");
     String errorMessage = String.format("-fx-text-fill: RED;");
-    String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 30;-fx-text-fill: RED;-fx-font-size: 14px;");
-    String successStyle = String.format("-fx-border-color: #A9A9A9; -fx-border-width: 2; -fx-border-radius: 5;-fx-text-fill: White;-fx-font-size: 14px;");
+    String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 30;");
+    String successStyle = String.format("-fx-border-color: #A9A9A9; -fx-border-width: 2; -fx-border-radius: 5;");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,9 +57,9 @@ public class AddEmployeeController implements Initializable {
     @FXML
     void clickOnAddButton(MouseEvent event) {
         validate = checkValidation();
-        if(validate){
+        if (validate) {
             validationLbl.setText("Please insert proper data");
-        }else{
+        } else {
             setEmployee();
             clearAllFields();
         }
@@ -71,6 +70,7 @@ public class AddEmployeeController implements Initializable {
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
+
     public void clearAllFields() {
         fullnameTB.clear();
         usernameTB.clear();
@@ -79,74 +79,29 @@ public class AddEmployeeController implements Initializable {
         typeCB.getSelectionModel().clearSelection();
         typeCB.setPromptText("Type");
         dobDP.setPromptText(dobDP.getPromptText());
-        genderCB.setPromptText(genderCB.getPromptText());
+        genderCB.getSelectionModel().clearSelection();
         contactTB.clear();
         emailTB.clear();
         addressTA.clear();
     }
 
-    private boolean checkValidation(){
-        //Getting values from fields
-        if (fullnameTB.getText().isBlank()) {
-            fullnameTB.setText("Full name cannot be blank");
-            fullnameTB.setStyle(errorStyle);
-            validate = true;
-        } else {
+    private boolean checkValidation() {
+
+        //We need to check the validation of all the fields
             empFullname = fullnameTB.getText();
-        }
-        if (usernameTB.getText().isBlank()) {
-            usernameTB.setText("Username cannot be blank");
-            usernameTB.setStyle(errorStyle);
-            validate = true;
-        } else {
             username = usernameTB.getText();
-        }
-        if(passwordTB.getText().isBlank()) {
-            passwordTB.setText("Password");
-            passwordTB.setStyle(errorStyle);
-            validate = true;
-        }else {
             password = passwordTB.getText();
-        }
-        if(typeCB.getValue()==null){
-            typeCB.setValue("Select user type");
-            typeCB.setStyle(errorStyle);
-            validate = true;
-        }else {
             userType = typeCB.getValue().toString();
-        }
-        if(dobDP.getValue()==null){
-            dobDP.setPromptText("Choose date of birth");
-            dobDP.setStyle(errorStyle);
-            validate = true;
-        }else {
             dob = dobDP.getValue().toString();
-        }
-        if(genderCB.getValue()==null){
-            genderCB.setValue("Select gender");
-            genderCB.setStyle(errorStyle);
-            validate = true;
-        }else {
             gender = genderCB.getValue().toString();
-        }
-        if(contactTB.getText().isBlank()){
-            contactTB.setText("Contact number cannot be blank");
-            contactTB.setStyle(errorStyle);
-            validate = true;
-        }else {
             contactNo = contactTB.getText();
-            for(int i=0;i<contactNo.length();i++){
-                if(contactNo.charAt(i)==)
-            }
-        }
+            emailId = emailTB.getText();
+            address = addressTA.getText();
 
-        emailId = emailTB.getText();
-        address = addressTA.getText();
-
-        return validate;
+        return false;
     }
 
-    private void setEmployee(){
+    private void setEmployee() {
         //adding to the employee object
         Employee employee = new Employee();
         employee.setEmpName(empFullname);
@@ -162,7 +117,7 @@ public class AddEmployeeController implements Initializable {
         insertingData(employee);
     }
 
-    private void insertingData(Employee employee){
+    private void insertingData(Employee employee) {
         EmployeeDao empDao = new EmployeeDao();
         int result = empDao.insertData(employee);
         if (result == 1) {
