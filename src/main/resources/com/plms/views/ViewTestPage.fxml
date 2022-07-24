@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewTestController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
+                     <children>
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="960.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewTestPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="965.0" layoutY="39.0" onMouseClicked="#clickOnCreateNewIcon" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/createnew.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="83.0" layoutY="21.0" prefHeight="28.0" prefWidth="112.0" text="Test" textFill="WHITE">
+                           <font>
+                              <Font name="Serif Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="51.0" size="4em" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView fx:id="testTV" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1100.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
+                    <columns>
+                      <TableColumn fx:id="TestIdCol" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" text="Test-ID" />
+                      <TableColumn fx:id="testnameCol" maxWidth="212.00004196166992" minWidth="150.0" prefWidth="212.00004196166992" resizable="false" text="          Test-Name" />
+                        <TableColumn fx:id="testStartDateCol" maxWidth="147.00001525878906" minWidth="85.33331298828125" prefWidth="140.3333740234375" resizable="false" text="Test-Start_Date" />
+                        <TableColumn fx:id="testCompleteDateCol" maxWidth="191.99996948242188" minWidth="100.0" prefWidth="151.33328247070312" resizable="false" text="Test-Completion-Date" />
+                        <TableColumn fx:id="teststatuscol" maxWidth="191.99996948242188" minWidth="100.0" prefWidth="136.0" resizable="false" text="        Test_Status" />
+                    </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <Pane prefHeight="50.0" prefWidth="1100.0" styleClass="header2" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="260.0" promptText="Search by Id">
+                           <font>
+                              <Font name="Serif Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="filterComboBox" layoutX="729.0" layoutY="10.0" prefHeight="30.0" prefWidth="260.0" promptText="Filter by Date" />
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
