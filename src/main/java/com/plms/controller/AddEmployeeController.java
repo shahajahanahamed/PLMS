@@ -65,13 +65,11 @@ public class AddEmployeeController implements Initializable {
             setEmployee();
             clearAllFields();
         }
-
     }
     @FXML
     void clickOnAddIcon(MouseEvent event) {
         clickOnAddButton(event);
     }
-
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
@@ -80,21 +78,15 @@ public class AddEmployeeController implements Initializable {
     void clickOnClearIcon(MouseEvent event) {
         clickOnClearBtn(event);
     }
-
-
     @FXML
     void clickOnBackBtn(MouseEvent event) {
         Stage stage=(Stage) backBtn.getScene().getWindow();
         stage.close();
     }
-
     @FXML
     void clickOnBackIcon(MouseEvent event) {
         clickOnBackBtn(event);
     }
-
-
-
     public void clearAllFields() {
         fullnameTB.clear();
         usernameTB.clear();
