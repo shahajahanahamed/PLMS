@@ -32,6 +32,9 @@ public class Homepage implements Initializable {
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewPatientPage");
     }
+    public void clickOnTestMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        loadContent("ViewTestPage");
+    }
     private void loadContent(String page) throws IOException {
         Parent content;
         content = FXMLLoader.load(getClass().getResource("/com/plms/views/"+page+".fxml"));
