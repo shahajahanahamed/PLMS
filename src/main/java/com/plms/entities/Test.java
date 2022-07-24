@@ -3,9 +3,10 @@ package com.plms.entities;
 public class Test {
     private int testId;
     private String testName;
-    private String testStartDate;
-    private String testCompleteDate;
-    private String testStatus;
+    private String groupName;
+    private String testUnit;
+    private String normalRange;
+    private String cost;
 
     public int getTestId() {
         return testId;
@@ -23,27 +24,36 @@ public class Test {
         this.testName = testName;
     }
 
-    public String getTestStartDate() {
-        return testStartDate;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setTestStartDate(String testStartDate) {
-        this.testStartDate = testStartDate;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
-    public String getTestCompleteDate() {
-        return testCompleteDate;
+    public String getUnit() {
+        return testUnit;
     }
 
-    public void setTestCompleteDate(String testCompleteDate) {
-        this.testCompleteDate = testCompleteDate;
+    public void setUnit(String testUnit) {
+        this.testUnit = testUnit;
     }
 
-    public String getTestStatus() {
-        return testStatus;
+    public String getNormalRange() {
+        return normalRange;
     }
 
-    public void setTestStatus(String testStatus) {
-        this.testStatus = testStatus;
+    public void setNormalRange(String normalRange) {
+        this.normalRange = normalRange;
     }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public void setCost(String cost) {
+        this.cost = cost;
+    }
+
 }

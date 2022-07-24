@@ -36,11 +36,12 @@ public class ViewTestController implements Initializable {
     @FXML
     private TableColumn<Test, String> testnameCol;
     @FXML
-    private TableColumn<Test, String> testStartDateCol;
+    private TableColumn<Test, String> groupNameCol;
     @FXML
-    private TableColumn<Test, String> testCompleteDateCol;
+    private TableColumn<Test, String> unitCol;
     @FXML
-    private TableColumn<Test, String> teststatuscol;
+    private TableColumn<Test, String> normalRangeCol;
+    private TableColumn<Test, String> costCol;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -60,9 +61,10 @@ public class ViewTestController implements Initializable {
         List<Test> testList = new TestDao().getAllTestShortDetails();
         TestIdCol.setCellValueFactory(new PropertyValueFactory<>("testId"));
         testnameCol.setCellValueFactory(new PropertyValueFactory<>("testName"));
-        testStartDateCol.setCellValueFactory(new PropertyValueFactory<>("testStartDate"));
-        testCompleteDateCol.setCellValueFactory(new PropertyValueFactory<>("testCmpltDate"));
-        teststatuscol.setCellValueFactory(new PropertyValueFactory<>("testStatus"));
+        groupNameCol.setCellValueFactory(new PropertyValueFactory<>("grpName"));
+        unitCol.setCellValueFactory(new PropertyValueFactory<>("testUnit"));
+        normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("testRange"));
+        costCol.setCellValueFactory(new PropertyValueFactory<>("testCost"));
         ObservableList<Test> tests = FXCollections.observableArrayList(testList);
         addUpdateButtonToTable();
         addDeleteButtonToTable();

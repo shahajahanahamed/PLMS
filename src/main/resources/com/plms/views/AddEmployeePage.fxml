@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -66,11 +57,11 @@
                         <Insets left="20.0" />
                      </padding>
                   </Button>
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="392.0" layoutY="44.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="394.0" layoutY="92.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="KEY" layoutX="396.0" layoutY="146.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="394.0" layoutY="335.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="395.0" layoutY="385.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="361.0" layoutY="46.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="361.0" layoutY="95.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="KEY" layoutX="358.0" layoutY="144.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="359.0" layoutY="334.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="359.0" layoutY="383.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" onMouseClicked="#clickOnClearIcon" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="207.0" layoutY="515.0" onMouseClicked="#clickOnAddIcon" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="515.0" onMouseClicked="#clickOnBackIcon" size="2em" />

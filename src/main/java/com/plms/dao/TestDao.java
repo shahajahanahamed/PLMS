@@ -16,18 +16,18 @@ public class TestDao {
         this.jdbcTemplate=this.context.getBean("jdbcTemplate",JdbcTemplate.class);
     }
     public int insertData(Test tst){
-        String sql = "INSERT INTO ttest (test_name,test_start_date,test_complete_date,test_status) VALUES(?,?,?,?)";
-        int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getTestStartDate(),tst.getTestCompleteDate(),tst.getTestStatus());
+        String sql = "INSERT INTO ttest (testName,testGroup,testUnit,testRange,testCost) VALUES(?,?,?,?,?)";
+        int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getGroupName(),tst.getUnit(),tst.getNormalRange(),tst.getCost());
         return result;
     }
 
     public List<Test> getAllTestShortDetails(){
-        String sql = "SELECT test_id,test_name,test_start_date,test_complete_date,test_status FROM ttest";
+        String sql = "SELECT test_id,test_name,testGroup,testUnit,testRange,testCost FROM ttest";
         List<Test> tests = this.jdbcTemplate.query(sql,new RowMapperImplmentationTest());
         return tests;
     }
     public int deleteSingleTest(int id){
-        String query = "DELETE FROM `ttest` WHERE test_id=?";
+        String query = "DELETE FROM `ttest` WHERE testId=?";
         int result = this.jdbcTemplate.update(query,id);
         return result;
     }
