@@ -5,6 +5,7 @@ import com.plms.entities.Employee;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
@@ -83,13 +84,13 @@ public class AddEmployeeController implements Initializable {
 
     @FXML
     void clickOnBackBtn(MouseEvent event) {
-        Stage stage = new Stage();
+        Stage stage=(Stage) backBtn.getScene().getWindow();
         stage.close();
     }
 
     @FXML
     void clickOnBackIcon(MouseEvent event) {
-
+        clickOnBackBtn(event);
     }
 
 
