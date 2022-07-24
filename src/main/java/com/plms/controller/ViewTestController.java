@@ -41,6 +41,7 @@ public class ViewTestController implements Initializable {
     private TableColumn<Test, String> unitCol;
     @FXML
     private TableColumn<Test, String> normalRangeCol;
+    @FXML
     private TableColumn<Test, String> costCol;
 
     @Override

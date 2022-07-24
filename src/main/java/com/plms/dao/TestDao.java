@@ -22,7 +22,7 @@ public class TestDao {
     }
 
     public List<Test> getAllTestShortDetails(){
-        String sql = "SELECT test_id,test_name,testGroup,testUnit,testRange,testCost FROM ttest";
+        String sql = "SELECT testId,testName,testGroup,testUnit,testRange,testCost FROM ttest";
         List<Test> tests = this.jdbcTemplate.query(sql,new RowMapperImplmentationTest());
         return tests;
     }
