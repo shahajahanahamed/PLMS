@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddTestDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddEmployeeController">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddTestDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddTestController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -14,7 +14,7 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="500.0">
                      <children>
-                        <Label layoutX="130.0" layoutY="12.0" text="Add Employee" textFill="WHITE">
+                        <Label layoutX="130.0" layoutY="12.0" text="Add Test" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="48.0" />
                            </font>
@@ -57,30 +57,19 @@
                         <Insets left="20.0" />
                      </padding>
                   </Button>
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="361.0" layoutY="46.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="361.0" layoutY="95.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="KEY" layoutX="358.0" layoutY="144.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="359.0" layoutY="334.0" size="2em" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="359.0" layoutY="383.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="358.0" layoutY="93.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" onMouseClicked="#clickOnClearIcon" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="207.0" layoutY="515.0" onMouseClicked="#clickOnAddIcon" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="515.0" onMouseClicked="#clickOnBackIcon" size="2em" />
-                  <TextField id="fullnameTB" fx:id="fullnameTB" layoutX="86.0" layoutY="20.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname" stylesheets="@../style/AddTestDetlsStyle.css" />
-                  <TextField id="usernameTB" fx:id="usernameTB" layoutX="85.0" layoutY="69.0" prefHeight="36.0" prefWidth="305.0" promptText="Username">
+                  <TextField id="testnameTB" fx:id="testnameTB" layoutX="85.0" layoutY="66.0" prefHeight="36.0" prefWidth="305.0" promptText="Test name" stylesheets="@../style/AddTestDetlsStyle.css" />
+                  <TextField id="groupnameTB" fx:id="groupnameTB" layoutX="89.0" layoutY="149.0" prefHeight="36.0" prefWidth="305.0" promptText="Group name" stylesheets="@../style/AddTestDetlsStyle.css">
                      <font>
                         <Font name="Serif Regular" size="12.0" />
                      </font>
                   </TextField>
-                  <PasswordField id="passwordTB" fx:id="passwordTB" layoutX="87.0" layoutY="118.0" prefHeight="25.0" prefWidth="305.0" promptText="Password" />
-                  <ComboBox id="typeCB" fx:id="typeCB" layoutX="87.0" layoutY="163.0" prefHeight="25.0" prefWidth="305.0" promptText="Type" visibleRowCount="4" />
-                  <DatePicker id="dobCal" fx:id="dobDP" editable="false" layoutX="87.0" layoutY="211.0" prefHeight="25.0" prefWidth="305.0" promptText="Date of Birth" />
-                  <ComboBox id="genderCB" fx:id="genderCB" layoutX="87.0" layoutY="259.0" prefHeight="25.0" prefWidth="305.0" promptText="Gender" />
-                  <TextField id="contactTB" fx:id="contactTB" layoutX="87.0" layoutY="308.0" prefHeight="25.0" prefWidth="305.0" promptText="Contact No" />
-                  <TextField id="emailTB" fx:id="emailTB" layoutX="87.0" layoutY="357.0" prefHeight="25.0" prefWidth="305.0" promptText="Email ID" />
-                  <TextArea id="addressTA" fx:id="addressTA" layoutX="87.0" layoutY="404.0" prefHeight="67.0" prefWidth="305.0" promptText="Address" stylesheets="@../style/AddTestDetlsStyle.css">
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding></TextArea>
+                  <TextField id="unitTB" fx:id="unitTB" layoutX="89.0" layoutY="230.0" prefHeight="36.0" prefWidth="305.0" promptText="Unit" stylesheets="@../style/AddTestDetlsStyle.css" />
+                  <TextField id="rangeTB" fx:id="rangeTB" layoutX="89.0" layoutY="310.0" prefHeight="36.0" prefWidth="305.0" promptText="Normal Range" stylesheets="@../style/AddTestDetlsStyle.css" />
+                  <TextField id="costTB" fx:id="costTB" layoutX="89.0" layoutY="382.0" prefHeight="36.0" prefWidth="305.0" promptText="Cost" stylesheets="@../style/AddTestDetlsStyle.css" />
                </children>
             </Pane>
          </center></BorderPane>

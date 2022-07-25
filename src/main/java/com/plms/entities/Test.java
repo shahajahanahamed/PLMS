@@ -4,7 +4,7 @@ public class Test {
     private int testId;
     private String testName;
     private String groupName;
-    private String testUnit;
+    private String tstUnit;
     private String normalRange;
     private String cost;
 
@@ -33,11 +33,11 @@ public class Test {
     }
 
     public String getUnit() {
-        return testUnit;
+        return tstUnit;
     }
 
-    public void setUnit(String testUnit) {
-        this.testUnit = testUnit;
+    public void setUnit(String tstUnit) {
+        this.tstUnit = tstUnit;
     }
 
     public String getNormalRange() {

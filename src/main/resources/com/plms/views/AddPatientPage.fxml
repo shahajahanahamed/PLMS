@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddPatientDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddPatientController">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddTestDetlsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddPatientController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -63,13 +63,13 @@
                   <FontAwesomeIcon fx:id="clearbtn" fill="WHITE" glyphName="ERASER" layoutX="102.0" layoutY="514.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="206.0" layoutY="515.0" size="2em" />
                   <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="303.0" layoutY="515.0" size="2em" />
-                  <TextField id="PatnFullNameTB" fx:id="ptnNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" stylesheets="@../style/AddPatientDetlsStyle.css" />
+                  <TextField id="PatnFullNameTB" fx:id="ptnNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" stylesheets="@../style/AddTestDetlsStyle.css" />
                   <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <DatePicker id="PatndobDP" fx:id="ptnDobDP" editable="false" layoutX="87.0" layoutY="140.0" prefHeight="29.0" prefWidth="305.0" promptText="Date of Birth" />
                   <ComboBox id="PatngenderCB" fx:id="ptnGenderCB" layoutX="87.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
                   <TextField id="PatncontactTB" fx:id="ptnContactTB" layoutX="87.0" layoutY="261.0" prefHeight="29.0" prefWidth="305.0" promptText="Contact No" />
                   <TextField id="PatnemailTB" fx:id="ptnEmailTB" layoutX="87.0" layoutY="320.0" prefHeight="36.0" prefWidth="305.0" promptText="Email ID" />
-                  <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="87.0" layoutY="381.0" prefHeight="90.0" prefWidth="305.0" promptText="Address" stylesheets="@../style/AddPatientDetlsStyle.css">
+                  <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="87.0" layoutY="381.0" prefHeight="90.0" prefWidth="305.0" promptText="Address" stylesheets="@../style/AddTestDetlsStyle.css">
                      <padding>
                         <Insets left="5.0" />
                      </padding></TextArea>

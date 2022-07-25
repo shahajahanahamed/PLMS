@@ -41,7 +41,7 @@
                   <TableView fx:id="testTV" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1100.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
                       <TableColumn fx:id="TestIdCol" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" text="Test-ID" />
-                      <TableColumn fx:id="testnameCol" maxWidth="212.00004196166992" minWidth="150.0" prefWidth="212.00004196166992" resizable="false" text="          Test Name" />
+                      <TableColumn fx:id="testnameCol" maxWidth="212.00004196166992" minWidth="150.0" prefWidth="212.00004196166992" resizable="false" text="Test Name" />
                         <TableColumn fx:id="groupNameCol" maxWidth="147.00001525878906" minWidth="85.33331298828125" prefWidth="140.3333740234375" resizable="false" text="Group Name" />
                         <TableColumn fx:id="unitCol" maxWidth="191.99996948242188" minWidth="100.0" prefWidth="151.33328247070312" resizable="false" text="Unit" />
                         <TableColumn fx:id="normalRangeCol" maxWidth="191.99996948242188" minWidth="100.0" prefWidth="136.0" resizable="false" text="Normal Range" />

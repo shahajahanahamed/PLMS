@@ -51,21 +51,21 @@ public class ViewTestController implements Initializable {
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         //Add Test page instead of AddTestPage
-        //new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddTestPage");
     }
     @FXML
     void clickOnCreateNewIcon(MouseEvent event) throws IOException {
-        //new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddTestPage");
     }
 
     public void loadDataIntoTable() {
         List<Test> testList = new TestDao().getAllTestShortDetails();
         TestIdCol.setCellValueFactory(new PropertyValueFactory<>("testId"));
         testnameCol.setCellValueFactory(new PropertyValueFactory<>("testName"));
-        groupNameCol.setCellValueFactory(new PropertyValueFactory<>("grpName"));
-        unitCol.setCellValueFactory(new PropertyValueFactory<>("testUnit"));
-        normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("testRange"));
-        costCol.setCellValueFactory(new PropertyValueFactory<>("testCost"));
+        groupNameCol.setCellValueFactory(new PropertyValueFactory<>("groupName"));
+        unitCol.setCellValueFactory(new PropertyValueFactory<>("tstUnit"));
+        normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("normalRange"));
+        costCol.setCellValueFactory(new PropertyValueFactory<>("cost"));
         ObservableList<Test> tests = FXCollections.observableArrayList(testList);
         addUpdateButtonToTable();
         addDeleteButtonToTable();
