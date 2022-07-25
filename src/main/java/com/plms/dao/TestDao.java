@@ -17,7 +17,7 @@ public class TestDao {
     }
     public int insertData(Test tst){
         String sql = "INSERT INTO ttest (testName,testGroup,testUnit,testRange,testCost) VALUES(?,?,?,?,?)";
-        int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getGroupName(),tst.getUnit(),tst.getNormalRange(),tst.getCost());
+        int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getGroupName(),tst.getTstUnit(),tst.getNormalRange(),tst.getCost());
         return result;
     }
 

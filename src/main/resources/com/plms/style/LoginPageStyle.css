@@ -1,5 +1,8 @@
+#mainHeader{
+    -fx-background-color: linear-gradient(to right, #504883, #eedbdb);
+}
 .login-bg{
-    -fx-background-image: url("../Images/home-bckground_imge.jpg");
+    -fx-background-image: url("../Images/loginImageFinal.jpg");
     -fx-background-repeat: stretch;   
     -fx-background-size: 1900 1024;
 }
@@ -11,6 +14,13 @@
 }
 .exit:hover{
     -fx-background-color:#ca0303;
+}
+
+#closeBtn{
+    -fx-background-color:#ff0101;
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 .user-textbox{
     -fx-background-radius:30px;

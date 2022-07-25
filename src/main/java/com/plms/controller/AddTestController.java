@@ -89,7 +89,7 @@ public class AddTestController implements Initializable {
         Test test = new Test();
         test.setTestName(testName);
         test.setGroupName(groupName);
-        test.setUnit(testUnit);
+        test.setTstUnit(testUnit);
         test.setNormalRange(testRange);
         test.setCost(testCost);
         insertingData(test);

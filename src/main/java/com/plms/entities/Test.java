@@ -32,11 +32,11 @@ public class Test {
         this.groupName = groupName;
     }
 
-    public String getUnit() {
+    public String getTstUnit() {
         return tstUnit;
     }
 
-    public void setUnit(String tstUnit) {
+    public void setTstUnit(String tstUnit) {
         this.tstUnit = tstUnit;
     }
 
