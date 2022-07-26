@@ -1,8 +1,10 @@
 package com.plms.controller;
 
 import com.plms.modules.SceneLoader;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -17,7 +19,16 @@ public class LoginController {
     private TextField usernameTB;
     @FXML
     private PasswordField passwordTB;
+    @FXML
+    private Button closeBtn;
 
+    @FXML
+    private FontAwesomeIcon closeIcon;
+    @FXML
+    private Button minimizeBtn;
+
+    @FXML
+    private FontAwesomeIcon minimizeIcon;
     private static Stage stage;
 
     public static Stage getStage() {
@@ -33,6 +44,28 @@ public class LoginController {
         userLogin("admin", "123");
     }
 
+
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
+    }
     public void userLogin(String username, String password) {
         try {
             //if (usernameTB.getText().equals(username) && passwordTB.getText().equals(password))

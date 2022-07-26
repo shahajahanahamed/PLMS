@@ -6,22 +6,19 @@
     -fx-background-repeat: stretch;   
     -fx-background-size: 1900 1024;
 }
-.exit{
-    -fx-background-color:#ff0101;
-    -fx-background-radius:5px;
-    -fx-cursor:hand;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
-}
-.exit:hover{
-    -fx-background-color:#ca0303;
-}
+
 
 #closeBtn{
     -fx-background-color:#ffffff;
     -fx-background-radius:100%;
     -fx-border-width:1px;
     -fx-border-radius:100%;
-    -fx-border-color:linear-gradient(to right, #ff0000, #ff0000);
+    -fx-border-color:red;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+#closeBtn:hover{
+    -fx-border-width:2px;
     -fx-cursor:hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
@@ -30,7 +27,12 @@
     -fx-background-radius:100%;
     -fx-border-width:1px;
     -fx-border-radius:100%;
-    -fx-border-color:linear-gradient(to right, #fffb00, #fffb00);
+    -fx-border-color:rgb(51, 0, 255);
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+#minimizeBtn:hover{
+    -fx-border-width:2px;
     -fx-cursor:hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
@@ -38,14 +40,14 @@
     -fx-background-radius:30px;
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
-    -fx-border-color: black;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+    -fx-border-color: linear-gradient(to right, #ff05dade, #0ef2df);
+    
 }
 .user-textbox:hover{
     -fx-background-radius:30px;
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
-    -fx-border-color: green;
+    -fx-border-color:linear-gradient(to right, #1eff00, #ff1100);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
@@ -53,14 +55,13 @@
     -fx-background-radius:30px;
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
-    -fx-border-color: black;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.8), 10, 0, 0, 0);
+    -fx-border-color: linear-gradient(to right, #ff05dade, #0ef2df);
 }
 .password-textbox:hover{
     -fx-background-radius:30px;
     -fx-border-radius: 30px;
     -fx-border-width: 2px;
-    -fx-border-color: green;
+    -fx-border-color:linear-gradient(to right, #1eff00, #ff1100);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
 }
 
