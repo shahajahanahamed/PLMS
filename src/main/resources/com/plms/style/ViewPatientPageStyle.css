@@ -41,6 +41,17 @@
     -fx-border-color: #ffffff;
     -fx-text-fill:white;
 }
+#filterComboBox .list-cell
+{
+   -fx-text-fill: #ffffff; 
+   -fx-background-color: #645d87;
+   -fx-background-radius: 30px;
+   -fx-border-width: 0.7px;
+   -fx-font-weight:bold;
+   -fx-border-color: #ffffff;
+   -fx-background-radius: 30px;
+   -fx-cursor:hand;
+}
 .table-view .column-header,
 .table-view .column-header-background .filler{
     -fx-cell-size:20;

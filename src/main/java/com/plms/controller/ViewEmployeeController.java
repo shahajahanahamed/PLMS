@@ -17,6 +17,8 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -32,21 +34,27 @@ public class ViewEmployeeController implements Initializable {
     private TableView<Employee> employeeTV;
 
     @FXML
-    private TableColumn<Employee, String> idCol;
-    @FXML
-    private TableColumn<Employee, String> nameCol;
-    @FXML
-    private TableColumn<Employee, String> usernameCol;
-    @FXML
-    private TableColumn<Employee, String> typeCol;
-    @FXML
-    private TableColumn<Employee, String> contactCol;
-    @FXML
-    private TableColumn<Employee, String> emailCol;
+    private TableColumn<Employee, String> idCol,nameCol,usernameCol,typeCol,contactCol,emailCol;
 
+    @FXML
+    private FontAwesomeIcon searchIcon,filterIcon;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDataIntoTable();
+        setUserTypeInFilterCombo();
+    }
+
+    private void setUserTypeInFilterCombo() {
+        //List<String> userTypeList = new ArrayList<>();
+        HashSet<String> userTypeList = new HashSet<String>();
+        List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
+        for(int i = 0 ; i < employeeList.size() ; i++){
+            Employee emp = (Employee) employeeList.get(i);
+            userTypeList.add(emp.getUserType());
+        }
+        ObservableList<String> usertypes = FXCollections.observableArrayList(userTypeList);
+        filterComboBox.setItems(usertypes);
+        filterComboBox.setPromptText("Filter by User Type");
     }
 
     @FXML
@@ -55,10 +63,44 @@ public class ViewEmployeeController implements Initializable {
     }
     @FXML
     void clickOnCreateNewIcon(MouseEvent event) throws IOException {
-        new SceneLoader().loadSceneInDifferentStage(getClass(), "AddEmployeePage");
+        clickOnCreateNewButton(event);
+    }
+
+    @FXML
+    void clickOnSearchIcon(MouseEvent event) {
+        String name = searchBox.getText();
+        loadDataIntoTable(name);
+    }
+
+    @FXML
+    void clickOnFilterIcon(MouseEvent event) {
+        String userType = filterComboBox.getValue();
+        loadDataIntoTableByUserType(userType);
+    }
+    private void clearTableData(){
+        employeeTV.getItems().clear();
+    }
+    private void loadDataIntoTable(String name) {
+        if(name==""){
+            loadDataIntoTable();
+        }else{
+            clearTableData();
+            List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails(name);
+            idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
+            nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
+            usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+            typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
+            contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+            emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+            ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
+            employeeTV.setItems(employees);
+            //addUpdateButtonToTable();
+            //addDeleteButtonToTable();
+        }
     }
 
     public void loadDataIntoTable() {
+        clearTableData();
         List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
         idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
@@ -66,14 +108,24 @@ public class ViewEmployeeController implements Initializable {
         typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
         contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
         emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
-        addUpdateButtonToTable();
-        addDeleteButtonToTable();
         ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
         employeeTV.setItems(employees);
-
-
+        addUpdateButtonToTable();
+        addDeleteButtonToTable();
     }
 
+    private void loadDataIntoTableByUserType(String userType) {
+        clearTableData();
+        List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetailsByUserType(userType);
+        idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
+        usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
+        contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+        ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
+        employeeTV.setItems(employees);
+    }
 
     private void addUpdateButtonToTable() {
         TableColumn<Employee, Void> updateBtnCol = new TableColumn("Update Action");
@@ -231,5 +283,18 @@ public class ViewEmployeeController implements Initializable {
                 "-fx-border-radius:30;" +
                 "-fx-border-width:1.5; " +
                 "-fx-border-color:Green");
+    }
+
+
+
+    @FXML
+    void clickOnFilterComboBox(MouseEvent event) {
+        searchBox.clear();
+    }
+
+    @FXML
+    void clickOnSearchBox(MouseEvent event) {
+        filterComboBox.setValue("");
+        filterComboBox.setPromptText("Filter by User Type");
     }
 }

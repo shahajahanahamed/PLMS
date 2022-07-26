@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDao {
@@ -25,11 +26,27 @@ public class EmployeeDao {
         List<Employee> employees = this.jdbcTemplate.query(sql,new RowMapperImplmentationEmp());
         return employees;
     }
-
+    public List<Employee> getAllEmployeeShortDetails(String name) {
+        String sql = "SELECT empId,empName,username,userType,contactNo,emailId FROM temployee where empName='"+name+"'";
+        List<Employee> employees = this.jdbcTemplate.query(sql,new RowMapperImplmentationEmp());
+        return employees;
+    }
     public int deleteSingleEmployee(int id){
         String query = "DELETE FROM `temployee` WHERE empId=?";
         int result = this.jdbcTemplate.update(query,id);
         return result;
     }
 
+
+    public List<Employee> getAllEmployeeShortDetailsByUserType(String userType) {
+        String sql = "SELECT empId,empName,username,userType,contactNo,emailId FROM temployee where userType='"+userType+"'";
+        List<Employee> employees = this.jdbcTemplate.query(sql,new RowMapperImplmentationEmp());
+        return employees;
+    }
+
+    public List<Employee> getAllUserType() {
+        String sql = "SELECT userType FROM temployee";
+        List<Employee> employeesUT = this.jdbcTemplate.query(sql,new RowMapperImplmentationEmp());
+        return employeesUT;
+    }
 }
