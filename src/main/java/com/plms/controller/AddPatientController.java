@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -82,6 +83,14 @@ public class AddPatientController implements Initializable {
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
+    }
+    void clickOnBackBtn(MouseEvent event) {
+        Stage stage=(Stage) ptnBackBtn.getScene().getWindow();
+        stage.close();
+    }
+    @FXML
+    void clickOnBackIcon(MouseEvent event) {
+        clickOnBackBtn(event);
     }
     public void addPatientDetails(){
         //Getting values from fields
