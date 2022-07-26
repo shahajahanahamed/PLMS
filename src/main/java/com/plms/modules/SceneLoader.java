@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -30,6 +31,7 @@ public class SceneLoader {
         Scene scene = new Scene(fxmlLoader.load());
         //stage.setTitle("PLMS");
         stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
         return fxmlLoader;
     }

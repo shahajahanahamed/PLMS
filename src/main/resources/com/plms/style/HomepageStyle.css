@@ -1,6 +1,37 @@
+#mainHeader{
+    -fx-background-color: linear-gradient(to right, #504883, #eedbdb);
+}
+#closeBtn{
+    -fx-background-color:#ffffff;
+    -fx-background-radius:100%;
+    -fx-border-width:1px;
+    -fx-border-radius:100%;
+    -fx-border-color:red;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+#closeBtn:hover{
+    -fx-border-width:2px;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+#minimizeBtn{
+    -fx-background-color:#ffffff;
+    -fx-background-radius:100%;
+    -fx-border-width:1px;
+    -fx-border-radius:100%;
+    -fx-border-color:rgb(51, 0, 255);
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+#minimizeBtn:hover{
+    -fx-border-width:2px;
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
 .button{
     -fx-background-color: #6F5CC2;
-    -fx-background-radius:10px;
     -fx-border-color: #9181d9;
 }
 .button:focussed{
@@ -9,8 +40,8 @@
     -fx-border-width:0px 0px,0px,3px;
 }
 .button:hover{
-    -fx-background-color: #A89DDA;
-    /*-fx-background-radium:0m;*/
+    -fx-border-color:linear-gradient(to right, #ffda06de, #ea00ff);
+    -fx-border-width:2px;
 }
 .button:pressed{
     -fx-background-color: #907de6;
@@ -52,11 +83,14 @@
     -fx-border-width: 2px;
     -fx-border-color: green;
 }
-.user-profile{
+#user-profile{
     -fx-background-radius:100px;
     -fx-border-radius: 100px;
-    -fx-border-width: 2px;
-    -fx-border-color: #fcfcff;
+    -fx-border-width: 3px;
+    -fx-border-color: linear-gradient(to right, #ff05dade, #0ef2df);
+}
+#user-profile:hover{
+    -fx-border-color: linear-gradient(to right, #0ef2df, #ff05dade);
 }
 
 /*Scroll bar starts here*/

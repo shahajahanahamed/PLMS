@@ -20,15 +20,10 @@ public class LoginController {
     @FXML
     private PasswordField passwordTB;
     @FXML
-    private Button closeBtn;
+    private Button closeBtn,minimizeBtn;
 
     @FXML
-    private FontAwesomeIcon closeIcon;
-    @FXML
-    private Button minimizeBtn;
-
-    @FXML
-    private FontAwesomeIcon minimizeIcon;
+    private FontAwesomeIcon closeIcon,minimizeIcon;
     private static Stage stage;
 
     public static Stage getStage() {
