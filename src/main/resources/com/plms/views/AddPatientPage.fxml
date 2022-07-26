@@ -49,7 +49,7 @@
                         <Insets left="20.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="ptnBackBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
+                  <Button fx:id="ptnBackBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnBackIcon" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
