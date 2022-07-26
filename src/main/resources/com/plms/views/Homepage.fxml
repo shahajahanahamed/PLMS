@@ -21,7 +21,7 @@
          <left>
             <VBox fx:id="menuPane" prefHeight="620.0" prefWidth="180.0" style="-fx-background-color: #6F5CC2;" stylesheets="@../style/HomepageStyle.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="homeBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHomeMenu" prefHeight="55.0" prefWidth="260.0" stylesheets="@../style/HomepageStyle.css" text="Home" textFill="WHITE">
+                  <Button fx:id="homeMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHomeMenu" prefHeight="55.0" prefWidth="260.0" stylesheets="@../style/HomepageStyle.css" text="Home" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -36,7 +36,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnEmployeeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="EmpLoyee" textFill="WHITE">
+                  <Button fx:id="employeeMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnEmployeeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="EmpLoyee" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPatientMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Patient" textFill="WHITE">
+                  <Button fx:id="patientMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPatientMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Patient" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -66,7 +66,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnTestMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Test" textFill="WHITE">
+                  <Button fx:id="testMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnTestMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Test" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -81,7 +81,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Prices" textFill="WHITE">
+                  <Button fx:id="priceMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPriceMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Prices" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -96,7 +96,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Reports" textFill="WHITE">
+                  <Button fx:id="reportsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnReportsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Reports" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -111,7 +111,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Dashboard" textFill="WHITE">
+                  <Button fx:id="dashboardMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnDashboardMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -126,7 +126,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Help" textFill="WHITE">
+                  <Button fx:id="helpMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHelpMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Help" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -141,7 +141,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="About Us" textFill="WHITE">
+                  <Button fx:id="aboutUsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnAboutUsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="About Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
@@ -156,7 +156,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Contact Us" textFill="WHITE">
+                  <Button fx:id="contactUsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnContactUsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Contact Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>

@@ -1,4 +1,5 @@
 package com.plms.controller;
+
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,10 +25,24 @@ public class Homepage implements Initializable {
     @FXML
     private Label lblUserProfile;
     @FXML
-    private Button closeBtn,minimizeBtn;
+    private Button closeBtn, minimizeBtn;
     @FXML
-    private FontAwesomeIcon closeIcon,minimizeIcon;
+    private FontAwesomeIcon closeIcon, minimizeIcon;
 
+    @FXML
+    private Label lblHome;
+    @FXML
+    private Label lblLabName;
+
+    @FXML
+    private Button aboutUsMenuBtn, contactUsMenuBtn, dashboardMenuBtn, employeeMenuBtn, helpMenuBtn, homeMenuBtn, patientMenuBtn, priceMenuBtn, reportsMenuBtn, testMenuBtn;
+
+    private Button selectedButton;
+
+    String normalBtnStyle = String.format("-fx-background-color: #6F5CC2;-fx-border-color: linear-gradient(to top right, #06fff3de, #408379);");
+    String selectedBtnStyle = String.format("-fx-background-color: #4f3f98;\n" +
+            "    -fx-border-color: linear-gradient(to right, #FFFFFF, #4decf492);\n" +
+            "    -fx-border-width:2px;-fx-border-radius:15px;");
 
     @FXML
     void clickOnCloseBtn(MouseEvent event) {
@@ -50,36 +65,134 @@ public class Homepage implements Initializable {
     void clickOnMinimizeIcon(MouseEvent event) {
         clickOnMinimizeBtn(event);
     }
+
     @FXML
     public void clickOnHomeMenu(javafx.scene.input.MouseEvent mouseEvent) {
         bp.setCenter(ap);
+        selectedButton.setStyle(normalBtnStyle);
+        homeMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=homeMenuBtn;
+
     }
+
     @FXML
     public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewEmployeePage");
+        selectedButton.setStyle(normalBtnStyle);
+        employeeMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=employeeMenuBtn;
     }
+
     @FXML
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewPatientPage");
+        selectedButton.setStyle(normalBtnStyle);
+        patientMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=patientMenuBtn;
     }
+
     public void clickOnTestMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewTestPage");
+        selectedButton.setStyle(normalBtnStyle);
+        testMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=testMenuBtn;
     }
+
+    @FXML
+    void clickOnAboutUsMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        aboutUsMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=aboutUsMenuBtn;
+    }
+
+    @FXML
+    void clickOnContactUsMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        contactUsMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=contactUsMenuBtn;
+    }
+    @FXML
+    void clickOnDashboardMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        dashboardMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=dashboardMenuBtn;
+    }
+
+    @FXML
+    void clickOnHelpMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        helpMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=helpMenuBtn;
+    }
+    @FXML
+    void clickOnPriceMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        priceMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=priceMenuBtn;
+    }
+    @FXML
+    void clickOnReportsMenu(MouseEvent event) {
+        selectedButton.setStyle(normalBtnStyle);
+        reportsMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton=reportsMenuBtn;
+    }
+
     private void loadContent(String page) throws IOException {
         Parent content;
-        content = FXMLLoader.load(getClass().getResource("/com/plms/views/"+page+".fxml"));
+        content = FXMLLoader.load(getClass().getResource("/com/plms/views/" + page + ".fxml"));
         bp.setCenter(content);
     }
+
     public void userLogOut(ActionEvent event) throws IOException {
         LoginController m = new LoginController();
         //m.changeScene("LoginPage.fxml");
 
     }
+
+
     public void printUserProfileName(String username) {
         lblUserProfile.setText(username);
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        homeMenuBtn.setStyle(selectedBtnStyle);
+        selectedButton = homeMenuBtn;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -32,13 +32,9 @@
 
 .button{
     -fx-background-color: #6F5CC2;
-    -fx-border-color: #9181d9;
+    -fx-border-color: linear-gradient(to top right, #06fff3de, #408379);
 }
-.button:focussed{
-    -fx-background-color: #7D6CC8;
-    -fx-border-color: #CDD1D6;
-    -fx-border-width:0px 0px,0px,3px;
-}
+
 .button:hover{
     -fx-border-color:linear-gradient(to right, #ffda06de, #ea00ff);
     -fx-border-width:2px;
@@ -49,9 +45,9 @@
     -fx-border-width:0px 0px,0px,3px;
 }
 .button:selected{
-    -fx-background-color: #4925e8;
-    -fx-border-color: #978ace;
-    -fx-border-width:0px 0px,0px,3px;
+    -fx-background-color: #4f3f98;
+    -fx-border-color: linear-gradient(to right, #d3d6f0, #2c3a3b92);
+    -fx-border-width:3px;
 }
 .table-view .column-header,
 .table-view .column-header-background .filler{
