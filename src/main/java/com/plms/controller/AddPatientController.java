@@ -88,7 +88,10 @@ public class AddPatientController implements Initializable {
         Stage stage=(Stage) ptnBackBtn.getScene().getWindow();
         stage.close();
     }
-
+    @FXML
+    void clickOnBackIcon(MouseEvent event) {
+        clickOnBackBtn(event);
+    }
     public void addPatientDetails(){
         //Getting values from fields
         String ptnName = ptnNameTB.getText();
