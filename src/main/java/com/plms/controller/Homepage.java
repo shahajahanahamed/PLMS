@@ -1,5 +1,6 @@
 package com.plms.controller;
 
+import com.plms.modules.SceneLoader;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,7 +37,8 @@ public class Homepage implements Initializable {
 
     @FXML
     private Button aboutUsMenuBtn, contactUsMenuBtn, dashboardMenuBtn, employeeMenuBtn, helpMenuBtn, homeMenuBtn, patientMenuBtn, priceMenuBtn, reportsMenuBtn, testMenuBtn;
-
+    @FXML
+    private Button userProfileBtn;
     private Button selectedButton;
 
     String normalBtnStyle = String.format("-fx-background-color: #6F5CC2;-fx-border-color: linear-gradient(to top right, #06fff3de, #408379);");
@@ -67,6 +69,14 @@ public class Homepage implements Initializable {
     }
 
     @FXML
+    void clickOnUserProfileBtn(MouseEvent event) throws IOException {
+        new SceneLoader().loadSceneInDifferentStage(getClass(),"UserProfilePage");
+    }
+    @FXML
+    void clickOnUserProfileIcon(MouseEvent event) throws IOException {
+        clickOnUserProfileBtn(event);
+    }
+    @FXML
     public void clickOnHomeMenu(javafx.scene.input.MouseEvent mouseEvent) {
         bp.setCenter(ap);
         selectedButton.setStyle(normalBtnStyle);
@@ -74,6 +84,11 @@ public class Homepage implements Initializable {
         selectedButton=homeMenuBtn;
 
     }
+    @FXML
+    void clickOnHomeMenuIcon(MouseEvent event) {
+        clickOnHomeMenu(event);
+    }
+
 
     @FXML
     public void clickOnEmployeeMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
@@ -82,7 +97,10 @@ public class Homepage implements Initializable {
         employeeMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=employeeMenuBtn;
     }
-
+    @FXML
+    void clickOnEmployeeMenuIcon(MouseEvent event) throws IOException {
+        clickOnEmployeeMenu(event);
+    }
     @FXML
     public void clickOnPatientMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewPatientPage");
@@ -90,14 +108,20 @@ public class Homepage implements Initializable {
         patientMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=patientMenuBtn;
     }
-
+    @FXML
+    void clickOnPatientMenuIcon(MouseEvent event) throws IOException {
+        clickOnPatientMenu(event);
+    }
     public void clickOnTestMenu(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         loadContent("ViewTestPage");
         selectedButton.setStyle(normalBtnStyle);
         testMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=testMenuBtn;
     }
-
+    @FXML
+    void clickOnTestMenuIcon(MouseEvent event) throws IOException {
+        clickOnTestMenu(event);
+    }
     @FXML
     void clickOnAboutUsMenu(MouseEvent event) {
         selectedButton.setStyle(normalBtnStyle);
@@ -117,6 +141,10 @@ public class Homepage implements Initializable {
         dashboardMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=dashboardMenuBtn;
     }
+    @FXML
+    void clickOnDashboardMenuIcon(MouseEvent event) {
+        clickOnDashboardMenu(event);
+    }
 
     @FXML
     void clickOnHelpMenu(MouseEvent event) {
@@ -125,10 +153,18 @@ public class Homepage implements Initializable {
         selectedButton=helpMenuBtn;
     }
     @FXML
+    void clickOnHelpMenuIcon(MouseEvent event) {
+        clickOnHelpMenu(event);
+    }
+    @FXML
     void clickOnPriceMenu(MouseEvent event) {
         selectedButton.setStyle(normalBtnStyle);
         priceMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=priceMenuBtn;
+    }
+    @FXML
+    void clickOnPriceMenuIcon(MouseEvent event) {
+        clickOnPriceMenu(event);
     }
     @FXML
     void clickOnReportsMenu(MouseEvent event) {
@@ -136,6 +172,11 @@ public class Homepage implements Initializable {
         reportsMenuBtn.setStyle(selectedBtnStyle);
         selectedButton=reportsMenuBtn;
     }
+    @FXML
+    void clickOnReportsMenuIcon(MouseEvent event) {
+        clickOnReportsMenu(event);
+    }
+
 
     private void loadContent(String page) throws IOException {
         Parent content;

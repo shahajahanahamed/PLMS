@@ -26,150 +26,210 @@
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnHomeMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/profile.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="employeeMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnEmployeeMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="EmpLoyee" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnEmployeeMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/users.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="patientMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPatientMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Patient" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnPatientMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/patient.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="testMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnTestMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Test" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnTestMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/test.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="priceMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnPriceMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Prices" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnPriceMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/price.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="reportsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnReportsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Reports" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnReportsMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/report.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="dashboardMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnDashboardMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnDashboardMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/dashboard.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="helpMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnHelpMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Help" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnHelpMenuIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/help.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="aboutUsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnAboutUsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="About Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnAboutUsMenu" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/aboutus.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button fx:id="contactUsMenuBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#clickOnContactUsMenu" prefHeight="55.0" prefWidth="263.0" stylesheets="@../style/HomepageStyle.css" text="Contact Us" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnContactUsMenu" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/contactus.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </graphic>
                      <padding>
                         <Insets left="30.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </VBox>
@@ -179,13 +239,20 @@
                <children>
                   <Pane fx:id="pane" prefHeight="100.0" prefWidth="1280.0">
                      <children>
-                        <Button id="user-profile" alignment="CENTER" contentDisplay="CENTER" layoutX="1199.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="user-profile" stylesheets="@../style/HomepageStyle.css">
+                        <Button id="user-profile" fx:id="userProfileBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="1199.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#clickOnUserProfileBtn" prefHeight="70.0" prefWidth="70.0" styleClass="user-profile" stylesheets="@../style/HomepageStyle.css">
                            <graphic>
-                              <FontAwesomeIcon id="userProfileIcon" fill="#00bbff" glyphName="USER" size="4.5em" />
+                              <FontAwesomeIcon id="userProfileIcon" fill="#00bbff" glyphName="USER" size="4.5em">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
                            </graphic>
                            <padding>
                               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                            </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                         <Label fx:id="lblLabName" alignment="BASELINE_LEFT" layoutX="109.0" layoutY="10.0" prefHeight="77.0" prefWidth="649.0" text="CURE PATHOLOGICAL lABORATORY" textFill="WHITE">
                            <font>
