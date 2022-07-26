@@ -18,13 +18,13 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/plms/views/LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Screen screen = Screen.getPrimary();
+        /*Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
         primaryStage.setX(bounds.getMinX());
         primaryStage.setY(bounds.getMinY());
         primaryStage.setWidth(bounds.getWidth());
-        primaryStage.setHeight(bounds.getHeight());
-        stage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setHeight(bounds.getHeight());*/
+        stage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setTitle("PLMS");
         primaryStage.setScene(scene);
         primaryStage.show();
