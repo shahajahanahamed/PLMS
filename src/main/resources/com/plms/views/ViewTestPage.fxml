@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewTestController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewTestController">
    <children>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewDetailsStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;">
                <children>
-                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" styleClass="header" stylesheets="@../style/ViewDetailsStyle.css">
                      <children>
-                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="960.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewTestPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" layoutX="960.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewDetailsStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
                            </font>
@@ -36,7 +36,7 @@
             </HBox>
          </top>
          <center>
-            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1100.0" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1100.0" stylesheets="@../style/ViewDetailsStyle.css" BorderPane.alignment="CENTER">
                <center>
                   <TableView fx:id="testTV" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1100.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
                     <columns>
@@ -50,7 +50,7 @@
                   </TableView>
                </center>
                <top>
-                  <Pane prefHeight="50.0" prefWidth="1100.0" styleClass="header2" stylesheets="@../style/ViewTestPageStyle.css" BorderPane.alignment="CENTER">
+                  <Pane prefHeight="50.0" prefWidth="1100.0" styleClass="header2" stylesheets="@../style/ViewDetailsStyle.css" BorderPane.alignment="CENTER">
                      <children>
                         <TextField fx:id="searchBox" layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="260.0" promptText="Search by Id">
                            <font>
