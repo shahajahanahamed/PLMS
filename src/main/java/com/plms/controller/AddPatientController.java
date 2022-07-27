@@ -17,30 +17,14 @@ import java.util.ResourceBundle;
 
 public class AddPatientController implements Initializable {
     @FXML
-    private TextField ptnNameTB;
+    private TextField ptnNameTB,ptnContactTB,ptnAgeTB;
 
     @FXML
-    private Button ptnAddBtn;
-
+    private Button ptnAddBtn,ptnBackBtn,PtnClearBtn;
     @FXML
     private TextArea ptnAddressTA;
-
     @FXML
-    private Button ptnBackBtn;
-
-    @FXML
-    private Button PtnClearBtn;
-
-    @FXML
-    private TextField ptnContactTB;
-    @FXML
-    private TextField ptnAgeTB;
-    @FXML
-    private ComboBox<String> ptnGenderCB;
-
-    @FXML
-    private ComboBox<String> testTypeCB;
-
+    private ComboBox<String> ptnGenderCB,testTypeCB;
     @FXML
     private Label validationLbl;
     private int ptnId;
