@@ -33,13 +33,8 @@ public class AddPatientController implements Initializable {
 
     @FXML
     private TextField ptnContactTB;
-
     @FXML
-    private DatePicker ptnDobDP;
-
-    @FXML
-    private TextField ptnEmailTB;
-
+    private TextField ptnAgeTB;
     @FXML
     private ComboBox<String> ptnGenderCB;
 
@@ -96,20 +91,18 @@ public class AddPatientController implements Initializable {
         //Getting values from fields
         String ptnName = ptnNameTB.getText();
         String testType = testTypeCB.getValue();
-        String dob = ptnDobDP.getValue().toString();
+        String ptnAge = ptnAgeTB.getText();
         String gender = ptnGenderCB.getValue();
         String contactNo = ptnContactTB.getText();
-        String emailId = ptnEmailTB.getText();
         String address = ptnAddressTA.getText();
 
         //adding to the employee object
         Patient ptnt = new Patient();
         ptnt.setPtnName(ptnName);
         ptnt.setTestType(testType);
-        ptnt.setPtnDOB(dob);
+        ptnt.setPtnAge(ptnAge);
         ptnt.setPtnGender(gender);
         ptnt.setPtnContact(contactNo);
-        ptnt.setPtnEmailId(emailId);
         ptnt.setPtnAddress(address);
 
         //
@@ -129,10 +122,9 @@ public class AddPatientController implements Initializable {
         //typeCB.setPromptText(typeCB.getPromptText());
         testTypeCB.getSelectionModel().clearSelection();
         testTypeCB.setPromptText("Type");
-        ptnDobDP.setPromptText(ptnDobDP.getPromptText());
+        ptnAgeTB.setPromptText(ptnAgeTB.getPromptText());
         ptnGenderCB.setPromptText(ptnGenderCB.getPromptText());
         ptnContactTB.clear();
-        ptnEmailTB.clear();
         ptnAddressTA.clear();
     }
 }

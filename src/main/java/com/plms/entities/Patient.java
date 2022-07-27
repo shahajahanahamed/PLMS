@@ -4,10 +4,9 @@ public class Patient {
     private int ptnId;
     private String ptnName;
     private String testType;
-    private String ptnDOB;
+    private String age;
     private String ptnGender;
     private String ptnContact;
-    private String ptnEmailId;
     private String ptnAddress;
 
     public int getPtnId() {
@@ -34,12 +33,12 @@ public class Patient {
         this.testType = testType;
     }
 
-    public String getPtnDOB() {
-        return ptnDOB;
+    public String getPtnAge() {
+        return age;
     }
 
-    public void setPtnDOB(String ptnDOB) {
-        this.ptnDOB = ptnDOB;
+    public void setPtnAge(String age) {
+        this.age = age;
     }
 
     public String getPtnGender() {
@@ -56,14 +55,6 @@ public class Patient {
 
     public void setPtnContact(String ptnContact) {
         this.ptnContact = ptnContact;
-    }
-
-    public String getPtnEmailId() {
-        return ptnEmailId;
-    }
-
-    public void setPtnEmailId(String ptnEmailId) {
-        this.ptnEmailId = ptnEmailId;
     }
 
     public String getPtnAddress() {
