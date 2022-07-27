@@ -216,3 +216,19 @@
 	-fx-background-color: -fx-primary-color;
 	-fx-text-fill: white;
 }
+
+#PatnFullNameTB{
+  -fx-background-color:transparent;
+  -fx-font-family:Serif;
+  -fx-text-fill: #ffffff;
+  -fx-font-size:18px;
+  -fx-background-radius:30px;
+  -fx-border-radius: 30px;
+  -fx-border-width: 2px;
+  -fx-border-color: #ffffff;
+}
+#patientNameTB:hover{
+  -fx-background-color:transparent;
+  -fx-border-color:linear-gradient(to right, #ffff00, #7e1f1f);;
+  -fx-background-size:255 37;
+}
