@@ -38,11 +38,9 @@ public class ViewPatientController implements Initializable {
     @FXML
     private TableColumn<Patient, String> TestTypeCol;
     @FXML
-    private TableColumn<Patient, String> DOBCol;
+    private TableColumn<Patient,String>AgeCol;
     @FXML
     private TableColumn<Patient, String> ContactCol;
-    @FXML
-    private TableColumn<Patient, String> EmailCol;
     @FXML
     private TableColumn<Patient, String> GenderCol;
     @Override
@@ -64,10 +62,9 @@ public class ViewPatientController implements Initializable {
         idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
         TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
-        DOBCol.setCellValueFactory(new PropertyValueFactory<>("ptnDOB"));
+        AgeCol.setCellValueFactory(new PropertyValueFactory<>("age"));
         GenderCol.setCellValueFactory(new PropertyValueFactory<>("ptnGender"));
         ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
-        EmailCol.setCellValueFactory(new PropertyValueFactory<>("ptnEmailId"));
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         addUpdateButtonToTable();
         addDeleteButtonToTable();
