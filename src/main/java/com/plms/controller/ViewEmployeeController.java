@@ -151,17 +151,6 @@ public class ViewEmployeeController implements Initializable {
                             EmployeeDao dao = new EmployeeDao();
                             Employee emp = dao.getSingleEmployeeDetails(empId);
                             UpdateEmployeeController controller = loader.getController();
-                            //controller.setEmp(emp);
-                            System.out.println(emp.getEmpId());
-                            System.out.println(emp.getEmpName());
-                            System.out.println(emp.getUsername());
-                            System.out.println(emp.getPassword());
-                            System.out.println(emp.getUserType());
-                            System.out.println(emp.getDob());
-                            System.out.println(emp.getContactNo());
-                            System.out.println(emp.getEmailId());
-                            System.out.println(emp.getAddress());
-
                             controller.loadDataIntoScene(emp);
 
                         });

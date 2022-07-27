@@ -13,34 +13,15 @@ import java.util.ResourceBundle;
 
 public class UpdateEmployeeController implements Initializable {
     @FXML
-    private Button addBtn;
-
+    private Button updateBtn,backBtn,clearBtn;
     @FXML
     private TextArea addressTA;
-
     @FXML
-    private Button backBtn;
-
-    @FXML
-    private Button clearBtn;
-
-    @FXML
-    private TextField contactTB;
-
-    @FXML
-    private TextField emailTB;
-
-    @FXML
-    private TextField fullnameTB;
-
+    private TextField contactTB,emailTB,fullnameTB,usernameTB;
     @FXML
     private PasswordField passwordTB;
-
     @FXML
-    private ComboBox<?> typeCB;
-
-    @FXML
-    private TextField usernameTB;
+    private ComboBox<String> typeCB;
 
     @FXML
     private Label validationLbl;
@@ -56,7 +37,7 @@ public class UpdateEmployeeController implements Initializable {
     }
 
     @FXML
-    void clickOnAddButton(MouseEvent event) {
+    void clickOnUpdateButton(MouseEvent event) {
 
     }
 
@@ -68,16 +49,20 @@ public class UpdateEmployeeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //loadDataIntoScene(getEmp());
+        setValuesToTypeComboBox();
     }
 
     public void loadDataIntoScene(Employee emp) {
         fullnameTB.setText(emp.getEmpName());
         usernameTB.setText(emp.getUsername());
         passwordTB.setText(emp.getPassword());
-        typeCB.getItems().indexOf(emp.getUserType());
+        typeCB.setValue(emp.getUserType());
         contactTB.setText(emp.getContactNo());
         emailTB.setText(emp.getEmailId());
         addressTA.setText(emp.getAddress());
     }
-
+    public void setValuesToTypeComboBox() {
+        ObservableList<String> empTypes = FXCollections.observableArrayList("Admin", "Receptionist", "Lab Technician", "Others");
+        typeCB.setItems(empTypes);
+    }
 }

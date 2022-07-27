@@ -47,7 +47,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="addBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#clickOnAddButton" prefHeight="35.0" prefWidth="95.0" text="Update" textFill="WHITE">
+            <Button fx:id="updateBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#clickOnUpdateButton" prefHeight="35.0" prefWidth="95.0" text="Update" textFill="WHITE">
                <font>
                   <Font name="Serif Bold" size="18.0" />
                </font>
