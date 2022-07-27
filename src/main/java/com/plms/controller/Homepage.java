@@ -51,7 +51,6 @@ public class Homepage implements Initializable {
         Stage stage1 = (Stage) closeBtn.getScene().getWindow();
         stage1.close();
     }
-
     @FXML
     void clickOnCloseIcon(MouseEvent event) {
         clickOnCloseBtn(event);
@@ -67,7 +66,6 @@ public class Homepage implements Initializable {
     void clickOnMinimizeIcon(MouseEvent event) {
         clickOnMinimizeBtn(event);
     }
-
     @FXML
     void clickOnUserProfileBtn(MouseEvent event) throws IOException {
         new SceneLoader().loadSceneInDifferentStage(getClass(),"UserProfilePage");

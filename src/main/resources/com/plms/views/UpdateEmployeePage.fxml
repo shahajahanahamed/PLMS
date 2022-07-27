@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/UpdatePatientDetlsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdateEmployeeController">
+<BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdateEmployeeController">
    <top>
       <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -71,7 +71,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="ERASER" layoutX="100.0" layoutY="449.0" size="2em" />
             <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="198.0" layoutY="451.0" size="2em" />
             <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="302.0" layoutY="450.0" size="2em" />
-            <TextField id="fullnameTB" fx:id="fullnameTB" layoutX="86.0" layoutY="35.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname" stylesheets="@../style/AddTestDetlsStyle.css" />
+            <TextField id="fullnameTB" fx:id="fullnameTB" layoutX="86.0" layoutY="35.0" prefHeight="36.0" prefWidth="305.0" promptText="Fullname"/>
             <TextField id="usernameTB" fx:id="usernameTB" layoutX="85.0" layoutY="84.0" prefHeight="36.0" prefWidth="305.0" promptText="Username">
                <font>
                   <Font name="Serif Regular" size="12.0" />
@@ -81,7 +81,7 @@
             <ComboBox id="typeCB" fx:id="typeCB" layoutX="87.0" layoutY="178.0" prefHeight="25.0" prefWidth="305.0" promptText="Type" visibleRowCount="4" />
             <TextField id="contactTB" fx:id="contactTB" layoutX="87.0" layoutY="226.0" prefHeight="25.0" prefWidth="305.0" promptText="Contact No" />
             <TextField id="emailTB" fx:id="emailTB" layoutX="87.0" layoutY="275.0" prefHeight="25.0" prefWidth="305.0" promptText="Email ID" />
-            <TextArea id="addressTA" fx:id="addressTA" layoutX="87.0" layoutY="322.0" prefHeight="67.0" prefWidth="305.0" promptText="Address" stylesheets="@../style/AddTestDetlsStyle.css">
+            <TextArea id="addressTA" fx:id="addressTA" layoutX="87.0" layoutY="322.0" prefHeight="67.0" prefWidth="305.0" promptText="Address">
                <padding>
                   <Insets left="5.0" />
                </padding>

@@ -46,7 +46,6 @@ public class ViewEmployeeController implements Initializable {
     }
 
     private void setUserTypeInFilterCombo() {
-        //List<String> userTypeList = new ArrayList<>();
         HashSet<String> userTypeList = new HashSet<String>();
         List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
         for(int i = 0 ; i < employeeList.size() ; i++){
