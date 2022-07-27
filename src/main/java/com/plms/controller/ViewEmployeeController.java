@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,7 +36,7 @@ public class ViewEmployeeController implements Initializable {
 
     @FXML
     private TableColumn<Employee, String> idCol,nameCol,usernameCol,typeCol,contactCol,emailCol;
-
+    FXMLLoader loader;
     @FXML
     private FontAwesomeIcon searchIcon,filterIcon;
     @Override
@@ -94,8 +95,6 @@ public class ViewEmployeeController implements Initializable {
             emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
             ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
             employeeTV.setItems(employees);
-            //addUpdateButtonToTable();
-            //addDeleteButtonToTable();
         }
     }
 
@@ -142,11 +141,29 @@ public class ViewEmployeeController implements Initializable {
                         updateBtn.setOnAction((ActionEvent event) -> {
                             Employee empRecord = getTableView().getItems().get(getIndex());
                             System.out.println("Update button clicked");
+                            int empId = empRecord.getEmpId();
+                            System.out.println(empId);
                             try {
-                                new SceneLoader().loadSceneInDifferentStage(getClass(),"UpdateEmployeePage");
+                                loader = new SceneLoader().loadSceneInDifferentStage(getClass(),"UpdateEmployeePage");
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
+                            EmployeeDao dao = new EmployeeDao();
+                            Employee emp = dao.getSingleEmployeeDetails(empId);
+                            UpdateEmployeeController controller = loader.getController();
+                            //controller.setEmp(emp);
+                            System.out.println(emp.getEmpId());
+                            System.out.println(emp.getEmpName());
+                            System.out.println(emp.getUsername());
+                            System.out.println(emp.getPassword());
+                            System.out.println(emp.getUserType());
+                            System.out.println(emp.getDob());
+                            System.out.println(emp.getContactNo());
+                            System.out.println(emp.getEmailId());
+                            System.out.println(emp.getAddress());
+
+                            controller.loadDataIntoScene(emp);
+
                         });
                     }
 
