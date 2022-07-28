@@ -64,12 +64,13 @@
             <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
             <ComboBox id="PatngenderCB" fx:id="ptnGenderCB" layoutX="87.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
             <TextField id="PatncontactTB" fx:id="ptnContactTB" layoutX="85.0" layoutY="257.0" prefHeight="36.0" prefWidth="305.0" promptText="Contact No" />
-            <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="89.0" layoutY="335.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
+            <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="85.0" layoutY="377.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </TextArea>
-            <TextField id="PatnAgeTB" fx:id="ptnAgeTB" layoutX="87.0" layoutY="145.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" text="Age" />
+            <TextField id="PatnAgeTB" fx:id="ptnAgeTB" layoutX="87.0" layoutY="145.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Age" />
+            <DatePicker id="CollectionDateDP" fx:id="collectionDateDP" layoutX="88.0" layoutY="325.0" prefHeight="25.0" prefWidth="302.0" promptText="Collection Date" />
          </children>
       </Pane>
    </center>

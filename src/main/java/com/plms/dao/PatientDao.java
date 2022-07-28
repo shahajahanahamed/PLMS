@@ -16,13 +16,13 @@ public class PatientDao {
         this.jdbcTemplate=this.context.getBean("jdbcTemplate",JdbcTemplate.class);
     }
     public int insertData(Patient ptnt){
-        String sql = "INSERT INTO tpatient (ptnName,testType,age,gender,contactNo,address) VALUES(?,?,?,?,?,?)";
-        int result = this.jdbcTemplate.update(sql,ptnt.getPtnName(),ptnt.getTestType(),ptnt.getPtnAge(),ptnt.getPtnGender(),ptnt.getPtnContact(),ptnt.getPtnAddress());
+        String sql = "INSERT INTO tpatient (ptnName,testType,age,gender,contactNo,address,collectedOn) VALUES(?,?,?,?,?,?,?)";
+        int result = this.jdbcTemplate.update(sql,ptnt.getPtnName(),ptnt.getTestType(),ptnt.getAge(),ptnt.getPtnGender(),ptnt.getPtnContact(),ptnt.getPtnAddress(),ptnt.getPtnTestCollectedDate());
         return result;
     }
 
     public List<Patient> getAllPatientShortDetails(){
-        String sql = "SELECT ptnId,ptnName,testType,age,gender,contactNo FROM tpatient";
+        String sql = "SELECT ptnId,ptnName,testType,age,gender,contactNo,collectedOn FROM tpatient";
         List<Patient> patients = this.jdbcTemplate.query(sql,new RowMapperImplmentationPatient());
         return patients;
     }

@@ -46,6 +46,7 @@
                         <TableColumn fx:id="AgeCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Age" />
                         <TableColumn fx:id="GenderCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Gender" />
                         <TableColumn fx:id="ContactCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="ContactNo" />
+                        <TableColumn fx:id="CollectionDateCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Collection Date" />
                     </columns>
                   </TableView>
                </center>

@@ -8,6 +8,7 @@ public class Patient {
     private String ptnGender;
     private String ptnContact;
     private String ptnAddress;
+    private String ptnTestCollectedDate;
 
     public int getPtnId() {
         return ptnId;
@@ -33,14 +34,6 @@ public class Patient {
         this.testType = testType;
     }
 
-    public String getPtnAge() {
-        return age;
-    }
-
-    public void setPtnAge(String age) {
-        this.age = age;
-    }
-
     public String getPtnGender() {
         return ptnGender;
     }
@@ -63,5 +56,21 @@ public class Patient {
 
     public void setPtnAddress(String ptnAddress) {
         this.ptnAddress = ptnAddress;
+    }
+
+    public String getPtnTestCollectedDate() {
+        return ptnTestCollectedDate;
+    }
+
+    public void setPtnTestCollectedDate(String ptnTestCollectedDate) {
+        this.ptnTestCollectedDate = ptnTestCollectedDate;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 }

@@ -26,6 +26,8 @@ public class AddPatientController implements Initializable {
     @FXML
     private ComboBox<String> ptnGenderCB,testTypeCB;
     @FXML
+    private DatePicker collectionDateDP;
+    @FXML
     private Label validationLbl;
     private int ptnId;
     protected
@@ -79,15 +81,17 @@ public class AddPatientController implements Initializable {
         String gender = ptnGenderCB.getValue();
         String contactNo = ptnContactTB.getText();
         String address = ptnAddressTA.getText();
+        String CollectedOn=collectionDateDP.getValue().toString();
 
         //adding to the employee object
         Patient ptnt = new Patient();
         ptnt.setPtnName(ptnName);
         ptnt.setTestType(testType);
-        ptnt.setPtnAge(ptnAge);
+        ptnt.setAge(ptnAge);
         ptnt.setPtnGender(gender);
         ptnt.setPtnContact(contactNo);
         ptnt.setPtnAddress(address);
+        ptnt.setPtnTestCollectedDate(CollectedOn);
 
         //
         PatientDao pDao = new PatientDao();
@@ -110,5 +114,7 @@ public class AddPatientController implements Initializable {
         ptnGenderCB.setPromptText(ptnGenderCB.getPromptText());
         ptnContactTB.clear();
         ptnAddressTA.clear();
+        collectionDateDP.setPromptText(collectionDateDP.getPromptText());
+
     }
 }

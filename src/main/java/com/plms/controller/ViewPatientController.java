@@ -32,17 +32,7 @@ public class ViewPatientController implements Initializable {
     @FXML
     private TableView<Patient> patientTV;
     @FXML
-    private TableColumn<Patient, String> idCol;
-    @FXML
-    private TableColumn<Patient, String> nameCol;
-    @FXML
-    private TableColumn<Patient, String> TestTypeCol;
-    @FXML
-    private TableColumn<Patient,String>AgeCol;
-    @FXML
-    private TableColumn<Patient, String> ContactCol;
-    @FXML
-    private TableColumn<Patient, String> GenderCol;
+    private TableColumn<Patient, String> idCol,nameCol,TestTypeCol,AgeCol,ContactCol,GenderCol,CollectionDateCol;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDataIntoTable();
@@ -65,6 +55,7 @@ public class ViewPatientController implements Initializable {
         AgeCol.setCellValueFactory(new PropertyValueFactory<>("age"));
         GenderCol.setCellValueFactory(new PropertyValueFactory<>("ptnGender"));
         ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
+        CollectionDateCol.setCellValueFactory(new PropertyValueFactory<>("ptnTestCollectedDate"));
         ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
         addUpdateButtonToTable();
         addDeleteButtonToTable();
