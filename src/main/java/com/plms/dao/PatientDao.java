@@ -22,13 +22,37 @@ public class PatientDao {
     }
 
     public List<Patient> getAllPatientShortDetails(){
-        String sql = "SELECT ptnId,ptnName,testType,age,gender,contactNo,collectedOn FROM tpatient";
+        String sql = "SELECT * FROM tpatient";
         List<Patient> patients = this.jdbcTemplate.query(sql,new RowMapperImplmentationPatient());
+        return patients;
+    }
+
+    public List<Patient> getAllPatientShortDetails(String name){
+        String sql = "SELECT * FROM tpatient where ptnName=?";
+        List<Patient> patients = this.jdbcTemplate.query(sql,new RowMapperImplmentationPatient(),name);
         return patients;
     }
     public int deleteSinglePatient(int id){
         String query = "DELETE FROM `tpatient` WHERE ptnId=?";
         int result = this.jdbcTemplate.update(query,id);
         return result;
+    }
+
+    public List<Patient> getAllPatientShortDetailsByTestType(String testType) {
+        String sql = "SELECT * FROM tpatient where testType=?";
+        List<Patient> patient = this.jdbcTemplate.query(sql, new RowMapperImplmentationPatient(),testType);
+        return patient;
+    }
+
+    public List<Patient> getAllTestType() {
+        String sql = "SELECT testType FROM tpatient";
+        List<Patient> patientTestType = this.jdbcTemplate.query(sql, new RowMapperImplmentationPatient());
+        return patientTestType;
+    }
+
+    public Patient getSinglePatientDetails(int ptnId) {
+        String sql = "SELECT * FROM tpatient where ptnId=?";
+        Patient patient = this.jdbcTemplate.queryForObject(sql, new RowMapperImplmentationPatient(),ptnId);
+        return patient;
     }
 }

@@ -2,8 +2,10 @@ package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
 import com.plms.dao.PatientDao;
+import com.plms.dao.TestDao;
 import com.plms.entities.Employee;
 import com.plms.entities.Patient;
+import com.plms.entities.Test;
 import com.plms.modules.SceneLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +20,7 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -35,12 +38,20 @@ public class ViewPatientController implements Initializable {
     private TableColumn<Patient, String> idCol,nameCol,TestTypeCol,AgeCol,ContactCol,GenderCol,CollectionDateCol;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setUserTypeInFilterCombo();
+        setTestTypeInFilterCombo();
         loadDataIntoTable();
     }
 
-    private void setUserTypeInFilterCombo() {
-
+    private void setTestTypeInFilterCombo() {
+        HashSet<String> testTypeList = new HashSet<String>();
+        List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
+        for(int i = 0 ; i < patientList.size() ; i++){
+            Patient ptnt = (Patient) patientList.get(i);
+            testTypeList.add(ptnt.getTestType());
+        }
+        ObservableList<String> testTypes = FXCollections.observableArrayList(testTypeList);
+        filterComboBox.setItems(testTypes);
+        filterComboBox.setPromptText("Filter by Test Type");
     }
 
     @FXML
@@ -52,8 +63,40 @@ public class ViewPatientController implements Initializable {
     void clickOnCreateNewIcon(MouseEvent event) throws IOException {
         new SceneLoader().loadSceneInDifferentStage(getClass(),"AddPatientPage");
     }
+    @FXML
+    void clickOnSearchIcon(MouseEvent event) {
+        String name = searchBox.getText();
+        loadDataIntoTable(name);
+    }
+
+    @FXML
+    void clickOnFilterIcon(MouseEvent event) {
+        String testType = filterComboBox.getValue();
+        loadDataIntoTableByTestType(testType);
+    }
+    private void clearTableData(){
+        patientTV.getItems().clear();
+    }
+    private void loadDataIntoTable(String name) {
+        if(name==""){
+            loadDataIntoTable();
+        }else{
+            clearTableData();
+            List<Patient> patientList = new PatientDao().getAllPatientShortDetails(name);
+            idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
+            nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
+            TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
+            AgeCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+            GenderCol.setCellValueFactory(new PropertyValueFactory<>("ptnGender"));
+            ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
+            CollectionDateCol.setCellValueFactory(new PropertyValueFactory<>("ptnTestCollectedDate"));
+            ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
+            patientTV.setItems(patients);
+        }
+    }
 
     public void loadDataIntoTable() {
+        clearTableData();
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
         idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
@@ -67,6 +110,22 @@ public class ViewPatientController implements Initializable {
         addDeleteButtonToTable();
         patientTV.setItems(patients);
     }
+
+    private void loadDataIntoTableByTestType(String testType) {
+        clearTableData();
+        List<Patient> patientList = new PatientDao().getAllPatientShortDetailsByTestType(testType);
+        idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
+        TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
+        AgeCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+        GenderCol.setCellValueFactory(new PropertyValueFactory<>("ptnGender"));
+        ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
+        CollectionDateCol.setCellValueFactory(new PropertyValueFactory<>("ptnTestCollectedDate"));
+        ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
+        patientTV.setItems(patients);
+    }
+
+
     private void addUpdateButtonToTable() {
         TableColumn<Patient, Void> updateBtnCol = new TableColumn("Update Action");
         updateBtnCol.setPrefWidth(70);

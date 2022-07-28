@@ -36,7 +36,7 @@
 #filterComboBox{
     -fx-background-color: #58507e;
     -fx-background-radius: 30px;
-    -fx-border-radius: 30px;
+    -fx-border-radius: 29px;
     -fx-border-width: 1.5px;
     -fx-border-color: #ffffff;
     -fx-text-fill:white;
@@ -49,7 +49,7 @@
    -fx-border-width: 0.7px;
    -fx-font-weight:bold;
    -fx-border-color: #ffffff;
-   -fx-background-radius: 30px;
+   -fx-border-radius: 30px;
    -fx-cursor:hand;
 }
 .table-view .column-header,

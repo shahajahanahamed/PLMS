@@ -18,7 +18,8 @@ public class RowMapperImplmentationPatient implements RowMapper<Patient> {
         ptn.setAge(rs.getString(4));
         ptn.setPtnGender(rs.getString(5));
         ptn.setPtnContact(rs.getString(6));
-        ptn.setPtnTestCollectedDate(rs.getString(7));
+        ptn.setPtnAddress(rs.getString(7));
+        ptn.setPtnTestCollectedDate(rs.getString(8));
         return ptn;
     }
 }

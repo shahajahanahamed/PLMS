@@ -31,7 +31,6 @@ public class EmployeeDao {
     }
 
     public List<Employee> getAllEmployeeShortDetails(String name) {
-//        String sql = "SELECT empId,empName,username,userType,contactNo,emailId FROM temployee where empName='" + name + "'";
         String sql = "SELECT * FROM temployee where empName=?";
         List<Employee> employees = this.jdbcTemplate.query(sql, new RowMapperImplmentationEmp(),name);
         return employees;
