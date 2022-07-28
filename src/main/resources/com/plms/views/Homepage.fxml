@@ -291,7 +291,7 @@
       </BorderPane>
    </center>
    <top>
-      <HBox id="mainHeader" alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="1280.0" stylesheets="@../style/HomepageStyle.css" BorderPane.alignment="CENTER">
+      <HBox id="mainHeader" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="1280.0" stylesheets="@../style/HomepageStyle.css" BorderPane.alignment="CENTER">
          <children>
             <Button id="minimizeBtn" fx:id="minimizeBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickOnMinimizeBtn" prefHeight="20.0" prefWidth="20.0" stylesheets="@../style/HomepageStyle.css" textAlignment="CENTER">
                <opaqueInsets>

@@ -79,7 +79,7 @@ public class ViewPatientController implements Initializable {
     }
     private void loadDataIntoTable(String name) {
         if(name==""){
-            loadDataIntoTable();
+            loadDataIntoTableTemp();
         }else{
             clearTableData();
             List<Patient> patientList = new PatientDao().getAllPatientShortDetails(name);
@@ -94,7 +94,19 @@ public class ViewPatientController implements Initializable {
             patientTV.setItems(patients);
         }
     }
-
+    public void loadDataIntoTableTemp() {
+        clearTableData();
+        List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
+        idCol.setCellValueFactory(new PropertyValueFactory<>("ptnId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("ptnName"));
+        TestTypeCol.setCellValueFactory(new PropertyValueFactory<>("testType"));
+        AgeCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+        GenderCol.setCellValueFactory(new PropertyValueFactory<>("ptnGender"));
+        ContactCol.setCellValueFactory(new PropertyValueFactory<>("ptnContact"));
+        CollectionDateCol.setCellValueFactory(new PropertyValueFactory<>("ptnTestCollectedDate"));
+        ObservableList<Patient> patients = FXCollections.observableArrayList(patientList);
+        patientTV.setItems(patients);
+    }
     public void loadDataIntoTable() {
         clearTableData();
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();

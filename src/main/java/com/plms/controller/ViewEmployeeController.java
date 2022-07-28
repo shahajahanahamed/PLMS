@@ -82,7 +82,8 @@ public class ViewEmployeeController implements Initializable {
     }
     private void loadDataIntoTable(String name) {
         if(name==""){
-            loadDataIntoTable();
+            loadDataIntoTableTemp();
+
         }else{
             clearTableData();
             List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails(name);
@@ -97,6 +98,18 @@ public class ViewEmployeeController implements Initializable {
         }
     }
 
+    public void loadDataIntoTableTemp() {
+        clearTableData();
+        List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
+        idCol.setCellValueFactory(new PropertyValueFactory<>("empId"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("empName"));
+        usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("userType"));
+        contactCol.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<>("emailId"));
+        ObservableList<Employee> employees = FXCollections.observableArrayList(employeeList);
+        employeeTV.setItems(employees);
+    }
     public void loadDataIntoTable() {
         clearTableData();
         List<Employee> employeeList = new EmployeeDao().getAllEmployeeShortDetails();
