@@ -42,7 +42,7 @@ public class UpdatePatientController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //loadDataIntoScene(getEmp());
-        setValuesToTypeComboBox();
+        //setValuesToTypeComboBox();
     }
 
     @FXML
@@ -57,10 +57,11 @@ public class UpdatePatientController implements Initializable {
         PatngenderCB.setValue(ptn.getPtnGender());
         PatnaddressTA.setText(ptn.getPtnAddress());
     }
+    /*
     public void setValuesToTypeComboBox() {
         ObservableList<String> empTypes = FXCollections.observableArrayList("Admin", "Receptionist", "Lab Technician", "Others");
       //  typeCB.setItems(empTypes);
     }
 
-
+    */
 }
