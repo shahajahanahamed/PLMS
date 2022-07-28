@@ -35,8 +35,14 @@ public class ViewPatientController implements Initializable {
     private TableColumn<Patient, String> idCol,nameCol,TestTypeCol,AgeCol,ContactCol,GenderCol,CollectionDateCol;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setUserTypeInFilterCombo();
         loadDataIntoTable();
     }
+
+    private void setUserTypeInFilterCombo() {
+
+    }
+
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         //Add patient page instead of AddEmployeePage

@@ -117,4 +117,7 @@ public class AddPatientController implements Initializable {
         collectionDateDP.setPromptText(collectionDateDP.getPromptText());
 
     }
+
+    public void clickOnUpdateButton(MouseEvent mouseEvent) {
+    }
 }

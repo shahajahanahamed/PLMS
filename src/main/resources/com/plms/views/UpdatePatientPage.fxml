@@ -66,11 +66,12 @@
                   <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <ComboBox id="PatngenderCB" fx:id="ptnGenderCB" layoutX="87.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
                   <TextField id="PatncontactTB" fx:id="ptnContactTB" layoutX="87.0" layoutY="265.0" prefHeight="29.0" prefWidth="305.0" promptText="Contact No" />
-                  <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="87.0" layoutY="346.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
+                  <TextArea id="PatnaddressTA" fx:id="ptnAddressTA" layoutX="87.0" layoutY="382.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
                      <padding>
                         <Insets left="5.0" />
                      </padding></TextArea>
                   <TextField id="PatnAgeTB" fx:id="ptnNameTB1" layoutX="87.0" layoutY="143.0" prefHeight="36.0" prefWidth="305.0" promptText="Age" />
+                  <DatePicker id="CollectionDateDP" fx:id="collectedOnDP" layoutX="88.0" layoutY="334.0" prefHeight="25.0" prefWidth="303.0" promptText="Collected On" />
                </children>
             </Pane>
          </center></BorderPane>

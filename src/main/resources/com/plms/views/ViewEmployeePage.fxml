@@ -64,7 +64,7 @@
                               <Font name="Serif Regular" size="14.0" />
                            </font>
                         </TextField>
-                        <FontAwesomeIcon fx:id="searchIcon" fill="WHITE" glyphName="SEARCH" layoutX="250.0" layoutY="30.0" onMouseClicked="#clickOnSearchIcon" size="1.4em" wrappingWidth="18.400025367736816">
+                        <FontAwesomeIcon fx:id="searchIcon" fill="WHITE" glyphName="SEARCH" layoutX="250.0" layoutY="30.0" onMouseClicked="#clickOnSearchIcon" size="1.4em" text="" wrappingWidth="18.400025367736816">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
