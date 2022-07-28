@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewDetailsStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
-   <children>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" stylesheets="@../style/ViewPatientPageStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="590.0" prefWidth="1100.0" stylesheets="@../style/ViewDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.ViewEmployeeController">
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1100.0" style="-fx-background-color: #ffddff;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1100.0" styleClass="header">
                <children>
-                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1100.0" styleClass="header" stylesheets="@../style/ViewPatientPageStyle.css">
-                     <children>
-                        <Button fx:id="createNewBtn" alignment="BASELINE_RIGHT" ellipsisString="x yz" layoutX="952.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="112.0" stylesheets="@../style/ViewPatientPageStyle.css" text="Create New" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="Serif Bold" size="14.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="960.0" layoutY="35.0" onMouseClicked="#clickOnCreateNewIcon" pickOnBounds="true" preserveRatio="true">
+                  <Button fx:id="createNewBtn" alignment="CENTER_RIGHT" ellipsisString="x yz" layoutX="946.0" layoutY="22.5" mnemonicParsing="false" onMouseClicked="#clickOnCreateNewButton" prefHeight="35.0" prefWidth="118.0" text="Create New" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="createNewIcon" fitHeight="20.0" fitWidth="21.0" onMouseClicked="#clickOnCreateNewIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/createnew.png" />
                            </image>
@@ -31,55 +37,55 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Label layoutX="83.0" layoutY="21.0" prefHeight="28.0" prefWidth="112.0" text="Employees" textFill="WHITE">
-                           <font>
-                              <Font name="Serif Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="51.0" size="4em" />
-                     </children>
-                  </Pane>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="83.0" layoutY="21.0" prefHeight="28.0" prefWidth="112.0" text="Employees" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="51.0" size="4em" />
                </children>
-            </HBox>
-         </top>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <BorderPane prefWidth="1100.0" BorderPane.alignment="CENTER">
          <center>
-            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1100.0" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
-               <center>
-                  <TableView fx:id="employeeTV" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
-                    <columns>
-                      <TableColumn fx:id="idCol" prefWidth="92.66666674613953" text="ID" />
-                      <TableColumn fx:id="nameCol" prefWidth="156.00003051757812" text="Name" />
-                        <TableColumn fx:id="usernameCol" prefWidth="157.59999084472656" text="Username" />
-                        <TableColumn fx:id="typeCol" prefWidth="83.20001220703125" text="Type" />
-                        <TableColumn fx:id="contactCol" prefWidth="158.4000244140625" text="Contact No" />
-                        <TableColumn fx:id="emailCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Email" />
-                    </columns>
-                  </TableView>
-               </center>
-               <top>
-                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1100.0" styleClass="header2" stylesheets="@../style/ViewPatientPageStyle.css" BorderPane.alignment="CENTER">
-                     <children>
-                        <TextField fx:id="searchBox" layoutX="14.0" layoutY="10.0" onMouseClicked="#clickOnSearchBox" prefHeight="30.0" prefWidth="260.0" promptText="Search by name">
-                           <font>
-                              <Font name="Serif Regular" size="14.0" />
-                           </font>
-                        </TextField>
-                        <FontAwesomeIcon fx:id="searchIcon" fill="WHITE" glyphName="SEARCH" layoutX="250.0" layoutY="30.0" onMouseClicked="#clickOnSearchIcon" size="1.4em" text="" wrappingWidth="18.400025367736816">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </FontAwesomeIcon>
-                        <ComboBox fx:id="filterComboBox" layoutX="782.0" layoutY="10.0" onMouseClicked="#clickOnFilterComboBox" prefHeight="30.0" prefWidth="260.0" promptText="Filter by User Type" />
-                        <FontAwesomeIcon fx:id="filterIcon" fill="#fafafa" glyphName="FILTER" layoutX="1047.0" layoutY="29.0" onMouseClicked="#clickOnFilterIcon" size="1.5em">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </FontAwesomeIcon>
-                     </children>
-                  </Pane>
-               </top>
-            </BorderPane>
+            <TableView fx:id="employeeTV" style="-fx-background-color: #D7BDE2; -fx-border-color: #E59866; -fx-border-width: 3px;">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="92.66666674613953" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="156.00003051757812" text="Name" />
+                  <TableColumn fx:id="usernameCol" prefWidth="157.59999084472656" text="Username" />
+                  <TableColumn fx:id="typeCol" prefWidth="83.20001220703125" text="Type" />
+                  <TableColumn fx:id="contactCol" prefWidth="158.4000244140625" text="Contact No" />
+                  <TableColumn fx:id="emailCol" minWidth="6.39996337890625" prefWidth="183.99993896484375" text="Email" />
+              </columns>
+            </TableView>
          </center>
+         <top>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1100.0" styleClass="header2" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchBox" layoutX="14.0" layoutY="5.5" onMouseClicked="#clickOnSearchBox" prefHeight="30.0" prefWidth="260.0" promptText="Search by name">
+                     <font>
+                        <Font name="Serif Regular" size="14.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIcon fx:id="searchIcon" fill="WHITE" glyphName="SEARCH" layoutX="250.0" layoutY="26.0" onMouseClicked="#clickOnSearchIcon" size="1.4em" text="" wrappingWidth="18.400025367736816">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <ComboBox fx:id="filterComboBox" layoutX="782.0" layoutY="5.5" onMouseClicked="#clickOnFilterComboBox" prefHeight="30.0" prefWidth="260.0" promptText="Filter by User Type" />
+                  <FontAwesomeIcon fx:id="filterIcon" fill="#fafafa" glyphName="FILTER" layoutX="1047.0" layoutY="24.0" onMouseClicked="#clickOnFilterIcon" size="1.5em">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </children>
+            </Pane>
+         </top>
       </BorderPane>
-   </children>
-</AnchorPane>
+   </center>
+</BorderPane>
