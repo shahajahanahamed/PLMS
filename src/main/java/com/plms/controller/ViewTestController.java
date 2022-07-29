@@ -228,4 +228,13 @@ public class ViewTestController implements Initializable {
                 "-fx-border-width:1.5; " +
                 "-fx-border-color:Green");
     }
+
+    public void clickOnSearchIcon(MouseEvent mouseEvent) {
+    }
+
+    public void clickOnFilterIcon(MouseEvent mouseEvent) {
+    }
+
+    public void clickOnTestMenu(MouseEvent mouseEvent) {
+    }
 }
