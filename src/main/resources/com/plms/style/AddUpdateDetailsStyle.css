@@ -1,3 +1,7 @@
+#mainHeader{
+  -fx-background-color: linear-gradient(to right, #504883, #eedbdb);
+}
+
 #mainBP{
   -fx-background-color: linear-gradient(to right, #9545e0, #41419e);
   -fx-border-width:0px 0px,0px,2px;

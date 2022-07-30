@@ -18,17 +18,20 @@ import java.util.ResourceBundle;
 
 public class AddTestController implements Initializable {
     @FXML
-    private Button backBtn,clearBtn,addBtn;
+    private Button backBtn, clearBtn, addBtn;
 
     @FXML
-    private FontAwesomeIcon backIcon,clearIcon,addIcon;
+    private FontAwesomeIcon backIcon, clearIcon, addIcon;
 
     @FXML
     private ComboBox<String> groupNameCB;
 
     @FXML
-    private TextField testNameTB,unitTB,rangeTB,costTB;
-
+    private TextField testNameTB, unitTB, rangeTB, costTB;
+    @FXML
+    private Button closeBtn, minimizeBtn;
+    @FXML
+    private FontAwesomeIcon closeIcon, minimizeIcon;
     @FXML
     private Label validationLbl;
 
@@ -42,6 +45,27 @@ public class AddTestController implements Initializable {
     String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 30;");
     String successStyle = String.format("-fx-border-color: #A9A9A9; -fx-border-width: 2; -fx-border-radius: 5;");
 
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
+    }
 
     @FXML
     void clickOnAddBtn(MouseEvent event) {
@@ -53,27 +77,33 @@ public class AddTestController implements Initializable {
             clearAllFields();
         }
     }
+
     @FXML
     void clickOnAddIcon(MouseEvent event) {
         clickOnAddBtn(event);
     }
+
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
+
     @FXML
     void clickOnClearIcon(MouseEvent event) {
         clickOnClearBtn(event);
     }
+
     @FXML
     void clickOnBackBtn(MouseEvent event) {
-        Stage stage=(Stage) backBtn.getScene().getWindow();
+        Stage stage = (Stage) backBtn.getScene().getWindow();
         stage.close();
     }
+
     @FXML
     void clickOnBackIcon(MouseEvent event) {
         clickOnBackBtn(event);
     }
+
     public void clearAllFields() {
         testNameTB.clear();
         groupNameCB.getSelectionModel().clearSelection();
@@ -85,12 +115,12 @@ public class AddTestController implements Initializable {
     private boolean checkValidation() {
 
         //We need to check the validation of all the fields
-            testName = testNameTB.getText();
-            groupName = groupNameCB.getValue();
-            testUnit=unitTB.getText();
-            testRange=rangeTB.getText();
-            testCost=costTB.getText();
-            return false;
+        testName = testNameTB.getText();
+        groupName = groupNameCB.getValue();
+        testUnit = unitTB.getText();
+        testRange = rangeTB.getText();
+        testCost = costTB.getText();
+        return false;
     }
 
     private void setTest() {

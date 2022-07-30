@@ -2,6 +2,7 @@ package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -29,6 +30,10 @@ public class AddEmployeeController implements Initializable {
     private PasswordField passwordTB;
     @FXML
     private Label validationLbl;
+    @FXML
+    private Button closeBtn, minimizeBtn;
+    @FXML
+    private FontAwesomeIcon closeIcon, minimizeIcon;
     private int empId;
     private String empFullname, username, password, userType, dob, gender, contactNo, emailId, address;
     boolean validate = false;
@@ -45,6 +50,26 @@ public class AddEmployeeController implements Initializable {
         setValuesToGenderComboBox();
     }
 
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
+    }
     //Adding employee types to the Type Combobox
     public void setValuesToTypeComboBox() {
         ObservableList<String> employeeTypes = FXCollections.observableArrayList("Admin", "Receptionist", "Lab Technician", "Others");

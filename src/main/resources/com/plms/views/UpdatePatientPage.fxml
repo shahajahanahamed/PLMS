@@ -2,20 +2,21 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdatePatientController">
-   <children>
+
+<BorderPane stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdatePatientController">
+   <center>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
             <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -79,13 +80,15 @@
                   <TextField id="PatnFullNameTB" fx:id="ptntNameTB" layoutX="87.0" layoutY="93.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name">
                      <font>
                         <Font name="Serif Regular" size="12.0" />
-                     </font></TextField>
+                     </font>
+                  </TextField>
                   <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="144.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <TextField id="PatncontactTB" fx:id="ptntContactTB" layoutX="87.0" layoutY="251.0" prefHeight="29.0" prefWidth="305.0" promptText="Contact No" />
                   <TextArea id="PatnaddressTA" fx:id="ptntAddressTA" layoutX="87.0" layoutY="353.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
                      <padding>
                         <Insets left="5.0" />
-                     </padding></TextArea>
+                     </padding>
+                  </TextArea>
                   <TextField id="PatnAgeTB" fx:id="ptntAgeTB" layoutX="87.0" layoutY="196.0" prefHeight="36.0" prefWidth="305.0" promptText="Age" />
                   <DatePicker id="CollectionDateDP" fx:id="ptntCollectedOnDP" layoutX="88.0" layoutY="300.0" prefHeight="25.0" prefWidth="303.0" promptText="Collected On" />
                   <TextField id="PatnFullNameTB" fx:id="ptntIDTB" editable="false" layoutX="87.0" layoutY="43.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient ID">
@@ -95,6 +98,55 @@
                   </TextField>
                </children>
             </Pane>
-         </right></BorderPane>
-   </children>
-</AnchorPane>
+         </right>
+      </BorderPane>
+   </center>
+   <top>
+      <HBox id="mainHeader" alignment="CENTER_RIGHT" prefHeight="30.0">
+         <children>
+            <Button id="minimizeBtn" fx:id="minimizeBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickOnMinimizeBtn" prefHeight="20.0" prefWidth="20.0" stylesheets="@../style/HomepageStyle.css" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fx:id="minimizeIcon" fill="RED" glyphName="MINUS" onMouseClicked="#clickOnMinimizeIcon" size="1.4em">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.5" top="1.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="closeBtn" fx:id="closeBtn" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickOnCloseBtn" prefHeight="20.0" prefWidth="20.0" stylesheets="@../style/HomepageStyle.css" textAlignment="CENTER" textFill="RED">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fx:id="closeIcon" fill="RED" glyphName="CLOSE" onMouseClicked="#clickOnCloseIcon" size="1.2em">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

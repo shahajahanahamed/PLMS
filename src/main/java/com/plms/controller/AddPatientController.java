@@ -28,15 +28,18 @@ public class AddPatientController implements Initializable {
     private DatePicker collectionDateDP;
 
     @FXML
-    private Button ptntAddBtn,ptntBackBtn,ptntClearBtn;
+    private Button ptntAddBtn, ptntBackBtn, ptntClearBtn;
 
     @FXML
     private TextArea ptntAddressTA;
-
     @FXML
-    private TextField ptntAgeTB,ptntContactTB,ptntNameTB;
+    private Button closeBtn, minimizeBtn;
     @FXML
-    private ComboBox<String> ptntGenderCB,testTypeCB;
+    private FontAwesomeIcon closeIcon, minimizeIcon;
+    @FXML
+    private TextField ptntAgeTB, ptntContactTB, ptntNameTB;
+    @FXML
+    private ComboBox<String> ptntGenderCB, testTypeCB;
 
     @FXML
     private Label validationLbl;
@@ -46,20 +49,46 @@ public class AddPatientController implements Initializable {
     String errorMessage = String.format("-fx-text-fill: RED;");
     String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 5;");
     String successStyle = String.format("-fx-border-color: #A9A9A9; -fx-border-width: 2; -fx-border-radius: 5;");
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setValuesToTestTypeComboBox();
         setValuesToGenderComboBox();
     }
+
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
+    }
+
     @FXML
     void clickOnAddBtn(MouseEvent event) {
         addPatientDetails();
         clearAllFields();
     }
+
     @FXML
     void clickOnAddIcon(MouseEvent event) {
         clickOnAddBtn(event);
     }
+
     @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
@@ -69,33 +98,38 @@ public class AddPatientController implements Initializable {
     void clickOnClearIcon(MouseEvent event) {
         clickOnClearBtn(event);
     }
+
     @FXML
     void clickOnBackBtn(MouseEvent event) {
-        Stage stage=(Stage) ptntBackBtn.getScene().getWindow();
+        Stage stage = (Stage) ptntBackBtn.getScene().getWindow();
         stage.close();
     }
+
     @FXML
     void clickOnBackIcon(MouseEvent event) {
         clickOnBackBtn(event);
     }
+
     //Adding Test types to the Type Combo box
-    public void setValuesToTestTypeComboBox(){
+    public void setValuesToTestTypeComboBox() {
         HashSet<String> testTypeList = new HashSet<String>();
         List<Test> testList = new TestDao().getAllTestShortDetails();
-        for(int i = 0 ; i < testList.size() ; i++){
+        for (int i = 0; i < testList.size(); i++) {
             Test tst = (Test) testList.get(i);
             testTypeList.add(tst.getTestName());
         }
         ObservableList<String> testTypes = FXCollections.observableArrayList(testTypeList);
         testTypeCB.setItems(testTypes);
     }
-    public void setValuesToGenderComboBox(){
-        ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
+
+    public void setValuesToGenderComboBox() {
+        ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
         ptntGenderCB.getItems().setAll(gender);
     }
+
     @FXML
 
-    public void addPatientDetails(){
+    public void addPatientDetails() {
         //Getting values from fields
         String ptnName = ptntNameTB.getText();
         String testType = testTypeCB.getValue();
@@ -103,7 +137,7 @@ public class AddPatientController implements Initializable {
         String gender = ptntGenderCB.getValue();
         String contactNo = ptntContactTB.getText();
         String address = ptntAddressTA.getText();
-        String CollectedOn=collectionDateDP.getValue().toString();
+        String CollectedOn = collectionDateDP.getValue().toString();
 
         //adding to the employee object
         Patient ptnt = new Patient();
@@ -118,16 +152,16 @@ public class AddPatientController implements Initializable {
         //
         PatientDao pDao = new PatientDao();
         int result = pDao.insertData(ptnt);
-        if(result==1){
+        if (result == 1) {
             validationLbl.setText("Patient Added Successfully");
             validationLbl.setStyle(successMessage);
-        }else {
+        } else {
             validationLbl.setText("Patient Addition Failed");
             validationLbl.setStyle(errorMessage);
         }
     }
 
-    public void clearAllFields(){
+    public void clearAllFields() {
         ptntNameTB.clear();
         //typeCB.setPromptText(typeCB.getPromptText());
         testTypeCB.getSelectionModel().clearSelection();

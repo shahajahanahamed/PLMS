@@ -2,6 +2,7 @@ package com.plms.controller;
 
 import com.plms.dao.EmployeeDao;
 import com.plms.entities.Employee;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,6 +19,10 @@ public class UpdateEmployeeController implements Initializable {
     private Button backBtn,clearBtn,updateBtn;
     @FXML
     private TextArea addressTA;
+    @FXML
+    private Button closeBtn, minimizeBtn;
+    @FXML
+    private FontAwesomeIcon closeIcon, minimizeIcon;
     @FXML
     private TextField empIDTB,contactTB,emailTB,fullnameTB,usernameTB;
     @FXML
@@ -36,6 +41,27 @@ public class UpdateEmployeeController implements Initializable {
 
     public void setEmp(Employee emp) {
         this.emp = emp;
+    }
+
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
     }
     @FXML
     void clickOnClearBtn(MouseEvent event) {

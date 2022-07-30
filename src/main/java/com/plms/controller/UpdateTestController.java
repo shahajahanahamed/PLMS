@@ -22,7 +22,10 @@ public class UpdateTestController implements Initializable {
     private FontAwesomeIcon updateIcon,backIcon,clearIcon;
     @FXML
     private Button backBtn,clearBtn,updateBtn;
-
+    @FXML
+    private Button closeBtn, minimizeBtn;
+    @FXML
+    private FontAwesomeIcon closeIcon, minimizeIcon;
     @FXML
     private TextField testIDTB,costTB,rangeTB,testNameTB,unitTB;
     @FXML
@@ -37,6 +40,26 @@ public class UpdateTestController implements Initializable {
 
     public void setTst(Test tst) {
         this.tst = tst;
+    }
+    @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
     }
 
     @FXML

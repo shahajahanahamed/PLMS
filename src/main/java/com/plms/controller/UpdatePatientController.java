@@ -21,20 +21,23 @@ import java.util.ResourceBundle;
 
 public class UpdatePatientController implements Initializable {
     @FXML
-    private Button backBtn,clearBtn,updateBtn;
+    private Button backBtn, clearBtn, updateBtn;
     @FXML
-    private FontAwesomeIcon backIcon,clearIcon,updateIcon;
+    private FontAwesomeIcon backIcon, clearIcon, updateIcon;
     @FXML
     private TextArea ptntAddressTA;
     @FXML
-    private TextField ptntAgeTB,ptntContactTB,ptntIDTB,ptntNameTB;
+    private TextField ptntAgeTB, ptntContactTB, ptntIDTB, ptntNameTB;
 
     @FXML
     private DatePicker ptntCollectedOnDP;
 
     @FXML
     private ComboBox<String> testTypeCB;
-
+    @FXML
+    private Button closeBtn, minimizeBtn;
+    @FXML
+    private FontAwesomeIcon closeIcon, minimizeIcon;
     @FXML
     private Label validationLbl;
 
@@ -49,13 +52,37 @@ public class UpdatePatientController implements Initializable {
     }
 
     @FXML
+    void clickOnCloseBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.close();
+    }
+
+    @FXML
+    void clickOnCloseIcon(MouseEvent event) {
+        clickOnCloseBtn(event);
+    }
+
+    @FXML
+    void clickOnMinimizeBtn(MouseEvent event) {
+        Stage stage1 = (Stage) closeBtn.getScene().getWindow();
+        stage1.setIconified(true);
+    }
+
+    @FXML
+    void clickOnMinimizeIcon(MouseEvent event) {
+        clickOnMinimizeBtn(event);
+    }
+
+    @FXML
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
+
     @FXML
     void clickOnClearIcon(MouseEvent event) {
         clickOnClearBtn(event);
     }
+
     @FXML
     void clickOnBackBtn(MouseEvent event) {
         Stage stg = (Stage) backBtn.getScene().getWindow();
@@ -70,7 +97,7 @@ public class UpdatePatientController implements Initializable {
     @FXML
     void clickOnUpdateBtn(MouseEvent event) {
         Patient ptnt = getPatientDetails();
-        PatientDao dao =new PatientDao();
+        PatientDao dao = new PatientDao();
         int result = dao.updatePatient(ptnt);
         Stage stg = (Stage) updateBtn.getScene().getWindow();
         stg.close();
@@ -92,6 +119,7 @@ public class UpdatePatientController implements Initializable {
     void clickOnUpdateIcon(MouseEvent event) {
         clickOnUpdateBtn(event);
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setValuesToTestTypeComboBox();
@@ -100,7 +128,7 @@ public class UpdatePatientController implements Initializable {
     private void setValuesToTestTypeComboBox() {
         HashSet<String> testTypeList = new HashSet<String>();
         List<Patient> patientList = new PatientDao().getAllPatientShortDetails();
-        for(int i = 0 ; i < patientList.size() ; i++){
+        for (int i = 0; i < patientList.size(); i++) {
             Patient ptnt = (Patient) patientList.get(i);
             testTypeList.add(ptnt.getTestType());
         }
