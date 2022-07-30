@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -44,18 +45,22 @@ public class ViewTestController implements Initializable {
     @FXML
     private TableColumn<Test, String> costCol;
 
+    FXMLLoader loader;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDataIntoTable();
     }
+
     @FXML
     void clickOnCreateNewButton(MouseEvent event) throws IOException {
         //Add Test page instead of AddTestPage
-        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddTestPage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(), "AddTestPage");
     }
+
     @FXML
     void clickOnCreateNewIcon(MouseEvent event) throws IOException {
-        new SceneLoader().loadSceneInDifferentStage(getClass(),"AddTestPage");
+        new SceneLoader().loadSceneInDifferentStage(getClass(), "AddTestPage");
     }
 
     public void loadDataIntoTable() {
@@ -71,6 +76,7 @@ public class ViewTestController implements Initializable {
         addDeleteButtonToTable();
         testTV.setItems(tests);
     }
+
     private void addUpdateButtonToTable() {
         TableColumn<Test, Void> updateBtnCol = new TableColumn("Update Action");
         updateBtnCol.setPrefWidth(70);
@@ -84,13 +90,19 @@ public class ViewTestController implements Initializable {
 
                     {
                         updateBtn.setOnAction((ActionEvent event) -> {
-                            Test testrecord= getTableView().getItems().get(getIndex());
+                            System.out.println("Update button clicked");
+                            Test testrecord = getTableView().getItems().get(getIndex());
+                            int testId = testrecord.getTestId();
                             System.out.println("Update button clicked");
                             try {
-                                new SceneLoader().loadSceneInDifferentStage(getClass(),"UpdatePatientPage");
+                                loader = new SceneLoader().loadSceneInDifferentStage(getClass(), "UpdateTestPage");
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
+                            TestDao dao = new TestDao();
+                            Test test = dao.getSingleTestDetails(testId);
+                            UpdateTestController controller = loader.getController();
+                            controller.loadDataIntoScene(test);
                         });
                     }
 
@@ -142,7 +154,7 @@ public class ViewTestController implements Initializable {
                             System.out.println("Delete button clicked");
                             TestDao testDao = new TestDao();
                             int result = testDao.deleteSingleTest(ptnRecord.getTestId());
-                            System.out.println("Result : "+result);
+                            System.out.println("Result : " + result);
                             loadDataIntoTable();
                         });
                     }
@@ -185,6 +197,7 @@ public class ViewTestController implements Initializable {
                 "-fx-border-width:1.5; " +
                 "-fx-border-color:Red");
     }
+
     public void setDeleteButtonEnterStyle(Button deleteBtn) {
         deleteBtn.setStyle("-fx-background-color:White; " +
                 "-fx-text-fill:Red; " +
@@ -211,6 +224,7 @@ public class ViewTestController implements Initializable {
                 "-fx-border-width:1.5; " +
                 "-fx-border-color:Green");
     }
+
     public void setUpdateButtonEnterStyle(Button updateBtn) {
         updateBtn.setStyle("-fx-background-color:White; " +
                 "-fx-text-fill:Green; " +

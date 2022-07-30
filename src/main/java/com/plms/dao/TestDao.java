@@ -31,4 +31,17 @@ public class TestDao {
         int result = this.jdbcTemplate.update(query,id);
         return result;
     }
+
+    public Test getSingleTestDetails(int testId) {
+        String sql = "SELECT * FROM ttest where testId=?";
+        Test tst = this.jdbcTemplate.queryForObject(sql, new RowMapperImplmentationTest(),testId);
+        return tst;
+    }
+
+    public int updateTest(Test tst) {
+        String sql = "UPDATE ttest SET testName=?,testGroup=?,testRange=?,testUnit=?,testCost=? WHERE testId=?";
+        int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getGroupName(),tst.getNormalRange(),tst.getTstUnit(),tst.getCost(),tst.getTestId());
+        return result;
+    }
+
 }

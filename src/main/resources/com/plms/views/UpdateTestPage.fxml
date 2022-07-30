@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -10,18 +11,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="mainBP" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddTestController">
+<BorderPane id="mainBP" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdateTestController">
    <top>
       <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Pane prefHeight="200.0" prefWidth="500.0">
                <children>
-                  <Label layoutX="143.0" layoutY="32.0" text="Add Test" textFill="WHITE">
+                  <Label layoutX="143.0" layoutY="34.0" text="Update Test" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="48.0" />
                      </font>
                   </Label>
-                  <FontAwesomeIcon fill="WHITE" glyphName="FLASK" layoutX="62.0" layoutY="81.0" size="5em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="FLASK" layoutX="62.0" layoutY="83.0" size="5em" />
                   <Label fx:id="validationLbl" alignment="BASELINE_CENTER" layoutX="165.0" layoutY="70.0" prefHeight="17.0" prefWidth="188.0" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="14.0" />
@@ -35,7 +36,7 @@
    <center>
       <Pane id="centerPane" prefHeight="439.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="clearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
+            <Button fx:id="clearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
                <font>
                   <Font name="Serif Bold" size="18.0" />
                </font>
@@ -46,18 +47,18 @@
                   <Insets right="2.0" />
                </padding>
             </Button>
-            <Button fx:id="addBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#clickOnAddBtn" prefHeight="35.0" prefWidth="95.0" text="Add" textFill="WHITE">
+            <Button fx:id="updateBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#clickOnUpdateBtn" prefHeight="35.0" prefWidth="95.0" text="Update" textFill="WHITE">
                <font>
                   <Font name="Serif Bold" size="18.0" />
                </font>
                <graphic>
-                  <FontAwesomeIcon fx:id="addIcon" fill="WHITE" glyphName="PLUS_CIRCLE" onMouseClicked="#clickOnAddIcon" size="1.3em" />
+                  <FontAwesomeIcon fx:id="updateIcon" fill="WHITE" glyphName="EDIT" onMouseClicked="#clickOnUpdateIcon" size="1.3em" />
                </graphic>
                <padding>
                   <Insets right="2.0" />
                </padding>
             </Button>
-            <Button fx:id="backBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#clickOnBackBtn" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
+            <Button fx:id="backBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#clickOnBackBtn" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
                <font>
                   <Font name="Serif Bold" size="18.0" />
                </font>
@@ -69,11 +70,28 @@
                </padding>
             </Button>
             <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="401.0" layoutY="115.0" size="2em" />
-            <TextField id="testnameTB" fx:id="testNameTB" layoutX="89.0" layoutY="42.0" prefHeight="36.0" prefWidth="305.0" promptText="Test name" />
-            <TextField id="unitTB" fx:id="unitTB" layoutX="89.0" layoutY="139.0" prefHeight="36.0" prefWidth="305.0" promptText="Unit" />
-            <TextField id="rangeTB" fx:id="rangeTB" layoutX="89.0" layoutY="184.0" prefHeight="36.0" prefWidth="305.0" promptText="Normal Range" />
-            <TextField id="costTB" fx:id="costTB" layoutX="89.0" layoutY="232.0" prefHeight="36.0" prefWidth="305.0" promptText="Cost" />
-            <ComboBox id="groupnameTB" fx:id="groupNameCB" editable="true" layoutX="89.0" layoutY="91.0" prefHeight="36.0" prefWidth="305.0" promptText="Group name" />
+            <TextField id="testnameTB" fx:id="testNameTB" layoutX="89.0" layoutY="90.0" prefHeight="36.0" prefWidth="305.0" promptText="Test name">
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font></TextField>
+            <TextField id="unitTB" fx:id="unitTB" layoutX="89.0" layoutY="187.0" prefHeight="36.0" prefWidth="305.0" promptText="Unit">
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font></TextField>
+            <TextField id="rangeTB" fx:id="rangeTB" layoutX="89.0" layoutY="232.0" prefHeight="36.0" prefWidth="305.0" promptText="Normal Range">
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font></TextField>
+            <TextField id="costTB" fx:id="costTB" layoutX="89.0" layoutY="280.0" prefHeight="36.0" prefWidth="305.0" promptText="Cost">
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font></TextField>
+            <ComboBox id="groupnameTB" fx:id="groupNameCB" editable="true" layoutX="89.0" layoutY="139.0" prefHeight="36.0" prefWidth="305.0" promptText="Group name" />
+            <TextField id="testnameTB" fx:id="testIDTB" editable="false" layoutX="89.0" layoutY="44.0" prefHeight="36.0" prefWidth="305.0" promptText="Test ID">
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
    </center>
