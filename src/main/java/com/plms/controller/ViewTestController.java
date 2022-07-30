@@ -19,6 +19,7 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -50,6 +51,18 @@ public class ViewTestController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDataIntoTable();
+        setGroupNameInFilterCombo();
+    }
+
+    private void setGroupNameInFilterCombo() {
+        HashSet<String> testGroupList = new HashSet<String>();
+        List<Test> testList = new TestDao().getAllTestShortDetails();
+        for(int i = 0 ; i < testList.size() ; i++){
+            Test test = (Test) testList.get(i);
+            testGroupList.add(test.getGroupName());
+        }
+        ObservableList<String> testGroups = FXCollections.observableArrayList(testGroupList);
+        filterComboBox.setItems(testGroups);
     }
 
     @FXML
@@ -61,6 +74,33 @@ public class ViewTestController implements Initializable {
     @FXML
     void clickOnCreateNewIcon(MouseEvent event) throws IOException {
         new SceneLoader().loadSceneInDifferentStage(getClass(), "AddTestPage");
+    }
+    @FXML
+    void clickOnSearchIcon(MouseEvent event) {
+        String name = searchBox.getText();
+        loadDataIntoTable(name);
+    }
+
+    @FXML
+    void clickOnFilterIcon(MouseEvent event) {
+        String testType = filterComboBox.getValue();
+        loadDataIntoTableByGroupName(testType);
+    }
+
+    private void loadDataIntoTableByGroupName(String groupName) {
+        clearTableData();
+        List<Test> testList = new TestDao().getAllTestDetailsByGroupName(groupName);
+        TestIdCol.setCellValueFactory(new PropertyValueFactory<>("testId"));
+        testnameCol.setCellValueFactory(new PropertyValueFactory<>("testName"));
+        groupNameCol.setCellValueFactory(new PropertyValueFactory<>("groupName"));
+        unitCol.setCellValueFactory(new PropertyValueFactory<>("tstUnit"));
+        normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("normalRange"));
+        costCol.setCellValueFactory(new PropertyValueFactory<>("cost"));
+        ObservableList<Test> tests = FXCollections.observableArrayList(testList);
+        testTV.setItems(tests);
+    }
+    private void clearTableData(){
+        testTV.getItems().clear();
     }
 
     public void loadDataIntoTable() {
@@ -74,6 +114,35 @@ public class ViewTestController implements Initializable {
         ObservableList<Test> tests = FXCollections.observableArrayList(testList);
         addUpdateButtonToTable();
         addDeleteButtonToTable();
+        testTV.setItems(tests);
+    }
+    private void loadDataIntoTable(String name) {
+        if(name==""){
+            loadDataIntoTableTemp();
+        }else{
+            clearTableData();
+            List<Test> testList = new TestDao().getAllTestShortDetails(name);
+            TestIdCol.setCellValueFactory(new PropertyValueFactory<>("testId"));
+            testnameCol.setCellValueFactory(new PropertyValueFactory<>("testName"));
+            groupNameCol.setCellValueFactory(new PropertyValueFactory<>("groupName"));
+            unitCol.setCellValueFactory(new PropertyValueFactory<>("tstUnit"));
+            normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("normalRange"));
+            costCol.setCellValueFactory(new PropertyValueFactory<>("cost"));
+            ObservableList<Test> tests = FXCollections.observableArrayList(testList);
+            testTV.setItems(tests);
+        }
+    }
+
+    private void loadDataIntoTableTemp() {
+        clearTableData();
+        List<Test> testList = new TestDao().getAllTestShortDetails();
+        TestIdCol.setCellValueFactory(new PropertyValueFactory<>("testId"));
+        testnameCol.setCellValueFactory(new PropertyValueFactory<>("testName"));
+        groupNameCol.setCellValueFactory(new PropertyValueFactory<>("groupName"));
+        unitCol.setCellValueFactory(new PropertyValueFactory<>("tstUnit"));
+        normalRangeCol.setCellValueFactory(new PropertyValueFactory<>("normalRange"));
+        costCol.setCellValueFactory(new PropertyValueFactory<>("cost"));
+        ObservableList<Test> tests = FXCollections.observableArrayList(testList);
         testTV.setItems(tests);
     }
 
@@ -243,12 +312,4 @@ public class ViewTestController implements Initializable {
                 "-fx-border-color:Green");
     }
 
-    public void clickOnSearchIcon(MouseEvent mouseEvent) {
-    }
-
-    public void clickOnFilterIcon(MouseEvent mouseEvent) {
-    }
-
-    public void clickOnTestMenu(MouseEvent mouseEvent) {
-    }
 }

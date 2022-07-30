@@ -22,8 +22,13 @@ public class TestDao {
     }
 
     public List<Test> getAllTestShortDetails(){
-        String sql = "SELECT testId,testName,testGroup,testUnit,testRange,testCost FROM ttest";
+        String sql = "SELECT * FROM ttest";
         List<Test> tests = this.jdbcTemplate.query(sql,new RowMapperImplmentationTest());
+        return tests;
+    }
+    public List<Test> getAllTestShortDetails(String name){
+        String sql = "SELECT * FROM ttest WHERE testName=?";
+        List<Test> tests = this.jdbcTemplate.query(sql,new RowMapperImplmentationTest(),name);
         return tests;
     }
     public int deleteSingleTest(int id){
@@ -43,5 +48,10 @@ public class TestDao {
         int result = this.jdbcTemplate.update(sql,tst.getTestName(),tst.getGroupName(),tst.getNormalRange(),tst.getTstUnit(),tst.getCost(),tst.getTestId());
         return result;
     }
-
+    public List<Test> getAllTestDetailsByGroupName(String groupName) {
+        String sql = "SELECT * FROM ttest where testGroup=?";
+        List<Test> tst = this.jdbcTemplate.query(sql, new RowMapperImplmentationTest(),groupName);
+        return tst;
+    }
 }
+
