@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class UpdateEmployeeController implements Initializable {
     @FXML
-    private Button backBtn,clearBtn;
+    private Button backBtn,clearBtn,updateBtn;
     @FXML
     private TextArea addressTA;
     @FXML
@@ -46,14 +46,26 @@ public class UpdateEmployeeController implements Initializable {
         Stage stg = (Stage) backBtn.getScene().getWindow();
         stg.close();
     }
+    @FXML
+    void clickOnClearIcon(MouseEvent event) {
+        clickOnBackBtn(event);
+    }
+    @FXML
+    void clickOnBackIcon(MouseEvent event) {
+        clickOnBackBtn(event);
+    }
 
     @FXML
-    void clickOnUpdateButton(MouseEvent event) {
+    void clickOnUpdateBtn(MouseEvent event) {
         Employee emp = getEmpDetails();
         EmployeeDao dao =new EmployeeDao();
         int result = dao.updateEmployee(emp);
-        Stage stg = (Stage) backBtn.getScene().getWindow();
+        Stage stg = (Stage) updateBtn.getScene().getWindow();
         stg.close();
+    }
+    @FXML
+    void clickOnUpdateIcon(MouseEvent event) {
+        clickOnUpdateBtn(event);
     }
 
     private Employee getEmpDetails() {
@@ -68,8 +80,6 @@ public class UpdateEmployeeController implements Initializable {
         emp.setAddress(addressTA.getText());
         return emp;
     }
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -55,4 +55,10 @@ public class PatientDao {
         Patient patient = this.jdbcTemplate.queryForObject(sql, new RowMapperImplmentationPatient(),ptnId);
         return patient;
     }
+
+    public int updatePatient(Patient ptnt) {
+        String sql = "UPDATE tpatient SET ptnName=?,testType=?,age=?,contactNo=?,collectedOn=?,address=? where ptnId=?";
+        int result = this.jdbcTemplate.update(sql,ptnt.getPtnName(),ptnt.getTestType(),ptnt.getAge(),ptnt.getPtnContact(),ptnt.getPtnTestCollectedDate(),ptnt.getPtnAddress(),ptnt.getPtnId());
+        return result;
+    }
 }

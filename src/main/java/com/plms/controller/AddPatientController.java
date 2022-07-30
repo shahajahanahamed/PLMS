@@ -4,6 +4,7 @@ import com.plms.dao.EmployeeDao;
 import com.plms.dao.PatientDao;
 import com.plms.entities.Employee;
 import com.plms.entities.Patient;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,16 +18,22 @@ import java.util.ResourceBundle;
 
 public class AddPatientController implements Initializable {
     @FXML
-    private TextField ptnNameTB,ptnContactTB,ptnAgeTB;
+    private FontAwesomeIcon clearbtn;
 
     @FXML
-    private Button ptnAddBtn,ptnBackBtn,PtnClearBtn;
-    @FXML
-    private TextArea ptnAddressTA;
-    @FXML
-    private ComboBox<String> ptnGenderCB,testTypeCB;
-    @FXML
     private DatePicker collectionDateDP;
+
+    @FXML
+    private Button ptntAddBtn,ptntBackBtn,ptntClearBtn;
+
+    @FXML
+    private TextArea ptntAddressTA;
+
+    @FXML
+    private TextField ptntAgeTB,ptntContactTB,ptntNameTB;
+    @FXML
+    private ComboBox<String> ptntGenderCB,testTypeCB;
+
     @FXML
     private Label validationLbl;
     private int ptnId;
@@ -40,7 +47,33 @@ public class AddPatientController implements Initializable {
         setValuesToTypeComboBox();
         setValuesToGenderComboBox();
     }
+    @FXML
+    void clickOnAddBtn(MouseEvent event) {
+        addPatientDetails();
+        clearAllFields();
+    }
+    @FXML
+    void clickOnAddIcon(MouseEvent event) {
+        clickOnAddBtn(event);
+    }
+    @FXML
+    void clickOnClearBtn(MouseEvent event) {
+        clearAllFields();
+    }
 
+    @FXML
+    void clickOnClearIcon(MouseEvent event) {
+        clickOnClearBtn(event);
+    }
+    @FXML
+    void clickOnBackBtn(MouseEvent event) {
+        Stage stage=(Stage) ptntBackBtn.getScene().getWindow();
+        stage.close();
+    }
+    @FXML
+    void clickOnBackIcon(MouseEvent event) {
+        clickOnBackBtn(event);
+    }
     //Adding Test types to the Type Combo box
     public void setValuesToTypeComboBox(){
         ObservableList<String> testTypeList = FXCollections.observableArrayList("ACTH(Adreno Corticotropic Hormone) Test","AFT(Alpha Feto Protein)Test","Albumin Test","Alkaline Phophatase(ALP)Test","Allergy Test","Amylase Test","ANA(Antinuclear Antibody)Test","ANCA Profile","Anti CCP(ACCP)Test","Anti TPO Test","Antibody Test","APTT(Active Partial Thromboplastin Time)Test",
@@ -54,34 +87,18 @@ public class AddPatientController implements Initializable {
     }
     public void setValuesToGenderComboBox(){
         ObservableList<String> gender = FXCollections.observableArrayList("Male","Female","Others");
-        ptnGenderCB.getItems().setAll(gender);
+        ptntGenderCB.getItems().setAll(gender);
     }
     @FXML
-    void clickOnAddButton(MouseEvent event) {
-        addPatientDetails();
-        clearAllFields();
-    }
-    @FXML
-    void clickOnClearBtn(MouseEvent event) {
-        clearAllFields();
-    }
-    @FXML
-    void clickOnBackBtn(MouseEvent event) {
-        Stage stage=(Stage) ptnBackBtn.getScene().getWindow();
-        stage.close();
-    }
-    @FXML
-    void clickOnBackIcon(MouseEvent event) {
-        clickOnBackBtn(event);
-    }
+
     public void addPatientDetails(){
         //Getting values from fields
-        String ptnName = ptnNameTB.getText();
+        String ptnName = ptntNameTB.getText();
         String testType = testTypeCB.getValue();
-        String ptnAge = ptnAgeTB.getText();
-        String gender = ptnGenderCB.getValue();
-        String contactNo = ptnContactTB.getText();
-        String address = ptnAddressTA.getText();
+        String ptnAge = ptntAgeTB.getText();
+        String gender = ptntGenderCB.getValue();
+        String contactNo = ptntContactTB.getText();
+        String address = ptntAddressTA.getText();
         String CollectedOn=collectionDateDP.getValue().toString();
 
         //adding to the employee object
@@ -107,18 +124,17 @@ public class AddPatientController implements Initializable {
     }
 
     public void clearAllFields(){
-        ptnNameTB.clear();
+        ptntNameTB.clear();
         //typeCB.setPromptText(typeCB.getPromptText());
         testTypeCB.getSelectionModel().clearSelection();
         testTypeCB.setPromptText("Type");
-        ptnAgeTB.setPromptText(ptnAgeTB.getPromptText());
-        ptnGenderCB.setPromptText(ptnGenderCB.getPromptText());
-        ptnContactTB.clear();
-        ptnAddressTA.clear();
+        ptntAgeTB.clear();
+        ptntGenderCB.getSelectionModel().clearSelection();
+        ptntContactTB.clear();
+        ptntAddressTA.clear();
         collectionDateDP.setPromptText(collectionDateDP.getPromptText());
 
     }
 
-    public void clickOnUpdateButton(MouseEvent mouseEvent) {
-    }
+
 }

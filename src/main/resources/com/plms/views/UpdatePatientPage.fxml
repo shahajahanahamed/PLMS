@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddPatientController">
+<AnchorPane id="mainAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.UpdatePatientController">
    <children>
       <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0">
          <top>
@@ -49,15 +49,15 @@
                         <Insets right="2.0" />
                      </padding>
                      <graphic>
-                        <FontAwesomeIcon fx:id="clearbtn" fill="WHITE" glyphName="ERASER" size="1.3em" />
+                        <FontAwesomeIcon fx:id="clearIcon" fill="WHITE" glyphName="ERASER" onMouseClicked="#clickOnClearIcon" size="1.3em" />
                      </graphic>
                   </Button>
-                  <Button fx:id="updateBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#clickOnUpdateButton" prefHeight="35.0" prefWidth="95.0" text="Update" textFill="WHITE">
+                  <Button fx:id="updateBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#clickOnUpdateBtn" prefHeight="35.0" prefWidth="95.0" text="Update" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
                      <graphic>
-                        <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="1.3em" wrappingWidth="23.85714340209961" />
+                        <FontAwesomeIcon fx:id="updateIcon" fill="WHITE" glyphName="EDIT" onMouseClicked="#clickOnUpdateIcon" size="1.3em" wrappingWidth="23.85714340209961" />
                      </graphic>
                      <padding>
                         <Insets right="2.0" />
@@ -68,7 +68,7 @@
                         <Font name="Serif Bold" size="18.0" />
                      </font>
                      <graphic>
-                        <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" size="1.3em" />
+                        <FontAwesomeIcon fx:id="backIcon" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#clickOnBackIcon" size="1.3em" />
                      </graphic>
                      <padding>
                         <Insets right="2.0" />
@@ -80,7 +80,7 @@
                      <font>
                         <Font name="Serif Regular" size="12.0" />
                      </font></TextField>
-                  <ComboBox id="TestTypeCB" fx:id="ptntTestTypeCB" layoutX="87.0" layoutY="144.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
+                  <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="144.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
                   <TextField id="PatncontactTB" fx:id="ptntContactTB" layoutX="87.0" layoutY="251.0" prefHeight="29.0" prefWidth="305.0" promptText="Contact No" />
                   <TextArea id="PatnaddressTA" fx:id="ptntAddressTA" layoutX="87.0" layoutY="353.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
                      <padding>
