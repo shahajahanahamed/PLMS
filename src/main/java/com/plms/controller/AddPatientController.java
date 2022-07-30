@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -23,24 +24,22 @@ import java.util.ResourceBundle;
 public class AddPatientController implements Initializable {
     @FXML
     private FontAwesomeIcon clearbtn;
-
     @FXML
     private DatePicker collectionDateDP;
-
     @FXML
     private Button ptntAddBtn, ptntBackBtn, ptntClearBtn;
-
     @FXML
     private TextArea ptntAddressTA;
     @FXML
-    private Button closeBtn, minimizeBtn;
+    private Button closeBtn, minimizeBtn,leftArrowBtn,rightArrowBtn;
     @FXML
-    private FontAwesomeIcon closeIcon, minimizeIcon;
+    private FontAwesomeIcon closeIcon, minimizeIcon,leftArrowIcon,rightArrowIcon;
     @FXML
     private TextField ptntAgeTB, ptntContactTB, ptntNameTB;
     @FXML
     private ComboBox<String> ptntGenderCB, testTypeCB;
-
+    @FXML
+    private ListView<String> availableTestLV, selectedTestLV;
     @FXML
     private Label validationLbl;
     private int ptnId;
@@ -54,6 +53,20 @@ public class AddPatientController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setValuesToTestTypeComboBox();
         setValuesToGenderComboBox();
+        setValuesToAvailabeList();
+        availableTestLV.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        selectedTestLV.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
+
+    private void setValuesToAvailabeList() {
+        HashSet<String> testNameList = new HashSet<String>();
+        List<Test> testList = new TestDao().getAllTestShortDetails();
+        for (int i = 0; i < testList.size(); i++) {
+            Test tst = (Test) testList.get(i);
+            testNameList.add(tst.getTestName());
+        }
+        ObservableList<String> allTests = FXCollections.observableArrayList(testNameList);
+        availableTestLV.setItems(allTests);
     }
 
     @FXML
@@ -76,6 +89,31 @@ public class AddPatientController implements Initializable {
     @FXML
     void clickOnMinimizeIcon(MouseEvent event) {
         clickOnMinimizeBtn(event);
+    }
+
+
+
+    @FXML
+    void clickOnLeftArrowBtn(MouseEvent event) {
+
+    }
+
+    @FXML
+    void clickOnLeftArrowIcon(MouseEvent event) {
+        clickOnLeftArrowBtn(event);
+    }
+    HashSet<String> testNameLists = new HashSet<String>();
+    @FXML
+    void clickOnRightArrowBtn(MouseEvent event) {
+        //testNameList=availableTestLV.getSelectionModel().getSelectedItems();
+        testNameLists.addAll(availableTestLV.getSelectionModel().getSelectedItems());
+        ObservableList<String> selectedTests = FXCollections.observableArrayList(testNameLists);
+        selectedTestLV.setItems(selectedTests);
+    }
+
+    @FXML
+    void clickOnRightArrowIcon(MouseEvent event) {
+        clickOnRightArrowBtn(event);
     }
 
     @FXML
