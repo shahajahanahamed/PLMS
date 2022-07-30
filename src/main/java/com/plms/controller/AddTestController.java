@@ -4,6 +4,7 @@ import com.plms.dao.EmployeeDao;
 import com.plms.dao.TestDao;
 import com.plms.entities.Employee;
 import com.plms.entities.Test;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,13 +18,21 @@ import java.util.ResourceBundle;
 
 public class AddTestController implements Initializable {
     @FXML
-    private Button addBtn, backBtn, clearBtn;
+    private Button backBtn,clearBtn,addBtn;
+
     @FXML
-    private TextField testnameTB, groupnameTB, unitTB, rangeTB,costTB;
+    private FontAwesomeIcon backIcon,clearIcon,addIcon;
+
+    @FXML
+    private ComboBox<String> groupNameCB;
+
+    @FXML
+    private TextField testNameTB,unitTB,rangeTB,costTB;
 
     @FXML
     private Label validationLbl;
-    private int empId;
+
+    private int testID;
     private String testName, groupName, testUnit, testRange, testCost;
     boolean validate = false;
     //boolean fullnameV,usernameV,passwordV,usertypeV,dobV,genderV,contactV,emailV,addressV;
@@ -35,7 +44,7 @@ public class AddTestController implements Initializable {
 
 
     @FXML
-    void clickOnAddButton(MouseEvent event) {
+    void clickOnAddBtn(MouseEvent event) {
         validate = checkValidation();
         if (validate) {
             validationLbl.setText("Please insert proper data");
@@ -46,7 +55,7 @@ public class AddTestController implements Initializable {
     }
     @FXML
     void clickOnAddIcon(MouseEvent event) {
-        clickOnAddButton(event);
+        clickOnAddBtn(event);
     }
     @FXML
     void clickOnClearBtn(MouseEvent event) {
@@ -66,8 +75,8 @@ public class AddTestController implements Initializable {
         clickOnBackBtn(event);
     }
     public void clearAllFields() {
-        testnameTB.clear();
-        groupnameTB.clear();
+        testNameTB.clear();
+        groupNameCB.getSelectionModel().clearSelection();
         unitTB.clear();
         rangeTB.clear();
         costTB.clear();
@@ -76,8 +85,8 @@ public class AddTestController implements Initializable {
     private boolean checkValidation() {
 
         //We need to check the validation of all the fields
-            testName = testnameTB.getText();
-            groupName = groupnameTB.getText();
+            testName = testNameTB.getText();
+            groupName = groupNameCB.getValue();
             testUnit=unitTB.getText();
             testRange=rangeTB.getText();
             testCost=costTB.getText();

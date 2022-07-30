@@ -128,11 +128,4 @@ public class UpdatePatientController implements Initializable {
 
     }
 
-    /*
-    public void setValuesToTypeComboBox() {
-        ObservableList<String> empTypes = FXCollections.observableArrayList("Admin", "Receptionist", "Lab Technician", "Others");
-      //  typeCB.setItems(empTypes);
-    }
-
-    */
 }
