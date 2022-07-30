@@ -7,6 +7,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,21 +16,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane stylesheets="@../style/AddUpdateDetailsStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plms.controller.AddPatientController">
    <center>
-      <BorderPane id="mainBP" prefHeight="650.0" prefWidth="500.0" stylesheets="@../style/AddUpdateDetailsStyle.css">
+      <BorderPane id="mainBP" stylesheets="@../style/AddUpdateDetailsStyle.css">
          <top>
             <HBox id="header" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <Pane prefHeight="200.0" prefWidth="500.0">
                      <children>
-                        <Label layoutX="130.0" layoutY="12.0" text="Add Patient" textFill="WHITE">
+                        <Label layoutX="130.0" layoutY="19.0" text="Add Patient" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="48.0" />
                            </font>
                         </Label>
-                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="49.0" layoutY="61.0" size="5em" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="49.0" layoutY="68.0" size="5em" />
                         <Label fx:id="validationLbl" alignment="BASELINE_CENTER" layoutX="165.0" layoutY="70.0" prefHeight="17.0" prefWidth="188.0" textFill="WHITE">
                            <font>
                               <Font name="Serif Bold" size="14.0" />
@@ -40,9 +41,9 @@
             </HBox>
          </top>
          <center>
-            <Pane id="centerPane" prefHeight="550.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <Pane id="centerPane" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="ptntClearBtn" alignment="BASELINE_CENTER" layoutX="92.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
+                  <Button fx:id="ptntClearBtn" alignment="BASELINE_CENTER" layoutX="57.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnClearBtn" prefHeight="35.0" prefWidth="95.0" text="Clear" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
@@ -53,7 +54,7 @@
                         <Insets right="2.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="ptntAddBtn" alignment="BASELINE_CENTER" layoutX="194.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnAddBtn" prefHeight="35.0" prefWidth="95.0" text="Add" textFill="WHITE">
+                  <Button fx:id="ptntAddBtn" alignment="BASELINE_CENTER" layoutX="159.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnAddBtn" prefHeight="35.0" prefWidth="95.0" text="Add" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
@@ -64,7 +65,7 @@
                         <Insets right="2.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="ptntBackBtn" alignment="BASELINE_CENTER" layoutX="295.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnBackBtn" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
+                  <Button fx:id="ptntBackBtn" alignment="BASELINE_CENTER" layoutX="260.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clickOnBackBtn" prefHeight="35.0" prefWidth="95.0" text="Back" textFill="WHITE">
                      <font>
                         <Font name="Serif Bold" size="18.0" />
                      </font>
@@ -75,22 +76,50 @@
                         <FontAwesomeIcon fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" onMouseClicked="#clickOnBackIcon" size="1.3em" />
                      </graphic>
                   </Button>
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="365.0" layoutY="45.0" size="2em" text="" wrappingWidth="8.0" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="369.0" layoutY="283.0" size="2em" />
-                  <TextField id="PatnFullNameTB" fx:id="ptntNameTB" layoutX="87.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" />
-                  <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="87.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
-                  <ComboBox id="PatngenderCB" fx:id="ptntGenderCB" layoutX="87.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
-                  <TextField id="PatncontactTB" fx:id="ptntContactTB" layoutX="85.0" layoutY="257.0" prefHeight="36.0" prefWidth="305.0" promptText="Contact No" />
-                  <TextArea id="PatnaddressTA" fx:id="ptntAddressTA" layoutX="85.0" layoutY="377.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="356.0" layoutY="45.0" size="2em" text="" wrappingWidth="8.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="360.0" layoutY="283.0" size="2em" />
+                  <TextField id="PatnFullNameTB" fx:id="ptntNameTB" layoutX="52.0" layoutY="19.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Name" />
+                  <ComboBox id="TestTypeCB" fx:id="testTypeCB" layoutX="52.0" layoutY="80.0" prefHeight="33.0" prefWidth="305.0" promptText="Test Type" visibleRowCount="4" />
+                  <ComboBox id="PatngenderCB" fx:id="ptntGenderCB" layoutX="52.0" layoutY="201.0" prefHeight="35.0" prefWidth="305.0" promptText="Gender" />
+                  <TextField id="PatncontactTB" fx:id="ptntContactTB" layoutX="50.0" layoutY="257.0" prefHeight="36.0" prefWidth="305.0" promptText="Contact No" />
+                  <TextArea id="PatnaddressTA" fx:id="ptntAddressTA" layoutX="50.0" layoutY="377.0" prefHeight="90.0" prefWidth="305.0" promptText="Address">
                      <padding>
                         <Insets left="5.0" />
                      </padding>
                   </TextArea>
-                  <TextField id="PatnAgeTB" fx:id="ptntAgeTB" layoutX="87.0" layoutY="145.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Age" />
-                  <DatePicker id="CollectionDateDP" fx:id="collectionDateDP" layoutX="88.0" layoutY="325.0" prefHeight="25.0" prefWidth="302.0" promptText="Collection Date" />
+                  <TextField id="PatnAgeTB" fx:id="ptntAgeTB" layoutX="52.0" layoutY="145.0" prefHeight="36.0" prefWidth="305.0" promptText="Patient Age" />
+                  <DatePicker id="CollectionDateDP" fx:id="collectionDateDP" layoutX="53.0" layoutY="325.0" prefHeight="25.0" prefWidth="302.0" promptText="Collection Date" />
                </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
             </Pane>
          </center>
+         <right>
+            <BorderPane BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <center>
+                  <HBox prefHeight="553.0" prefWidth="460.0" style="-fx-background-color: olive;">
+                     <children>
+                        <ListView id="availableTest" fx:id="availableTest" prefHeight="554.0" prefWidth="228.0" style="-fx-background-color: aqua;" />
+                        <ListView id="selectedTest" fx:id="selectedTest" prefHeight="554.0" prefWidth="228.0" style="-fx-background-color: red;" />
+                     </children>
+                  </HBox>
+               </center>
+               <left>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" top="100.0" />
+                     </BorderPane.margin>
+                  </Separator>
+               </left>
+            </BorderPane>
+         </right>
       </BorderPane>
    </center>
    <top>
