@@ -40,6 +40,7 @@ public class SceneLoader {
         Parent root = loader.load();
         Stage stage1 = new Stage();
         stage1.setScene(new Scene(root));
+        stage1.initStyle(StageStyle.TRANSPARENT);
         stage1.show();
         return loader;
     }

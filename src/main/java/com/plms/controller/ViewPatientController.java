@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -36,6 +37,8 @@ public class ViewPatientController implements Initializable {
     private TableView<Patient> patientTV;
     @FXML
     private TableColumn<Patient, String> idCol,nameCol,TestTypeCol,AgeCol,ContactCol,GenderCol,CollectionDateCol;
+
+    FXMLLoader loader;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setTestTypeInFilterCombo();
@@ -153,11 +156,16 @@ public class ViewPatientController implements Initializable {
                         updateBtn.setOnAction((ActionEvent event) -> {
                             Patient ptnRecord = getTableView().getItems().get(getIndex());
                             System.out.println("Update button clicked");
+                            int ptntId = ptnRecord.getPtnId();
                             try {
-                                new SceneLoader().loadSceneInDifferentStage(getClass(),"UpdatePatientPage");
+                                loader = new SceneLoader().loadSceneInDifferentStage(getClass(),"UpdatePatientPage");
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
+                            PatientDao dao = new PatientDao();
+                            Patient ptnt = dao.getSinglePatientDetails(ptntId);
+                            UpdatePatientController controller = loader.getController();
+                            controller.loadDataIntoScene(ptnt);
                         });
                     }
 

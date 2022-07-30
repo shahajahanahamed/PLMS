@@ -5,7 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDao {
@@ -60,5 +59,11 @@ public class EmployeeDao {
         String sql = "SELECT * FROM temployee where empId=?";
         Employee employees = this.jdbcTemplate.queryForObject(sql, new RowMapperImplmentationEmp(),empId);
         return employees;
+    }
+
+    public int updateEmployee(Employee emp) {
+        String sql = "UPDATE temployee SET empName=?,username=?,password=?,userType=?,contactNo=?,emailId=?,address=? where empId=?";
+        int result = this.jdbcTemplate.update(sql,emp.getEmpName(),emp.getUsername(),emp.getPassword(),emp.getUserType(),emp.getContactNo(),emp.getEmailId(),emp.getAddress(),emp.getEmpId());
+        return result;
     }
 }

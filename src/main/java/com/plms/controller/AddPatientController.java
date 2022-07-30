@@ -65,6 +65,7 @@ public class AddPatientController implements Initializable {
     void clickOnClearBtn(MouseEvent event) {
         clearAllFields();
     }
+    @FXML
     void clickOnBackBtn(MouseEvent event) {
         Stage stage=(Stage) ptnBackBtn.getScene().getWindow();
         stage.close();
